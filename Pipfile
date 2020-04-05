@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+rope = "*"
+
+[packages]
+colorzero = "==1.1"
+gpiozero = "==1.5.1"
+pygame = "==1.9.6"
+autopep8 = "*"
+docformatter = "*"
+
+[requires]
+python_version = "3.7"

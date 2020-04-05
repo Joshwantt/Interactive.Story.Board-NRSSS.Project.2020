@@ -1,0 +1,427 @@
+[
+
+	{
+		"title" : "Where the river meets the sea",
+		"sound_narration" : "title.wav",		
+		"buttons" : [
+			{
+				"name" : "start",
+				"frames" : 4,
+				"image" : "assets/img/buttons/start.png",
+				"location" : [960, 843],
+				"text" : "Start"
+			}
+
+		]		
+	},
+	{
+		"title" : "We're going on a ride on a",
+		"sound_narration" : "going_on_a_ride_on_a.wav",
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/canoe.png",
+				"location" : [510, 620],
+				"text" : "Canoe",
+				"sound_hover" : "canoe.wav",
+				"selected_sound" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Jetski",
+				"sound_hover" : "jetski.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Boat",
+				"sound_hover" : "boat.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "Do these always travel on water?",
+		"sound_narration" : "do_these_always_travel_on_water.wav",		
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/yes.png",
+				"location" : [810, 620],
+				"text" : "Yes",
+				"sound_hover" : "yes.wav",
+				"effects" : {
+					"answer" : "Yes, these always travel on water.",
+					"sound_narration" : "yes_these_always_travel_on_water.wav",
+					"selected_sound" : ""
+
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/no.png",
+				"location" : [1110, 620],
+				"text" : "No",
+				"sound_hover" : "no.wav",
+				"effects" : {
+					"answer" : "Yes, these always travel on water.",
+					"sound_narration" : "yes_these_always_travel_on_water.wav",
+					"selected_sound" : "wrong.wav"
+				}
+			}
+		]	
+	},
+	{
+		"title" : "We are going to the",	
+		"sound_narration" : "we_are_going_to_the.wav",	
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/river.png",
+				"location" : [510, 620],
+				"text" : "River",
+				"sound_hover" : "river.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/beach.png",
+				"location" : [960, 620],
+				"text" : "Beach",
+				"sound_hover" : "beach.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/creek.png",
+				"location" : [1410, 620],
+				"text" : "Creek",
+				"sound_hover" : "creek.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["rotors"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "Are all of these waterways connected?",
+		"sound_narration" : "are_all_connected.wav",	
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/yes.png",
+				"location" : [810, 620],
+				"text" : "Yes",
+				"sound_hover" : "yes.wav",
+				"effects" : {
+					"answer" : "The creek goes to the river, and the river goes to the ocean.",
+					"selected_sound" : "",
+					"sound_narration" : "the_creek_goes_to.wav"
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/no.png",
+				"location" : [1110, 620],
+				"text" : "No",
+				"sound_hover" : "no.wav",
+				"effects" : {
+					"answer" : "The creek goes to the river, and the river goes to the ocean.",
+					"selected_sound" : "wrong.wav",
+					"sound_narration" : "the_creek_goes_to.wav"
+				}
+			}
+		]	
+	},
+	{
+		"title" : "The weather outside is",
+		"sound_narration" : "the_weather_is.wav",	
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/windy.png",
+				"location" : [510, 620],
+				"text" : "Windy",
+				"sound_hover" : "windy.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/stormy.png",
+				"location" : [960, 620],
+				"text" : "Stormy",
+				"sound_hover" : "stormy.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["rotors", "fan"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/sunny.png",
+				"location" : [1410, 620],
+				"text" : "Sunny",
+				"sound_hover" : "sunny.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["vibe_mat"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "Do you need to wear something special when you are travelling through the water?",
+		"sound_narration" : "do_you_need_to_wear.wav",	
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/yes.png",
+				"location" : [810, 620],
+				"text" : "Yes",
+				"sound_hover" : "yes.wav",
+				"effects" : {
+					"answer" : "You always need to wear a life jacket when you are travelling through the water.",
+					"selected_sound" : "",
+					"sound_narration" : "always_wear_life_jacket.wav"
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/no.png",
+				"location" : [1110, 620],
+				"text" : "No",
+				"sound_hover" : "no.wav",
+				"effects" : {
+					"answer" : "You always need to wear a life jacket when you are travelling through the water.",
+					"selected_sound" : "wrong.wav",
+					"sound_narration" : "always_wear_life_jacket.wav"
+				}
+			}
+		]	
+	},
+	{
+		"title" : "The ride on our water transport is",
+		"sound_narration" : "the_ride_on_water_trans_is.wav",	
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/bumpy.png",
+				"location" : [510, 620],
+				"text" : "Bumpy",
+				"sound_hover" : "bumpy.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/smooth.png",
+				"location" : [960, 620],
+				"text" : "Smooth",
+				"sound_hover" : "smooth.wav",
+				"effects" : {
+					"selected_sound" : ""
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/fun.png",
+				"location" : [1410, 620],
+				"text" : "Fun",
+				"sound_hover" : "fun.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["rotors"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "Does the ride move across the water?",
+		"sound_narration" : "does_ride_move_across_water.wav",
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/yes.png",
+				"location" : [810, 620],
+				"text" : "Yes",
+				"sound_hover" : "yes.wav",
+				"effects" : {
+					"answer" : "Yes, the ride does move across the water.",
+					"selected_sound" : "",
+					"sound_narration" : "yes_does_move_across_the_water.wav"
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/no.png",
+				"location" : [1110, 620],
+				"text" : "No",
+				"sound_hover" : "no.wav",
+				"effects" : {
+					"answer" : "Yes, the ride does move across the water.",
+					"selected_sound" : "wrong.wav",
+					"sound_narration" : "yes_does_move_across_the_water.wav"
+				}
+			}
+		]	
+	},
+	{
+		"title" : "We found a",
+		"sound_narration" : "we_found_a.wav",
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/dolphin.png",
+				"location" : [510, 620],
+				"text" : "Dolphin",
+				"sound_hover" : "dolphin.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/bird.png",
+				"location" : [960, 620],
+				"text" : "Bird",
+				"sound_hover" : "bird.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/pelican.png",
+				"location" : [1410, 620],
+				"text" : "Pelican",
+				"sound_hover" : "pelican.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "Do these animals all live UNDER the water?",
+		"sound_narration" : "do_these_live_underwater.wav",
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/yes.png",
+				"location" : [810, 620],
+				"text" : "Yes",
+				"sound_hover" : "yes.wav",
+				"effects" : {
+					"answer" : "No, they don't!",
+					"selected_sound" : "wrong.wav",
+					"sound_narration" : "no_they_dont.wav"
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/no.png",
+				"location" : [1110, 620],
+				"text" : "No",
+				"sound_hover" : "no.wav",
+				"effects" : {
+					"answer" : "No, they don't!",
+					"selected_sound" : "",
+					"sound_narration" : "no_they_dont.wav"
+				}
+			}
+		]	
+	},
+	{
+		"title" : "The sun is going down and it's time to go home. This adventure has been",
+		"sound_narration" : "ending.wav",
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/exciting.png",
+				"location" : [510, 620],
+				"text" : "Exciting",
+				"sound_hover" : "exciting.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["rotors"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/scary.png",
+				"location" : [810, 620],
+				"text" : "Scary",
+				"sound_hover" : "scary.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/fun2.png",
+				"location" : [1110, 620],
+				"text" : "Fun",
+				"sound_hover" : "fun2.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/boring.png",
+				"location" : [1410, 620],
+				"text" : "Boring",
+				"sound_hover" : "boring.wav",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ["rotors"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "Thanks for playing!",
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/start.png",
+				"location" : [960, 843],
+				"text" : "Restart",
+				"effects" : {
+					"restart" : ""
+				}
+			}
+		]
+	}
+]
