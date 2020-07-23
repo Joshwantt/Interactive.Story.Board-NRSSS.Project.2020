@@ -1,361 +1,1658 @@
 [
 
 	{
-		"title" : "Where the river meets the sea",
-		"sound_narration" : "title.wav",		
+		"title" : "START",
+		"not_random" : "Yes",
+		"sound_narration" : "title.wav",
+				
 		"buttons" : [
 			{
 				"name" : "start",
 				"frames" : 4,
 				"image" : "assets/img/buttons/start.png",
 				"location" : [960, 843],
-				"text" : "Start"
+				"text" : "Start",
+				"effects": {
+				"not_random" : "Yes"
+				}
 			}
 
 		]		
 	},
 	{
-		"title" : "We're going on a ride on a",
-		"sound_narration" : "going_on_a_ride_on_a.wav",
+		"title" : "They are ready to travel in their...",
+		"sound_narration" : "story1page6.wav",
 		"buttons" : [
 			{
+				"index": 0,
 				"frames" : 4,
-				"image" : "assets/img/buttons/canoe.png",
 				"location" : [510, 620],
-				"text" : "Canoe",
-				"sound_hover" : "canoe.wav",
-				"selected_sound" : "",
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Spaceship",
+				"sound_hover" : "spaceship.wav",
 				"effects" : {
-					"selected_sound" : "",
+					"selected_sound" : "spaceship.wav",
 					"output" : ["fan"]
 				}
 			},
 			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Train",
+				"sound_hover" : "train.wav",
+				"effects" : {
+					"selected_sound" : "train.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Dodgem car",
+				"sound_hover" : "dodgem_car.wav",
+				"effects" : {
+					"selected_sound" : "dodgem_car.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Jet ski",
+				"sound_hover" : "jet_ski.wav",
+				"effects" : {
+					"selected_sound" : "jet_ski.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
 				"frames" : 4,
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
-				"text" : "Jetski",
-				"sound_hover" : "jetski.wav",
+				"text" : "Bus",
+				"selected_sound" : "bus.wav",
 				"effects" : {
-					"selected_sound" : "",
+					"selected_sound" : "bus.wav",
 					"output" : ["vibe_mat"]
 				}
 			},
 			{
+				"index": 5,
 				"frames" : 4,
-				"image" : "assets/img/buttons/boat.png",
-				"location" : [1410, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
 				"text" : "Boat",
 				"sound_hover" : "boat.wav",
 				"effects" : {
-					"selected_sound" : "",
+					"selected_sound" : "boat.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Wheelchair",
+				"sound_hover" : "wheelchair.wav",
+				"effects" : {
+					"selected_sound" : "wheelchair.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Taxi",
+				"sound_hover" : "taxi.wav",
+				"effects" : {
+					"selected_sound" : "taxi.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Car",
+				"sound_hover" : "car.wav",
+				"effects" : {
+					"selected_sound" : "car.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Hot air balloon",
+				"sound_hover" : "hot_air_balloon.wav",
+				"effects" : {
+					"selected_sound" : "hot_air_balloon.wav",
 					"output" : ["fan"]
 				}
 			}
 		]	
 	},
 	{
-		"title" : "Do these always travel on water?",
-		"sound_narration" : "do_these_always_travel_on_water.wav",		
+		"title" : "They go through the...",
+		"sound_narration" : "story1page7.wav",
 		"buttons" : [
 			{
+				"index": 0,
 				"frames" : 4,
-				"image" : "assets/img/buttons/yes.png",
-				"location" : [810, 620],
-				"text" : "Yes",
-				"sound_hover" : "yes.wav",
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Mirror",
+				"sound_hover" : "mirror.wav",
 				"effects" : {
-					"answer" : "Yes, these always travel on water.",
-					"sound_narration" : "yes_these_always_travel_on_water.wav",
-					"selected_sound" : ""
-
+					"selected_sound" : "mirror.wav",
+					"output" : ["fan"]
 				}
 			},
 			{
+				"index": 1,
 				"frames" : 4,
-				"image" : "assets/img/buttons/no.png",
-				"location" : [1110, 620],
-				"text" : "No",
-				"sound_hover" : "no.wav",
-				"effects" : {
-					"answer" : "Yes, these always travel on water.",
-					"sound_narration" : "yes_these_always_travel_on_water.wav",
-					"selected_sound" : "wrong.wav"
-				}
-			}
-		]	
-	},
-	{
-		"title" : "We are going to the",	
-		"sound_narration" : "we_are_going_to_the.wav",	
-		"buttons" : [
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/river.png",
+				"image" : "assets/img/buttons/jetski.png",
 				"location" : [510, 620],
+				"text" : "Tunnel",
+				"sound_hover" : "tunnel.wav",
+				"effects" : {
+					"selected_sound" : "tunnel.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Storm",
+				"sound_hover" : "storm.wav",
+				"effects" : {
+					"selected_sound" : "storm.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Forest",
+				"sound_hover" : "forest.wav",
+				"effects" : {
+					"selected_sound" : "forest.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Window",
+				"selected_sound" : "window.wav",
+				"effects" : {
+					"selected_sound" : "window.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Door",
+				"sound_hover" : "door.wav",
+				"effects" : {
+					"selected_sound" : "door.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Fence",
+				"sound_hover" : "fence.wav",
+				"effects" : {
+					"selected_sound" : "fence.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
 				"text" : "River",
 				"sound_hover" : "river.wav",
 				"effects" : {
-					"selected_sound" : "",
+					"selected_sound" : "river.wav",
 					"output" : ["vibe_mat"]
 				}
 			},
 			{
+				"index": 8,
 				"frames" : 4,
-				"image" : "assets/img/buttons/beach.png",
-				"location" : [960, 620],
-				"text" : "Beach",
-				"sound_hover" : "beach.wav",
-				"effects" : {
-					"selected_sound" : "",
-					"output" : ["fan"]
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/creek.png",
+				"image" : "assets/img/buttons/jetski.png",
 				"location" : [1410, 620],
-				"text" : "Creek",
-				"sound_hover" : "creek.wav",
+				"text" : "Mud",
+				"sound_hover" : "mud.wav",
 				"effects" : {
-					"selected_sound" : "",
-					"output" : ["rotors"]
-				}
-			}
-		]	
-	},
-	{
-		"title" : "Are all of these waterways connected?",
-		"sound_narration" : "are_all_connected.wav",	
-		"buttons" : [
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/yes.png",
-				"location" : [810, 620],
-				"text" : "Yes",
-				"sound_hover" : "yes.wav",
-				"effects" : {
-					"answer" : "The creek goes to the river, and the river goes to the ocean.",
-					"selected_sound" : "",
-					"sound_narration" : "the_creek_goes_to.wav"
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/no.png",
-				"location" : [1110, 620],
-				"text" : "No",
-				"sound_hover" : "no.wav",
-				"effects" : {
-					"answer" : "The creek goes to the river, and the river goes to the ocean.",
-					"selected_sound" : "wrong.wav",
-					"sound_narration" : "the_creek_goes_to.wav"
-				}
-			}
-		]	
-	},
-	{
-		"title" : "The weather outside is",
-		"sound_narration" : "the_weather_is.wav",	
-		"buttons" : [
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/windy.png",
-				"location" : [510, 620],
-				"text" : "Windy",
-				"sound_hover" : "windy.wav",
-				"effects" : {
-					"selected_sound" : "",
-					"output" : ["fan"]
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/stormy.png",
-				"location" : [960, 620],
-				"text" : "Stormy",
-				"sound_hover" : "stormy.wav",
-				"effects" : {
-					"selected_sound" : "",
-					"output" : ["rotors", "fan"]
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/sunny.png",
-				"location" : [1410, 620],
-				"text" : "Sunny",
-				"sound_hover" : "sunny.wav",
-				"effects" : {
-					"selected_sound" : "",
+					"selected_sound" : "mud.wav",
 					"output" : ["vibe_mat"]
 				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Fire",
+				"sound_hover" : "fire.wav",
+				"effects" : {
+					"selected_sound" : "fire.wav",
+					"output" : ["fan"]
+				}
 			}
 		]	
 	},
 	{
-		"title" : "Do you need to wear something special when you are travelling through the water?",
-		"sound_narration" : "do_you_need_to_wear.wav",	
+		"title" : "It is...",
+		"sound_narration" : "story1page8.wav",
 		"buttons" : [
 			{
+				"index": 0,
 				"frames" : 4,
-				"image" : "assets/img/buttons/yes.png",
-				"location" : [810, 620],
-				"text" : "Yes",
-				"sound_hover" : "yes.wav",
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Fluffy",
+				"sound_hover" : "fluffy.wav",
 				"effects" : {
-					"answer" : "You always need to wear a life jacket when you are travelling through the water.",
-					"selected_sound" : "",
-					"sound_narration" : "always_wear_life_jacket.wav"
+					"selected_sound" : "fluffy.wav",
+					"output" : ["fan"]
 				}
 			},
 			{
+				"index": 1,
 				"frames" : 4,
-				"image" : "assets/img/buttons/no.png",
-				"location" : [1110, 620],
-				"text" : "No",
-				"sound_hover" : "no.wav",
-				"effects" : {
-					"answer" : "You always need to wear a life jacket when you are travelling through the water.",
-					"selected_sound" : "wrong.wav",
-					"sound_narration" : "always_wear_life_jacket.wav"
-				}
-			}
-		]	
-	},
-	{
-		"title" : "The ride on our water transport is",
-		"sound_narration" : "the_ride_on_water_trans_is.wav",	
-		"buttons" : [
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/bumpy.png",
+				"image" : "assets/img/buttons/jetski.png",
 				"location" : [510, 620],
+				"text" : "Cold",
+				"sound_hover" : "cold.wav",
+				"effects" : {
+					"selected_sound" : "cold.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Scary",
+				"sound_hover" : "scary.wav",
+				"effects" : {
+					"selected_sound" : "scary.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Wet",
+				"sound_hover" : "wet.wav",
+				"effects" : {
+					"selected_sound" : "wet.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Smooth",
+				"selected_sound" : "smooth.wav",
+				"effects" : {
+					"selected_sound" : "smooth.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Loud",
+				"sound_hover" : "loud.wav",
+				"effects" : {
+					"selected_sound" : "loud.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Scratchy",
+				"sound_hover" : "scratchy.wav",
+				"effects" : {
+					"selected_sound" : "scratchy.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
 				"text" : "Bumpy",
 				"sound_hover" : "bumpy.wav",
 				"effects" : {
-					"selected_sound" : "",
+					"selected_sound" : "bumpy.wav",
 					"output" : ["vibe_mat"]
 				}
 			},
 			{
+				"index": 8,
 				"frames" : 4,
-				"image" : "assets/img/buttons/smooth.png",
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Light",
+				"sound_hover" : "light.wav",
+				"effects" : {
+					"selected_sound" : "light.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Gross",
+				"sound_hover" : "gross.wav",
+				"effects" : {
+					"selected_sound" : "gross.wav",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "They stop to...",
+		"sound_narration" : "story1page9.wav",
+		"buttons" : [
+			{
+				"index": 0,
+				"frames" : 4,
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Drink",
+				"sound_hover" : "drink.wav",
+				"effects" : {
+					"selected_sound" : "drink.wav",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Nap",
+				"sound_hover" : "nap.wav",
+				"effects" : {
+					"selected_sound" : "nap.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Stretch",
+				"sound_hover" : "stretchy.wav",
+				"effects" : {
+					"selected_sound" : "stretchy.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Read a book",
+				"sound_hover" : "read_a_book.wav",
+				"effects" : {
+					"selected_sound" : "read_a_book.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Chocolate cake",
+				"selected_sound" : "chocolate_cake.wav",
+				"effects" : {
+					"selected_sound" : "chocolate_cake.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Go to the toilet",
+				"sound_hover" : "go_to_the_toilet.wav",
+				"effects" : {
+					"selected_sound" : "go_to_the_toilet.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Make a phone call",
+				"sound_hover" : "make_a_phone_call.wav",
+				"effects" : {
+					"selected_sound" : "make_a_phone_call.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Scratch",
+				"sound_hover" : "scratch.wav",
+				"effects" : {
+					"selected_sound" : "scratch.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Listen to the music",
+				"sound_hover" : "listen_to_music.wav",
+				"effects" : {
+					"selected_sound" : "listen_to_music.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Ask for directions",
+				"sound_hover" : "ask_for_directions.wav",
+				"effects" : {
+					"selected_sound" : "ask_for_directions.wav",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "It is...",
+		"sound_narration" : "story1page11.wav",
+		"buttons" : [
+			{
+				"index": 0,
+				"frames" : 4,
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Hard",
+				"sound_hover" : "hard.wav",
+				"selected_sound" : "hard.wav",
+				"effects" : {
+					"selected_sound" : "hard.wav",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Heavy",
+				"sound_hover" : "heavy.wav",
+				"selected_sound" : "heavy.wav",
+				"effects" : {
+					"selected_sound" : "heavy.wav","output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Sticky",
+				"sound_hover" : "sticky.wav",
+				"selected_sound" : "sticky.wav",
+				"effects" : {
+					"selected_sound" : "sticky.wav","output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Hot",
+				"sound_hover" : "hot.wav",
+				"selected_sound" : "hot.wav",
+				"effects" : {
+					"selected_sound" : "hot.wav","output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Lumpy",
+				"selected_sound" : "lumpy.wav",
+				"effects" : {
+					"selected_sound" : "lumpy.wav","output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Rough",
+				"sound_hover" : "rough.wav",
+				"selected_sound" : "rough.wav",
+				"effects" : {
+					"selected_sound" : "rough.wav","output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Stretchy",
+				"sound_hover" : "stretchy.wav",
+				"selected_sound" : "stretchy.wav",
+				"effects" : {
+					"selected_sound" : "stretchy.wav","output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Quiet",
+				"sound_hover" : "quiet.wav",
+				"selected_sound" : "quiet.wav",
+				"effects" : {
+					"selected_sound" : "quiet.wav","output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Dark",
+				"sound_hover" : "dark.wav",
+				"selected_sound" : "dark.wav",
+				"effects" : {
+					"selected_sound" : "dark.wav","output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Freezing",
+				"sound_hover" : "freezing.wav",
+				"selected_sound" : "freezing.wav",
+				"effects" : {
+					"selected_sound" : "freezing.wav","output" : ["fan"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "They meet someone who helped- a...",
+		"sound_narration" : "story1page12.wav",		
+		"buttons" : [
+			{
+				"index": 0,
+				"frames" : 4,
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Elephant",
+				"sound_hover" : "elephant.wav",
+				"effects" : {
+					"selected_sound" : "elephant.wav",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Mermaid",
+				"sound_hover" : "mermaid.wav",
+				"effects" : {
+					"selected_sound" : "mermaid.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Friend",
+				"sound_hover" : "friend.wav",
+				"effects" : {
+					"selected_sound" : "friend.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Kangaroo",
+				"sound_hover" : "kangaroo.wav",
+				"effects" : {
+					"selected_sound" : "kangaroo.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Crab",
+				"sound_hover" : "crab.wav",
+				"effects" : {
+					"selected_sound" : "crab.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Unicorn",
+				"sound_hover" : "unicorn.wav",
+				"effects" : {
+					"selected_sound" : "unicorn.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Stuntman",
+				"sound_hover" : "stuntman.wav",
+				"effects" : {
+					"selected_sound" : "stuntman.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Werewolf",
+				"sound_hover" : "werewolf.wav",
+				"effects" : {
+					"selected_sound" : "werewolf.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Spider",
+				"sound_hover" : "spider.wav",
+				"effects" : {
+					"selected_sound" : "spider.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "King",
+				"sound_hover" : "king.wav",
+				"effects" : {
+					"selected_sound" : "king.wav",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "They are...",
+		"sound_narration" : "story1page13.wav",		
+		"buttons" : [
+			{
+				"index": 0,
+				"frames" : 4,
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Fat",
+				"sound_hover" : "fat.wav",
+				"effects" : {
+					"selected_sound" : "fat.wav",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Clever",
+				"sound_hover" : "clever.wav",
+				"effects" : {
+					"selected_sound" : "clever.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Mad",
+				"sound_hover" : "mad.wav",
+				"effects" : {
+					"selected_sound" : "mad.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Sleepy",
+				"sound_hover" : "sleepy.wav",
+				"effects" : {
+					"selected_sound" : "sleepy.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Gross",
+				"sound_hover" : "gross.wav",
+				"effects" : {
+					"selected_sound" : "gross.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Mean",
+				"sound_hover" : "mean.wav",
+				"effects" : {
+					"selected_sound" : "mean.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Cheeky",
+				"sound_hover" : "cheeky.wav",
+				"effects" : {
+					"selected_sound" : "cheeky.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Crazy",
+				"sound_hover" : "crazy.wav",
+				"effects" : {
+					"selected_sound" : "crazy.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Naughty",
+				"sound_hover" : "naughty.wav",
+				"effects" : {
+					"selected_sound" : "naughty.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "My favourite",
+				"sound_hover" : "my_favourite.wav",
+				"effects" : {
+					"selected_sound" : "my_favourite.wav",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+{
+		"title" : "Our trip took...",
+		"sound_narration" : "story1page14.wav",		
+		"buttons" : [
+			{
+				"index": 0,
+				"frames" : 4,
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "100 years",
+				"sound_hover" : "100_years.wav",
+				"effects" : {
+					"selected_sound" : "100_years.wav",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "2 days",
+				"sound_hover" : "2_days.wav",
+				"effects" : {
+					"selected_sound" : "2_days.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "5 minutes",
+				"sound_hover" : "5_minutes.wav",
+				"effects" : {
+					"selected_sound" : "5_minutes.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "25 seconds",
+				"sound_hover" : "25_seconds.wav",
+				"effects" : {
+					"selected_sound" : "25_seconds.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "All day",
+				"sound_hover" : "all_day.wav",
+				"effects" : {
+					"selected_sound" : "all_day.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "All night",
+				"sound_hover" : "all_night.wav",
+				"effects" : {
+					"selected_sound" : "all_night.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "A month",
+				"sound_hover" : "a_month.wav",
+				"effects" : {
+					"selected_sound" : "a_month.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "A minute",
+				"sound_hover" : "a_minute.wav",
+				"effects" : {
+					"selected_sound" : "a_minute.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "A little while",
+				"sound_hover" : "a_little_while.wav",
+				"effects" : {
+					"selected_sound" : "a_little_while.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Forever",
+				"sound_hover" : "forever.wav",
+				"effects" : {
+					"selected_sound" : "forever.wav",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+{
+		"title" : "When we get to our final destination, we...",
+		"sound_narration" : "story1page15.wav",		
+		"buttons" : [
+			{
+				"index": 0,
+				"frames" : 4,
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Have a party",
+				"sound_hover" : "have_a_party.wav",
+				"effects" : {
+					"selected_sound" : "have_a_party.wav",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Fist bump",
+				"sound_hover" : "fist_bump.wav",
+				"effects" : {
+					"selected_sound" : "fist_bump.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Look around",
+				"sound_hover" : "look_around.wav",
+				"effects" : {
+					"selected_sound" : "look_around.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Share the news",
+				"sound_hover" : "share_the_news.wav",
+				"effects" : {
+					"selected_sound" : "share_the_news.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Cry",
+				"sound_hover" : "cry.wav",
+				"effects" : {
+					"selected_sound" : "cry.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Sigh",
+				"sound_hover" : "sigh.wav",
+				"effects" : {
+					"selected_sound" : "sigh.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Smile",
+				"sound_hover" : "smile.wav",
+				"effects" : {
+					"selected_sound" : "smile.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "High five",
+				"sound_hover" : "high_five.wav",
+				"effects" : {
+					"selected_sound" : "high_five.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Whistle",
+				"sound_hover" : "whistle.wav",
+				"effects" : {
+					"selected_sound" : "whistle.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Hug",
+				"sound_hover" : "hug.wav",
+				"effects" : {
+					"selected_sound" : "hug.wav",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "It is...",
+		"sound_narration" : "story2page11.wav",		
+		"buttons" : [
+			{
+				"index": 0,
+				"frames" : 4,
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Fluffy",
+				"sound_hover" : "fluffy.wav",
+				"effects" : {
+					"selected_sound" : "fluffy.wav",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Cold",
+				"sound_hover" : "cold.wav",
+				"effects" : {
+					"selected_sound" : "cold.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Scary",
+				"sound_hover" : "scary.wav",
+				"effects" : {
+					"selected_sound" : "scary.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Wet",
+				"sound_hover" : "wet.wav",
+				"effects" : {
+					"selected_sound" : "wet.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Smooth",
 				"sound_hover" : "smooth.wav",
 				"effects" : {
-					"selected_sound" : ""
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/fun.png",
-				"location" : [1410, 620],
-				"text" : "Fun",
-				"sound_hover" : "fun.wav",
-				"effects" : {
-					"selected_sound" : "",
-					"output" : ["rotors"]
-				}
-			}
-		]	
-	},
-	{
-		"title" : "Does the ride move across the water?",
-		"sound_narration" : "does_ride_move_across_water.wav",
-		"buttons" : [
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/yes.png",
-				"location" : [810, 620],
-				"text" : "Yes",
-				"sound_hover" : "yes.wav",
-				"effects" : {
-					"answer" : "Yes, the ride does move across the water.",
-					"selected_sound" : "",
-					"sound_narration" : "yes_does_move_across_the_water.wav"
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/no.png",
-				"location" : [1110, 620],
-				"text" : "No",
-				"sound_hover" : "no.wav",
-				"effects" : {
-					"answer" : "Yes, the ride does move across the water.",
-					"selected_sound" : "wrong.wav",
-					"sound_narration" : "yes_does_move_across_the_water.wav"
-				}
-			}
-		]	
-	},
-	{
-		"title" : "We found a",
-		"sound_narration" : "we_found_a.wav",
-		"buttons" : [
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/dolphin.png",
-				"location" : [510, 620],
-				"text" : "Dolphin",
-				"sound_hover" : "dolphin.wav",
-				"effects" : {
-					"selected_sound" : "",
+					"selected_sound" : "smooth.wav",
 					"output" : ["vibe_mat"]
 				}
 			},
 			{
+				"index": 5,
 				"frames" : 4,
-				"image" : "assets/img/buttons/bird.png",
+				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
-				"text" : "Bird",
-				"sound_hover" : "bird.wav",
+				"text" : "Loud",
+				"sound_hover" : "loud.wav",
 				"effects" : {
-					"selected_sound" : "",
-					"output" : ["fan"]
+					"selected_sound" : "loud.wav",
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
+				"index": 6,
 				"frames" : 4,
-				"image" : "assets/img/buttons/pelican.png",
-				"location" : [1410, 620],
-				"text" : "Pelican",
-				"sound_hover" : "pelican.wav",
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Scratchy",
+				"sound_hover" : "scratchy.wav",
 				"effects" : {
-					"selected_sound" : "",
+					"selected_sound" : "scratchy.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Bumpy",
+				"sound_hover" : "bumpy.wav",
+				"effects" : {
+					"selected_sound" : "bumpy.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Light",
+				"sound_hover" : "light.wav",
+				"effects" : {
+					"selected_sound" : "light.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Gross",
+				"sound_hover" : "gross.wav",
+				"effects" : {
+					"selected_sound" : "gross.wav",
 					"output" : ["fan"]
 				}
 			}
 		]	
 	},
 	{
-		"title" : "Do these animals all live UNDER the water?",
-		"sound_narration" : "do_these_live_underwater.wav",
+		"title" : "It is...",
+		"sound_narration" : "story2page13.wav",		
 		"buttons" : [
 			{
+				"index": 0,
 				"frames" : 4,
-				"image" : "assets/img/buttons/yes.png",
-				"location" : [810, 620],
-				"text" : "Yes",
-				"sound_hover" : "yes.wav",
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Stinky",
+				"sound_hover" : "stinky.wav",
 				"effects" : {
-					"answer" : "No, they don't!",
-					"selected_sound" : "wrong.wav",
-					"sound_narration" : "no_they_dont.wav"
+					"selected_sound" : "stinky.wav",
+					"output" : ["fan"]
 				}
 			},
 			{
+				"index": 1,
 				"frames" : 4,
-				"image" : "assets/img/buttons/no.png",
-				"location" : [1110, 620],
-				"text" : "No",
-				"sound_hover" : "no.wav",
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Funny",
+				"sound_hover" : "funny.wav",
 				"effects" : {
-					"answer" : "No, they don't!",
-					"selected_sound" : "",
-					"sound_narration" : "no_they_dont.wav"
+					"selected_sound" : "funny.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Silly",
+				"sound_hover" : "silly.wav",
+				"effects" : {
+					"selected_sound" : "silly.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Cool",
+				"sound_hover" : "cool.wav",
+				"effects" : {
+					"selected_sound" : "cool.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Good",
+				"sound_hover" : "good.wav",
+				"effects" : {
+					"selected_sound" : "good.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Beautiful",
+				"sound_hover" : "beautiful.wav",
+				"effects" : {
+					"selected_sound" : "beautiful.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Smart",
+				"sound_hover" : "smart.wav",
+				"effects" : {
+					"selected_sound" : "smart.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Shiny",
+				"sound_hover" : "shiny.wav",
+				"effects" : {
+					"selected_sound" : "shiny.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Bad",
+				"sound_hover" : "bad.wav",
+				"effects" : {
+					"selected_sound" : "bad.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Annoying",
+				"sound_hover" : "annoying.wav",
+				"effects" : {
+					"selected_sound" : "annoying.wav",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "Our trip took...",
+		"sound_narration" : "story2page14.wav",		
+		"buttons" : [
+			{
+				"index": 0,
+				"frames" : 4,
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "5 hours",
+				"sound_hover" : "5_hours.wav",
+				"effects" : {
+					"selected_sound" : "5_hours.wav",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "A day",
+				"sound_hover" : "a_day.wav",
+				"effects" : {
+					"selected_sound" : "a_day.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "A year",
+				"sound_hover" : "a_year.wav",
+				"effects" : {
+					"selected_sound" : "a_year.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "4 days",
+				"sound_hover" : "4_days.wav",
+				"effects" : {
+					"selected_sound" : "4_days.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "A long time",
+				"sound_hover" : "a_long_time.wav",
+				"effects" : {
+					"selected_sound" : "a_long_time.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Half an hour",
+				"sound_hover" : "half_an_hour.wav",
+				"effects" : {
+					"selected_sound" : "half_an_hour.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "10 seconds",
+				"sound_hover" : "10_seconds.wav",
+				"effects" : {
+					"selected_sound" : "10_seconds.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Some time",
+				"sound_hover" : "some_time.wav",
+				"effects" : {
+					"selected_sound" : "some_time.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "A week",
+				"sound_hover" : "a_week.wav",
+				"effects" : {
+					"selected_sound" : "a_week.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "A few hours",
+				"sound_hover" : "a_few_hours.wav",
+				"effects" : {
+					"selected_sound" : "a_few_hours.wav",
+					"output" : ["fan"]
+				}
+			}
+		]	
+	},
+	{
+		"title" : "When the job was done, we...",
+		"sound_narration" : "story2page15.wav",		
+		"buttons" : [
+			{
+				"index": 0,
+				"frames" : 4,
+				"location" : [510, 620],
+				"image" : "assets/img/buttons/jetski.png",
+				"text" : "Feel proud",
+				"sound_hover" : "feel_proud.wav",
+				"effects" : {
+					"selected_sound" : "feel_proud.wav",
+					"output" : ["fan"]
+				}
+			},
+			{
+				"index": 1,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Have a sleep",
+				"sound_hover" : "have_a_sleep.wav",
+				"effects" : {
+					"selected_sound" : "have_a_sleep.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Laugh",
+				"sound_hover" : "laugh.wav",
+				"effects" : {
+					"selected_sound" : "laugh.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 3,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [510, 620],
+				"text" : "Cheer",
+				"sound_hover" : "cheer.wav",
+				"effects" : {
+					"selected_sound" : "cheer.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 4,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Feel sick",
+				"sound_hover" : "feel_sick.wav",
+				"effects" : {
+					"selected_sound" : "feel_sick.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 5,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Take a photo",
+				"sound_hover" : "take_a_photo.wav",
+				"effects" : {
+					"selected_sound" : "take_a_photo.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 6,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [960, 620],
+				"text" : "Ring a friend",
+				"sound_hover" : "ring_a_friend.wav",
+				"effects" : {
+					"selected_sound" : "ring_a_friend.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 7,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Shake hands",
+				"sound_hover" : "shake_hands.wav",
+				"effects" : {
+					"selected_sound" : "shake_hands.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 8,
+				"frames" : 4,
+				"image" : "assets/img/buttons/jetski.png",
+				"location" : [1410, 620],
+				"text" : "Sing a song",
+				"sound_hover" : "sing_a_song.wav",
+				"effects" : {
+					"selected_sound" : "sing_a_song.wav",
+					"output" : ["vibe_mat"]
+				}
+			},
+			{
+				"index": 9,
+				"frames" : 4,
+				"image" : "assets/img/buttons/boat.png",
+				"location" : [1410, 620],
+				"text" : "Do a dance",
+				"sound_hover" : "do_a_dance.wav",
+				"effects" : {
+					"selected_sound" : "do_a_dance.wav",
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -363,6 +1660,7 @@
 	{
 		"title" : "The sun is going down and it's time to go home. This adventure has been",
 		"sound_narration" : "ending.wav",
+		"not_random" : "Yes",
 		"buttons" : [
 			{
 				"frames" : 4,
@@ -372,6 +1670,7 @@
 				"sound_hover" : "exciting.wav",
 				"effects" : {
 					"selected_sound" : "",
+					"not_random" : "Yes",
 					"output" : ["rotors"]
 				}
 			},
@@ -383,6 +1682,7 @@
 				"sound_hover" : "scary.wav",
 				"effects" : {
 					"selected_sound" : "",
+					"not_random" : "Yes",
 					"output" : ["vibe_mat"]
 				}
 			},
@@ -394,6 +1694,7 @@
 				"sound_hover" : "fun2.wav",
 				"effects" : {
 					"selected_sound" : "",
+					"not_random" : "Yes",
 					"output" : ["fan"]
 				}
 			},
@@ -405,6 +1706,7 @@
 				"sound_hover" : "boring.wav",
 				"effects" : {
 					"selected_sound" : "",
+					"not_random" : "Yes",
 					"output" : ["rotors"]
 				}
 			}
@@ -412,6 +1714,7 @@
 	},
 	{
 		"title" : "Thanks for playing!",
+		"not_random" : "Yes",
 		"buttons" : [
 			{
 				"frames" : 4,
@@ -419,6 +1722,7 @@
 				"location" : [960, 843],
 				"text" : "Restart",
 				"effects" : {
+					"not_random" : "Yes",
 					"restart" : ""
 				}
 			}

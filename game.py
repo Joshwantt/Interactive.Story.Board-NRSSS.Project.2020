@@ -56,17 +56,19 @@ if __name__ == "__main__":
 
     def randomise_button_positions(buttons):
         positions = []
-        for button in buttons:
-            positions.append(button["location"])
+        ##for button in buttons:
+        ##    positions.append(button["location"])
 
-        shuffle(positions)
+        ##shuffle(positions)
 
-        for index, button in enumerate(buttons):
-            button["preload_button"].set_pos(positions[index])
-            button["location"] = positions[index]
+        ##for index, button in enumerate(buttons):
+        ##    button["preload_button"].set_pos(positions[index])
+        ##    button["location"] = positions[index]
             
-        buttons.sort(key=lambda x : x["location"][0])
+        ##buttons.sort(key=lambda x : x["location"][0])
 
+
+   
 
     # Pre-render buttons for performance.
     def preload_buttons(_dict, randomise_buttons=False):

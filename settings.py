@@ -15,9 +15,9 @@ DEBUG = False if SYSTEM == "Linux" else True
 PRODUCTION = True
 
 FONT_SIZE = 100
-BACKGROUND_COLOUR = (0,0,0,100)
+BACKGROUND_COLOUR = (0, 0, 0)
 FPS = 10
-LABEL_COLOUR = (255, 255, 255)
+LABEL_COLOUR = (255,255,0,100)
 DESIGN_WIDTH = 1920
 DESIGN_HEIGHT = 1080
 BUTTON_MIN_ZOOM = 200
@@ -72,6 +72,7 @@ menu_narrative = [
 
     {
         "title": "Welcome to the adventure!",
+        "not_random": "Yes",
         "buttons": [
             {
                 "image": "assets/img/buttons/start.png",
@@ -79,6 +80,7 @@ menu_narrative = [
                 "location": [560, 720],
                 "text": "Start",
                 "effects": {
+                    "not_random": "Yes",
                     "manager": "having this key will swap the manager. This value doesnt matter."
                 }
             },
@@ -88,6 +90,7 @@ menu_narrative = [
                 "location": [960, 720],
                 "text": "Options",
                 "effects": {
+                    "not_random": "Yes",
                     "goto": 1
                 }
             },
@@ -97,6 +100,7 @@ menu_narrative = [
                 "location": [1360, 720],
                 "text": "Shutdown",
                 "effects": {
+                    "not_random": "Yes",
                     "plain_function": shutdown
                 }
             }
@@ -106,6 +110,7 @@ menu_narrative = [
     },
     {
         "title": "Difficulty",
+        "not_random": "Yes",
         "background_img": "assets/img/backgrounds/ocean_main.jpg",
         "buttons": [
             {
@@ -114,6 +119,7 @@ menu_narrative = [
                 "location": [510, 720],
                 "text": "Easy",
                 "effects": {
+                    "not_random": "Yes",
                     "mode": "easy",
                     "goto": 0
 
@@ -125,6 +131,7 @@ menu_narrative = [
                 "location": [960, 720],
                 "text": "Advanced",
                 "effects": {
+                    "not_random": "Yes",
                     "mode": "adv",
                     "goto": 0
                 }
