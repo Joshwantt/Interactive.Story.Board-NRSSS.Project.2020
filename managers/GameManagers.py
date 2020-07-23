@@ -5,7 +5,7 @@ from game_objects.gui_button import GUIButton
 import settings
 from threading import Timer
 from time import sleep
-
+import random
 
 class Manager(object):
 
@@ -27,6 +27,14 @@ class Manager(object):
         self.scene_active = False
         self.narrative_played = False
         self.scene_wind_down = False
+        
+        self.randomOptions = [[10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10]]
+        
+        random.seed()
+        for i in self.randomOptions:
+            i[0] = random.randint(0, 3)
+            i[1] = random.randint(4, 6)
+            i[2] = random.randint(7, 9)
 
         # Because the timer thread goes off and does its thing before the game starts, a start bool will be used to set it in update rather than here.
         self.start = True
@@ -96,10 +104,23 @@ class Manager(object):
         if "buttons" in self.narrative[self.scene_number]:
             self.buttons.clear()
 
-            for button in self.narrative[self.scene_number]["buttons"]:
-                self.buttons.append(button["preload_button"])
+            enumerateButtons = enumerate(self.narrative[self.scene_number]["buttons"])
 
-            # Set button one to selected.
+            for i, button in enumerateButtons:
+                if "not_random" in self.narrative[self.scene_number]:
+                    self.buttons.append(button["preload_button"])
+                else:
+                    if (self.randomOptions[self.scene_number][0] == i):
+                        self.buttons.append(button["preload_button"])
+                        
+                    if (self.randomOptions[self.scene_number][1] == i):
+                        self.buttons.append(button["preload_button"])
+                        
+                    if (self.randomOptions[self.scene_number][2] == i):
+                        self.buttons.append(button["preload_button"])
+
+            
+            # Set button one to selected.if
             self.selected_button = 0
 
     def render_buttons(self, active=True):
@@ -118,10 +139,10 @@ class Manager(object):
         self.render_message()
 
         if self.scene_wind_down:
-            # Here is where we handle when to transition scenes.
+            # Here is where we handle when to transition scenes.    ####################################################
             self.destroy_cycle_timer()
             if not pygame.mixer.get_busy() and (not self.active_scene_transition_timer or not self.active_scene_transition_timer.is_alive()):
-                settings.SOUND_EFFECTS.play(settings.TRANSITION_SOUND)
+                #settings.SOUND_EFFECTS.play(settings.TRANSITION_SOUND)    ############ OBSOLETE?
                 # Compensates for bell delay
                 sleep(.5)
                 self.next_scene()
@@ -255,32 +276,56 @@ class GameManager(Manager):
     def process_button_effects(self):
 
         # We have a special key called effects and this function will process it.
-        effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
+        if "not_random" in self.narrative[self.scene_number]:
+            effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
+        else:
+            effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
+            effectsRandom = self.narrative[self.scene_number]["buttons"][self.randomOptions[self.scene_number - 0][self.selected_button]].get("effects")
 
-        # If there is no effects key, just go to the next scene.
+        # If there is no effects key, just go to the next scene. 
         if effects:
+            if "not_random" in effects:
+                if "selected_sound" in effects:
+                    # Play a default sound if nothing in the field.
+                    to_play = effects["selected_sound"] if effects["selected_sound"] else settings.SELECTED_SOUND
+                    settings.SOUND_EFFECTS.play(to_play)
 
-            if "selected_sound" in effects:
-                # Play a default sound if nothing in the field.
-                to_play = effects["selected_sound"] if effects["selected_sound"] else settings.SELECTED_SOUND
-                settings.SOUND_EFFECTS.play(to_play)
+                if "sound_narration" in effects:
+                    settings.NARRATION.play(effects["sound_narration"])
 
-            if "sound_narration" in effects:
-                settings.NARRATION.play(effects["sound_narration"])
+                if "answer" in effects:
+                    self.active_scene_transition_timer = Timer(settings.MESSAGE_TIMER, lambda *args: None)
+                    self.active_scene_transition_timer.start()
+                    self.message = effects["answer"]
 
-            if "answer" in effects:
-                self.active_scene_transition_timer = Timer(settings.MESSAGE_TIMER, lambda *args: None)
-                self.active_scene_transition_timer.start()
-                self.message = effects["answer"]
+                if "output" in effects:
+                    for op in effects["output"]:
+                        self.outputs[op].pulse()
 
-            if "output" in effects:
-                for op in effects["output"]:
-                    self.outputs[op].pulse()
+                if "restart" in effects:
+                    self.scene_number = -1
+                    self.swap_manager = True
+            else:
+                if "selected_sound" in effects:
+                    # Play a default sound if nothing in the field.
+                    to_play = effectsRandom["selected_sound"] if effectsRandom["selected_sound"] else settings.SELECTED_SOUND
+                    settings.SOUND_EFFECTS.play(to_play)
 
-            if "restart" in effects:
-                self.scene_number = -1
-                self.swap_manager = True
+                if "sound_narration" in effectsRandom:
+                    settings.NARRATION.play(effectsRandom["sound_narration"])
 
+                if "answer" in effectsRandom:
+                    self.active_scene_transition_timer = Timer(settings.MESSAGE_TIMER, lambda *args: None)
+                    self.active_scene_transition_timer.start()
+                    self.message = effectsRandom["answer"]
+
+                if "output" in effectsRandom:
+                    for op in effectsRandom["output"]:
+                        self.outputs[op].pulse()
+
+                if "restart" in effectsRandom:
+                    self.scene_number = -1
+                    self.swap_manager = True
 
 
         # After everything is processed, enter scene wind-down mode.
