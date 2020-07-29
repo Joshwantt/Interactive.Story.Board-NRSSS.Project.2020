@@ -36,8 +36,10 @@ SELECTED_SOUND = pygame.mixer.Sound("assets/selected.wav")
 # Pins
 ## Outputs
 FAN = 26
-VIBE_MAT = 19
-ROTORS = 13
+VIBE_MAT = 13
+ROTORS = 6
+
+##CUSTOM = 6 ## ROTOR are supposed to be on 13. swapped for testing with client.
 
 ## Inputs
 BUTTON_ONE = 16
@@ -77,7 +79,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/start.png",
                 "frames" : 4,
-                "location": [560, 720],
+                "location": [410, 620],
                 "text": "Start",
                 "effects": {
                     "not_random": "Yes",
@@ -87,7 +89,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/options.png",
                 "frames" : 4,
-                "location": [960, 720],
+                "location": [960, 620],
                 "text": "Options",
                 "effects": {
                     "not_random": "Yes",
@@ -97,7 +99,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/shutdown.png",
                 "frames" : 4,
-                "location": [1360, 720],
+                "location": [1510, 620],
                 "text": "Shutdown",
                 "effects": {
                     "not_random": "Yes",
@@ -116,7 +118,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
-                "location": [510, 720],
+                "location": [410, 620],
                 "text": "Easy",
                 "effects": {
                     "not_random": "Yes",
@@ -128,7 +130,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [960, 720],
+                "location": [960, 620],
                 "text": "Advanced",
                 "effects": {
                     "not_random": "Yes",
