@@ -11,7 +11,7 @@ from random import shuffle
 
 
 """
-This is the main game script by Vortech 2019.
+This is the main game script by Vortech 2019, Extended by the The Nights Watch 2020.
 
 It will read in the narrative.json file and operate the game logic based on that.
 
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     with open("narrative.json", "r") as f:
         narrative = json.loads(f.read())
 
-    screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+    screen = pygame.display.set_mode((0,0), pygame.RESIZABLE)
     design_canvas = pygame.Surface([settings.DESIGN_WIDTH, settings.DESIGN_HEIGHT])
 
     # Draw loading screen.

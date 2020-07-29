@@ -1,6 +1,6 @@
 [
 	{
-		"title" : "START",
+		"title" : "My Story",
 		"not_random" : "Yes",
 		"sound_narration" : "title.wav",
 				
@@ -15,7 +15,6 @@
 				"not_random" : "Yes"
 				}
 			}
-
 		]		
 	},
 	{
@@ -31,7 +30,7 @@
 				"sound_hover" : "baby.wav",
 				"effects" : {
 					"selected_sound" : "baby.wav",
-					"output" : ["fan"]
+					"output" : ["fan","vibe_mat","rotors","custom"]
 				}
 			},
 			{
@@ -43,7 +42,7 @@
 				"sound_hover" : "alien.wav",
 				"effects" : {
 					"selected_sound" : "alien.wav",
-					"output" : ["vibe_mat"]
+					"output" : ["fan","vibe_mat","rotors","custom"]
 				}
 			},
 			{
@@ -55,7 +54,7 @@
 				"sound_hover" : "dragon.wav",
 				"effects" : {
 					"selected_sound" : "dragon.wav",
-					"output" : ["rotors"]
+					"output" : ["fan","vibe_mat","rotors","custom"]
 				}
 			},
 			{
@@ -67,7 +66,7 @@
 				"sound_hover" : "princess.wav",
 				"effects" : {
 					"selected_sound" : "princess.wav",
-					"output" : ["vibe_mat"]
+					"output" : ["fan","vibe_mat","rotors","custom"]
 				}
 			},
 			{
