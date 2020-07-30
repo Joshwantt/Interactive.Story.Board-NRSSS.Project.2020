@@ -2013,7 +2013,7 @@
 				"sound_hover" : "teacher.wav",
 				"effects" : {
 					"selected_sound" : "teacher.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			},
 			{
@@ -2193,7 +2193,7 @@
 				"sound_hover" : "lunch.wav",
 				"effects" : {
 					"selected_sound" : "lunch.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			},
 			{
@@ -2289,7 +2289,7 @@
 				"sound_hover" : "book.wav",
 				"effects" : {
 					"selected_sound" : "book.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			}
 		]	
@@ -2367,7 +2367,7 @@
 				"sound_hover" : "map.wav",
 				"effects" : {
 					"selected_sound" : "map.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			},
 			{
@@ -2793,7 +2793,7 @@
 				"sound_hover" : "pit.wav",
 				"effects" : {
 					"selected_sound" : "pit.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			}
 		]	
@@ -2937,7 +2937,7 @@
 				"sound_hover" : "here.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			},
 			{
@@ -3033,7 +3033,7 @@
 				"sound_hover" : "right.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			},
 			{
@@ -3171,7 +3171,7 @@
 				"sound_hover" : "tree.wav",
 				"effects" : {
 					"selected_sound" : "tree.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			}
 		]	
@@ -3363,7 +3363,7 @@
 				"sound_hover" : "crown.wav",
 				"effects" : {
 					"selected_sound" : "crown.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			},
 			{
@@ -3465,7 +3465,7 @@
 				"sound_hover" : "silly.wav",
 				"effects" : {
 					"selected_sound" : "silly.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			},
 			{
@@ -3627,7 +3627,7 @@
 				"sound_hover" : "half_an_hour.wav",
 				"effects" : {
 					"selected_sound" : "half_an_hour.wav",
-					"output" : ["custom"]
+					"output" : ["fan","custom"]
 				}
 			},
 			{
