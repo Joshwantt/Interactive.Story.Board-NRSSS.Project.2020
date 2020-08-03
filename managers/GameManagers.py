@@ -1,6 +1,6 @@
 import pygame
 from board_components.inputs import InputController
-from board_components.outputs import Fan, VibeMat, Rotors, Custom
+from board_components.outputs import Fan, VibeMat, Rotors
 from game_objects.gui_button import GUIButton
 import settings
 from threading import Timer
@@ -27,7 +27,7 @@ class Manager(object):
         self.scene_active = False
         self.narrative_played = False
         self.scene_wind_down = False
-        
+        ###self.chosenAnswers = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
         self.randomOptions = [[10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10]]
         
         random.seed()
@@ -74,6 +74,7 @@ class Manager(object):
     def render_text(self):
         if "title" in self.narrative[self.scene_number]:
             self.draw_text_lines(self.narrative[self.scene_number]["title"], self.screen.get_width()/2, self.screen.get_height()/3)
+            
 
             
     def draw_text_lines(self, text, x, y):
@@ -108,6 +109,7 @@ class Manager(object):
 
             for i, button in enumerateButtons:
                 if "not_random" in self.narrative[self.scene_number]:
+                    ###button["preload_button"] = GUIButton(pygame.Surface([settings.DESIGN_WIDTH, settings.DESIGN_HEIGHT]), button["location"], "bla bla bla", button.get("sound_hover", None))
                     self.buttons.append(button["preload_button"])
                 else:
                     if (self.randomOptions[self.scene_number][0] == i):
@@ -259,8 +261,7 @@ class GameManager(Manager):
         self.outputs = {
             "fan" : Fan(settings.FAN, settings.FAN_PULSE_DURATION, settings.FAN_PULSE_INTERVAL, settings.FAN_PULSE_TOTAL),
             "rotors" : Rotors(settings.ROTORS, settings.ROTORS_PULSE_DURATION, settings.ROTORS_PULSE_INTERVAL, settings.ROTORS_PULSE_TOTAL),
-            "vibe_mat" : VibeMat(settings.VIBE_MAT, settings.VIBE_MAT_PULSE_DURATION, settings.VIBE_MAT_PULSE_INTERVAL, settings.VIBE_MAT_PULSE_TOTAL),
-            "custom" : Custom(settings.CUSTOM, settings.CUSTOM_PULSE_DURATION, settings.CUSTOM_PULSE_INTERVAL, settings.CUSTOM_PULSE_TOTAL)
+            "vibe_mat" : VibeMat(settings.VIBE_MAT, settings.VIBE_MAT_PULSE_DURATION, settings.VIBE_MAT_PULSE_INTERVAL, settings.VIBE_MAT_PULSE_TOTAL)
         }
        
 
@@ -281,7 +282,8 @@ class GameManager(Manager):
             effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
         else:
             effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
-            effectsRandom = self.narrative[self.scene_number]["buttons"][self.randomOptions[self.scene_number - 0][self.selected_button]].get("effects")
+            effectsRandom = self.narrative[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]].get("effects")
+            ###self.chosenAnswers[self.scene_number] = self.randomOptions[self.scene_number][self.selected_button]
 
         # If there is no effects key, just go to the next scene. 
         if effects:
@@ -310,7 +312,7 @@ class GameManager(Manager):
                 if "selected_sound" in effects:
                     # Play a default sound if nothing in the field.
                     to_play = effectsRandom["selected_sound"] if effectsRandom["selected_sound"] else settings.SELECTED_SOUND
-                    settings.SOUND_EFFECTS.play(to_play)
+                    settings.SOUND_EFFECTS.play(to_play, 1)
 
                 if "sound_narration" in effectsRandom:
                     settings.NARRATION.play(effectsRandom["sound_narration"])
