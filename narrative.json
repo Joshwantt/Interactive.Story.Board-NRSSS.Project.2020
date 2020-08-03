@@ -1,6 +1,6 @@
 [
 	{
-		"title" : "My Story",
+		"title" : "START",
 		"not_random" : "Yes",
 		"sound_narration" : "title.wav",
 				
@@ -9,12 +9,13 @@
 				"name" : "start",
 				"frames" : 4,
 				"image" : "assets/img/buttons/start.png",
-				"location" : [960, 620],
+				"location" : [960, 843],
 				"text" : "Start",
 				"effects": {
 				"not_random" : "Yes"
 				}
 			}
+
 		]		
 	},
 	{
@@ -30,7 +31,7 @@
 				"sound_hover" : "baby.wav",
 				"effects" : {
 					"selected_sound" : "baby.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -42,7 +43,7 @@
 				"sound_hover" : "alien.wav",
 				"effects" : {
 					"selected_sound" : "alien.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -54,7 +55,7 @@
 				"sound_hover" : "dragon.wav",
 				"effects" : {
 					"selected_sound" : "dragon.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -66,7 +67,7 @@
 				"sound_hover" : "princess.wav",
 				"effects" : {
 					"selected_sound" : "princess.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -75,10 +76,10 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Scientist",
-				"selected_sound" : "scientist.wav",
+				"sound_hover" : "scientist.wav",
 				"effects" : {
 					"selected_sound" : "scientist.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -90,7 +91,7 @@
 				"sound_hover" : "dog.wav",
 				"effects" : {
 					"selected_sound" : "dog.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -102,7 +103,7 @@
 				"sound_hover" : "fox.wav",
 				"effects" : {
 					"selected_sound" : "fox.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -126,7 +127,7 @@
 				"sound_hover" : "giant.wav",
 				"effects" : {
 					"selected_sound" : "giant.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -156,7 +157,7 @@
 				"sound_hover" : "tiger.wav",
 				"effects" : {
 					"selected_sound" : "tiger.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -168,7 +169,7 @@
 				"sound_hover" : "chef.wav",
 				"effects" : {
 					"selected_sound" : "chef.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -180,7 +181,7 @@
 				"sound_hover" : "dinosaur.wav",
 				"effects" : {
 					"selected_sound" : "dinosaur.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -192,7 +193,7 @@
 				"sound_hover" : "cowboy.wav",
 				"effects" : {
 					"selected_sound" : "cowboy.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -201,10 +202,10 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Ghost",
-				"selected_sound" : "ghost.wav",
+				"sound_hover" : "ghost.wav",
 				"effects" : {
 					"selected_sound" : "ghost.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -216,7 +217,7 @@
 				"sound_hover" : "clown.wav",
 				"effects" : {
 					"selected_sound" : "clown.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -228,7 +229,7 @@
 				"sound_hover" : "policeman.wav",
 				"effects" : {
 					"selected_sound" : "policeman.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -240,7 +241,7 @@
 				"sound_hover" : "turtle.wav",
 				"effects" : {
 					"selected_sound" : "turtle.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -252,7 +253,7 @@
 				"sound_hover" : "pig.wav",
 				"effects" : {
 					"selected_sound" : "pig.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -264,7 +265,7 @@
 				"sound_hover" : "spaceman.wav",
 				"effects" : {
 					"selected_sound" : "spaceman.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -282,7 +283,7 @@
 				"sound_hover" : "castle.wav",
 				"effects" : {
 					"selected_sound" : "castle.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -294,7 +295,7 @@
 				"sound_hover" : "playground.wav",
 				"effects" : {
 					"selected_sound" : "playground.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -306,7 +307,7 @@
 				"sound_hover" : "beach.wav",
 				"effects" : {
 					"selected_sound" : "beach.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -318,7 +319,7 @@
 				"sound_hover" : "zoo.wav",
 				"effects" : {
 					"selected_sound" : "zoo.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -327,10 +328,10 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Clouds",
-				"selected_sound" : "clouds.wav",
+				"sound_hover" : "clouds.wav",
 				"effects" : {
 					"selected_sound" : "clouds.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -342,7 +343,7 @@
 				"sound_hover" : "space.wav",
 				"effects" : {
 					"selected_sound" : "space.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -354,7 +355,7 @@
 				"sound_hover" : "volcano.wav",
 				"effects" : {
 					"selected_sound" : "volcano.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -366,7 +367,7 @@
 				"sound_hover" : "farm.wav",
 				"effects" : {
 					"selected_sound" : "farm.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -378,7 +379,7 @@
 				"sound_hover" : "hospital.wav",
 				"effects" : {
 					"selected_sound" : "hospital.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -390,7 +391,7 @@
 				"sound_hover" : "haunted_house.wav",
 				"effects" : {
 					"selected_sound" : "haunted_house.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -420,7 +421,7 @@
 				"sound_hover" : "stormy.wav",
 				"effects" : {
 					"selected_sound" : "stormy.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -432,7 +433,7 @@
 				"sound_hover" : "rainy.wav",
 				"effects" : {
 					"selected_sound" : "rainy.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -444,7 +445,7 @@
 				"sound_hover" : "cloudy.wav",
 				"effects" : {
 					"selected_sound" : "cloudy.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -453,10 +454,10 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Windy",
-				"selected_sound" : "windy.wav",
+				"sound_hover" : "windy.wav",
 				"effects" : {
 					"selected_sound" : "windy.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -468,7 +469,7 @@
 				"sound_hover" : "hot.wav",
 				"effects" : {
 					"selected_sound" : "hot.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -480,7 +481,7 @@
 				"sound_hover" : "dry.wav",
 				"effects" : {
 					"selected_sound" : "dry.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -492,7 +493,7 @@
 				"sound_hover" : "cold.wav",
 				"effects" : {
 					"selected_sound" : "cold.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -504,7 +505,7 @@
 				"sound_hover" : "warm.wav",
 				"effects" : {
 					"selected_sound" : "fire.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -516,7 +517,7 @@
 				"sound_hover" : "snowy.wav",
 				"effects" : {
 					"selected_sound" : "cold.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -546,7 +547,7 @@
 				"sound_hover" : "sunglasses.wav",
 				"effects" : {
 					"selected_sound" : "sunglasses.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -558,7 +559,7 @@
 				"sound_hover" : "hat.wav",
 				"effects" : {
 					"selected_sound" : "hat.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -570,7 +571,7 @@
 				"sound_hover" : "scarf.wav",
 				"effects" : {
 					"selected_sound" : "scarf.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -579,10 +580,10 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Second Skin",
-				"selected_sound" : "second_skin.wav",
+				"sound_hover" : "second_skin.wav",
 				"effects" : {
 					"selected_sound" : "second_skin.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -594,7 +595,7 @@
 				"sound_hover" : "rain_boots.wav",
 				"effects" : {
 					"selected_sound" : "rain_boots.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -606,7 +607,7 @@
 				"sound_hover" : "tutu.wav",
 				"effects" : {
 					"selected_sound" : "tutu.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -618,7 +619,7 @@
 				"sound_hover" : "scary_mask.wav",
 				"effects" : {
 					"selected_sound" : "scary_mask.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -630,7 +631,7 @@
 				"sound_hover" : "cape.wav",
 				"effects" : {
 					"selected_sound" : "cape.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -642,7 +643,7 @@
 				"sound_hover" : "swimmers.wav",
 				"effects" : {
 					"selected_sound" : "swimmers.wav",
-					"output" : ["vibe_mat"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -660,7 +661,7 @@
 				"sound_hover" : "spaceship.wav",
 				"effects" : {
 					"selected_sound" : "spaceship.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -672,7 +673,7 @@
 				"sound_hover" : "train.wav",
 				"effects" : {
 					"selected_sound" : "train.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -684,7 +685,7 @@
 				"sound_hover" : "dodgem_car.wav",
 				"effects" : {
 					"selected_sound" : "dodgem_car.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -696,7 +697,7 @@
 				"sound_hover" : "jet_ski.wav",
 				"effects" : {
 					"selected_sound" : "jet_ski.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -705,7 +706,7 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Bus",
-				"selected_sound" : "bus.wav",
+				"sound_hover" : "bus.wav",
 				"effects" : {
 					"selected_sound" : "bus.wav",
 					"output" : ["vibe_mat"]
@@ -720,7 +721,7 @@
 				"sound_hover" : "boat.wav",
 				"effects" : {
 					"selected_sound" : "boat.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -732,7 +733,7 @@
 				"sound_hover" : "wheelchair.wav",
 				"effects" : {
 					"selected_sound" : "wheelchair.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -744,7 +745,7 @@
 				"sound_hover" : "taxi.wav",
 				"effects" : {
 					"selected_sound" : "taxi.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -756,7 +757,7 @@
 				"sound_hover" : "car.wav",
 				"effects" : {
 					"selected_sound" : "car.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -768,7 +769,7 @@
 				"sound_hover" : "hot_air_balloon.wav",
 				"effects" : {
 					"selected_sound" : "hot_air_balloon.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -786,7 +787,7 @@
 				"sound_hover" : "mirror.wav",
 				"effects" : {
 					"selected_sound" : "mirror.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -798,7 +799,7 @@
 				"sound_hover" : "tunnel.wav",
 				"effects" : {
 					"selected_sound" : "tunnel.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -810,7 +811,7 @@
 				"sound_hover" : "storm.wav",
 				"effects" : {
 					"selected_sound" : "storm.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -822,7 +823,7 @@
 				"sound_hover" : "forest.wav",
 				"effects" : {
 					"selected_sound" : "forest.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -831,10 +832,10 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Window",
-				"selected_sound" : "window.wav",
+				"sound_hover" : "window.wav",
 				"effects" : {
 					"selected_sound" : "window.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -858,7 +859,7 @@
 				"sound_hover" : "fence.wav",
 				"effects" : {
 					"selected_sound" : "fence.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -870,7 +871,7 @@
 				"sound_hover" : "river.wav",
 				"effects" : {
 					"selected_sound" : "river.wav",
-					"output" : ["fan","vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -882,7 +883,7 @@
 				"sound_hover" : "mud.wav",
 				"effects" : {
 					"selected_sound" : "mud.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -894,7 +895,7 @@
 				"sound_hover" : "fire.wav",
 				"effects" : {
 					"selected_sound" : "fire.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -912,7 +913,7 @@
 				"sound_hover" : "fluffy.wav",
 				"effects" : {
 					"selected_sound" : "fluffy.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -924,7 +925,7 @@
 				"sound_hover" : "cold.wav",
 				"effects" : {
 					"selected_sound" : "cold.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -936,7 +937,7 @@
 				"sound_hover" : "scary.wav",
 				"effects" : {
 					"selected_sound" : "scary.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -948,7 +949,7 @@
 				"sound_hover" : "wet.wav",
 				"effects" : {
 					"selected_sound" : "wet.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -957,10 +958,10 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Smooth",
-				"selected_sound" : "smooth.wav",
+				"sound_hover" : "smooth.wav",
 				"effects" : {
 					"selected_sound" : "smooth.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -972,7 +973,7 @@
 				"sound_hover" : "loud.wav",
 				"effects" : {
 					"selected_sound" : "loud.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -984,7 +985,7 @@
 				"sound_hover" : "scratchy.wav",
 				"effects" : {
 					"selected_sound" : "scratchy.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -996,7 +997,7 @@
 				"sound_hover" : "bumpy.wav",
 				"effects" : {
 					"selected_sound" : "bumpy.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1008,7 +1009,7 @@
 				"sound_hover" : "light.wav",
 				"effects" : {
 					"selected_sound" : "light.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1020,7 +1021,7 @@
 				"sound_hover" : "gross.wav",
 				"effects" : {
 					"selected_sound" : "gross.wav",
-					"output" : ["vibe_mat"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -1038,7 +1039,7 @@
 				"sound_hover" : "drink.wav",
 				"effects" : {
 					"selected_sound" : "drink.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -1050,7 +1051,7 @@
 				"sound_hover" : "nap.wav",
 				"effects" : {
 					"selected_sound" : "nap.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1062,7 +1063,7 @@
 				"sound_hover" : "stretchy.wav",
 				"effects" : {
 					"selected_sound" : "stretchy.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1074,7 +1075,7 @@
 				"sound_hover" : "read_a_book.wav",
 				"effects" : {
 					"selected_sound" : "read_a_book.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1083,7 +1084,7 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Chocolate cake",
-				"selected_sound" : "chocolate_cake.wav",
+				"sound_hover" : "chocolate_cake.wav",
 				"effects" : {
 					"selected_sound" : "chocolate_cake.wav",
 					"output" : ["vibe_mat"]
@@ -1098,7 +1099,7 @@
 				"sound_hover" : "go_to_the_toilet.wav",
 				"effects" : {
 					"selected_sound" : "go_to_the_toilet.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1110,7 +1111,7 @@
 				"sound_hover" : "make_a_phone_call.wav",
 				"effects" : {
 					"selected_sound" : "make_a_phone_call.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1122,7 +1123,7 @@
 				"sound_hover" : "scratch.wav",
 				"effects" : {
 					"selected_sound" : "scratch.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1134,7 +1135,7 @@
 				"sound_hover" : "listen_to_music.wav",
 				"effects" : {
 					"selected_sound" : "listen_to_music.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1146,7 +1147,7 @@
 				"sound_hover" : "ask_for_directions.wav",
 				"effects" : {
 					"selected_sound" : "ask_for_directions.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -1164,7 +1165,7 @@
 				"sound_hover" : "pedestrian_crossing.wav",
 				"effects" : {
 					"selected_sound" : "pedestrian_crossing.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -1176,7 +1177,7 @@
 				"sound_hover" : "bridge.wav",
 				"effects" : {
 					"selected_sound" : "bridge.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1188,7 +1189,7 @@
 				"sound_hover" : "stepping_stones.wav",
 				"effects" : {
 					"selected_sound" : "stepping_stones.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1200,7 +1201,7 @@
 				"sound_hover" : "train_track.wav",
 				"effects" : {
 					"selected_sound" : "train_track.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1209,10 +1210,10 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Rainbow",
-				"selected_sound" : "rainbow.wav",
+				"sound_hover" : "rainbow.wav",
 				"effects" : {
 					"selected_sound" : "rainbow.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1224,7 +1225,7 @@
 				"sound_hover" : "fence.wav",
 				"effects" : {
 					"selected_sound" : "fence.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1236,7 +1237,7 @@
 				"sound_hover" : "plinth.wav",
 				"effects" : {
 					"selected_sound" : "door.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1248,7 +1249,7 @@
 				"sound_hover" : "drain.wav",
 				"effects" : {
 					"selected_sound" : "drain.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1260,7 +1261,7 @@
 				"sound_hover" : "hill.wav",
 				"effects" : {
 					"selected_sound" : "hill.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1272,7 +1273,7 @@
 				"sound_hover" : "speed_bump.wav",
 				"effects" : {
 					"selected_sound" : "speed_bump.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -1291,7 +1292,7 @@
 				"selected_sound" : "hard.wav",
 				"effects" : {
 					"selected_sound" : "hard.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -1303,8 +1304,7 @@
 				"sound_hover" : "heavy.wav",
 				"selected_sound" : "heavy.wav",
 				"effects" : {
-					"selected_sound" : "heavy.wav",
-					"output" : ["vibe_mat","custom"]
+					"selected_sound" : "heavy.wav","output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1316,8 +1316,7 @@
 				"sound_hover" : "sticky.wav",
 				"selected_sound" : "sticky.wav",
 				"effects" : {
-					"selected_sound" : "sticky.wav",
-					"output" : ["vibe_mat"]
+					"selected_sound" : "sticky.wav","output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1329,8 +1328,7 @@
 				"sound_hover" : "hot.wav",
 				"selected_sound" : "hot.wav",
 				"effects" : {
-					"selected_sound" : "hot.wav",
-					"output" : ["fan"]
+					"selected_sound" : "hot.wav","output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1339,10 +1337,9 @@
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [960, 620],
 				"text" : "Lumpy",
-				"selected_sound" : "lumpy.wav",
+				"sound_hover" : "lumpy.wav",
 				"effects" : {
-					"selected_sound" : "lumpy.wav",
-					"output" : ["vibe_mat"]
+					"selected_sound" : "lumpy.wav","output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1354,8 +1351,7 @@
 				"sound_hover" : "rough.wav",
 				"selected_sound" : "rough.wav",
 				"effects" : {
-					"selected_sound" : "rough.wav",
-					"output" : ["rotors"]
+					"selected_sound" : "rough.wav","output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1367,8 +1363,7 @@
 				"sound_hover" : "stretchy.wav",
 				"selected_sound" : "stretchy.wav",
 				"effects" : {
-					"selected_sound" : "stretchy.wav",
-					"output" : ["fan"]
+					"selected_sound" : "stretchy.wav","output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1380,8 +1375,7 @@
 				"sound_hover" : "quiet.wav",
 				"selected_sound" : "quiet.wav",
 				"effects" : {
-					"selected_sound" : "quiet.wav",
-					"output" : ["fan","custom"]
+					"selected_sound" : "quiet.wav","output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1393,8 +1387,7 @@
 				"sound_hover" : "dark.wav",
 				"selected_sound" : "dark.wav",
 				"effects" : {
-					"selected_sound" : "dark.wav",
-					"output" : ["vibe_mat"]
+					"selected_sound" : "dark.wav","output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1406,8 +1399,7 @@
 				"sound_hover" : "freezing.wav",
 				"selected_sound" : "freezing.wav",
 				"effects" : {
-					"selected_sound" : "freezing.wav",
-					"output" : ["fan"]
+					"selected_sound" : "freezing.wav","output" : ["fan"]
 				}
 			}
 		]	
@@ -1425,7 +1417,7 @@
 				"sound_hover" : "elephant.wav",
 				"effects" : {
 					"selected_sound" : "elephant.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -1437,7 +1429,7 @@
 				"sound_hover" : "mermaid.wav",
 				"effects" : {
 					"selected_sound" : "mermaid.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1449,7 +1441,7 @@
 				"sound_hover" : "friend.wav",
 				"effects" : {
 					"selected_sound" : "friend.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1461,7 +1453,7 @@
 				"sound_hover" : "kangaroo.wav",
 				"effects" : {
 					"selected_sound" : "kangaroo.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1485,7 +1477,7 @@
 				"sound_hover" : "unicorn.wav",
 				"effects" : {
 					"selected_sound" : "unicorn.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1497,7 +1489,7 @@
 				"sound_hover" : "stuntman.wav",
 				"effects" : {
 					"selected_sound" : "stuntman.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1509,7 +1501,7 @@
 				"sound_hover" : "werewolf.wav",
 				"effects" : {
 					"selected_sound" : "werewolf.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1521,7 +1513,7 @@
 				"sound_hover" : "spider.wav",
 				"effects" : {
 					"selected_sound" : "spider.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1533,7 +1525,7 @@
 				"sound_hover" : "king.wav",
 				"effects" : {
 					"selected_sound" : "king.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -1551,7 +1543,7 @@
 				"sound_hover" : "fat.wav",
 				"effects" : {
 					"selected_sound" : "fat.wav",
-					"output" : ["vibe_mat"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -1563,7 +1555,7 @@
 				"sound_hover" : "clever.wav",
 				"effects" : {
 					"selected_sound" : "clever.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1575,7 +1567,7 @@
 				"sound_hover" : "mad.wav",
 				"effects" : {
 					"selected_sound" : "mad.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1587,7 +1579,7 @@
 				"sound_hover" : "sleepy.wav",
 				"effects" : {
 					"selected_sound" : "sleepy.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1599,7 +1591,7 @@
 				"sound_hover" : "gross.wav",
 				"effects" : {
 					"selected_sound" : "gross.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1611,7 +1603,7 @@
 				"sound_hover" : "mean.wav",
 				"effects" : {
 					"selected_sound" : "mean.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1623,7 +1615,7 @@
 				"sound_hover" : "cheeky.wav",
 				"effects" : {
 					"selected_sound" : "cheeky.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1635,7 +1627,7 @@
 				"sound_hover" : "crazy.wav",
 				"effects" : {
 					"selected_sound" : "crazy.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1647,7 +1639,7 @@
 				"sound_hover" : "naughty.wav",
 				"effects" : {
 					"selected_sound" : "naughty.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1659,7 +1651,7 @@
 				"sound_hover" : "my_favourite.wav",
 				"effects" : {
 					"selected_sound" : "my_favourite.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -1677,7 +1669,7 @@
 				"sound_hover" : "100_years.wav",
 				"effects" : {
 					"selected_sound" : "100_years.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -1689,7 +1681,7 @@
 				"sound_hover" : "2_days.wav",
 				"effects" : {
 					"selected_sound" : "2_days.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1701,7 +1693,7 @@
 				"sound_hover" : "5_minutes.wav",
 				"effects" : {
 					"selected_sound" : "5_minutes.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1713,7 +1705,7 @@
 				"sound_hover" : "25_seconds.wav",
 				"effects" : {
 					"selected_sound" : "25_seconds.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1725,7 +1717,7 @@
 				"sound_hover" : "all_day.wav",
 				"effects" : {
 					"selected_sound" : "all_day.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1737,7 +1729,7 @@
 				"sound_hover" : "all_night.wav",
 				"effects" : {
 					"selected_sound" : "all_night.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1749,7 +1741,7 @@
 				"sound_hover" : "a_month.wav",
 				"effects" : {
 					"selected_sound" : "a_month.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1761,7 +1753,7 @@
 				"sound_hover" : "a_minute.wav",
 				"effects" : {
 					"selected_sound" : "a_minute.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1773,7 +1765,7 @@
 				"sound_hover" : "a_little_while.wav",
 				"effects" : {
 					"selected_sound" : "a_little_while.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1785,7 +1777,7 @@
 				"sound_hover" : "forever.wav",
 				"effects" : {
 					"selected_sound" : "forever.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -1803,7 +1795,7 @@
 				"sound_hover" : "have_a_party.wav",
 				"effects" : {
 					"selected_sound" : "have_a_party.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -1827,7 +1819,7 @@
 				"sound_hover" : "look_around.wav",
 				"effects" : {
 					"selected_sound" : "look_around.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1851,7 +1843,7 @@
 				"sound_hover" : "cry.wav",
 				"effects" : {
 					"selected_sound" : "cry.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1863,7 +1855,7 @@
 				"sound_hover" : "sigh.wav",
 				"effects" : {
 					"selected_sound" : "sigh.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1887,7 +1879,7 @@
 				"sound_hover" : "high_five.wav",
 				"effects" : {
 					"selected_sound" : "high_five.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1899,7 +1891,7 @@
 				"sound_hover" : "whistle.wav",
 				"effects" : {
 					"selected_sound" : "whistle.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1911,7 +1903,7 @@
 				"sound_hover" : "hug.wav",
 				"effects" : {
 					"selected_sound" : "hug.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -1929,7 +1921,7 @@
 				"sound_hover" : "fairy.wav",
 				"effects" : {
 					"selected_sound" : "fairy.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -1941,7 +1933,7 @@
 				"sound_hover" : "cat.wav",
 				"effects" : {
 					"selected_sound" : "cat.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1953,7 +1945,7 @@
 				"sound_hover" : "monster.wav",
 				"effects" : {
 					"selected_sound" : "monster.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1965,7 +1957,7 @@
 				"sound_hover" : "robot.wav",
 				"effects" : {
 					"selected_sound" : "robot.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1977,7 +1969,7 @@
 				"sound_hover" : "prince.wav",
 				"effects" : {
 					"selected_sound" : "prince.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -1989,7 +1981,7 @@
 				"sound_hover" : "possum.wav",
 				"effects" : {
 					"selected_sound" : "possum.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2001,7 +1993,7 @@
 				"sound_hover" : "butterfly.wav",
 				"effects" : {
 					"selected_sound" : "butterfly.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2013,7 +2005,7 @@
 				"sound_hover" : "teacher.wav",
 				"effects" : {
 					"selected_sound" : "teacher.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2025,7 +2017,7 @@
 				"sound_hover" : "wizard.wav",
 				"effects" : {
 					"selected_sound" : "wizard.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2037,7 +2029,7 @@
 				"sound_hover" : "donkey.wav",
 				"effects" : {
 					"selected_sound" : "donkey.wav",
-					"output" : ["rotors"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -2055,7 +2047,7 @@
 				"sound_hover" : "fireman.wav",
 				"effects" : {
 					"selected_sound" : "fireman.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -2067,7 +2059,7 @@
 				"sound_hover" : "bear.wav",
 				"effects" : {
 					"selected_sound" : "bear.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2079,7 +2071,7 @@
 				"sound_hover" : "cow.wav",
 				"effects" : {
 					"selected_sound" : "cow.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2091,7 +2083,7 @@
 				"sound_hover" : "knight.wav",
 				"effects" : {
 					"selected_sound" : "knight.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2103,7 +2095,7 @@
 				"sound_hover" : "superhero.wav",
 				"effects" : {
 					"selected_sound" : "superhero.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2115,7 +2107,7 @@
 				"sound_hover" : "magician.wav",
 				"effects" : {
 					"selected_sound" : "magician.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2127,7 +2119,7 @@
 				"sound_hover" : "giraffe.wav",
 				"effects" : {
 					"selected_sound" : "giraffe.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2139,7 +2131,7 @@
 				"sound_hover" : "witch.wav",
 				"effects" : {
 					"selected_sound" : "witch.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2163,7 +2155,7 @@
 				"sound_hover" : "builder.wav",
 				"effects" : {
 					"selected_sound" : "builder.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -2181,7 +2173,7 @@
 				"sound_hover" : "harp.wav",
 				"effects" : {
 					"selected_sound" : "harp.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -2193,7 +2185,7 @@
 				"sound_hover" : "lunch.wav",
 				"effects" : {
 					"selected_sound" : "lunch.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2205,7 +2197,7 @@
 				"sound_hover" : "puppy.wav",
 				"effects" : {
 					"selected_sound" : "puppy.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2229,7 +2221,7 @@
 				"sound_hover" : "money.wav",
 				"effects" : {
 					"selected_sound" : "money.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2253,7 +2245,7 @@
 				"sound_hover" : "bag.wav",
 				"effects" : {
 					"selected_sound" : "bag.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2265,7 +2257,7 @@
 				"sound_hover" : "wheelchair.wav",
 				"effects" : {
 					"selected_sound" : "wheelchair.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2289,7 +2281,7 @@
 				"sound_hover" : "book.wav",
 				"effects" : {
 					"selected_sound" : "book.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -2307,7 +2299,7 @@
 				"sound_hover" : "magnifying_glass.wav",
 				"effects" : {
 					"selected_sound" : "magnifying_glass.wav",
-					"output" : ["vibe_mat"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -2319,7 +2311,7 @@
 				"sound_hover" : "rope.wav",
 				"effects" : {
 					"selected_sound" : "rope.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2343,7 +2335,7 @@
 				"sound_hover" : "ipad.wav",
 				"effects" : {
 					"selected_sound" : "ipad.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2355,7 +2347,7 @@
 				"sound_hover" : "tissues.wav",
 				"effects" : {
 					"selected_sound" : "tissues.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2367,7 +2359,7 @@
 				"sound_hover" : "map.wav",
 				"effects" : {
 					"selected_sound" : "map.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2379,7 +2371,7 @@
 				"sound_hover" : "phone.wav",
 				"effects" : {
 					"selected_sound" : "phone.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2391,7 +2383,7 @@
 				"sound_hover" : "toothbrush.wav",
 				"effects" : {
 					"selected_sound" : "toothbrush.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2415,7 +2407,7 @@
 				"sound_hover" : "first_aid_kit.wav",
 				"effects" : {
 					"selected_sound" : "first_aid_kit.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -2433,7 +2425,7 @@
 				"sound_hover" : "shops.wav",
 				"effects" : {
 					"selected_sound" : "shops.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -2445,7 +2437,7 @@
 				"sound_hover" : "light_house.wav",
 				"effects" : {
 					"selected_sound" : "light_house.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2457,7 +2449,7 @@
 				"sound_hover" : "grandmashouse.wav",
 				"effects" : {
 					"selected_sound" : "grandmashouse.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2469,7 +2461,7 @@
 				"sound_hover" : "river.wav",
 				"effects" : {
 					"selected_sound" : "river.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2481,7 +2473,7 @@
 				"sound_hover" : "top_of_the_beanstalk.wav",
 				"effects" : {
 					"selected_sound" : "top_of_the_beanstalk.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2493,7 +2485,7 @@
 				"sound_hover" : "farm.wav",
 				"effects" : {
 					"selected_sound" : "farm.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2505,7 +2497,7 @@
 				"sound_hover" : "island.wav",
 				"effects" : {
 					"selected_sound" : "island.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2517,7 +2509,7 @@
 				"sound_hover" : "movies.wav",
 				"effects" : {
 					"selected_sound" : "movies.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2529,7 +2521,7 @@
 				"sound_hover" : "school.wav",
 				"effects" : {
 					"selected_sound" : "school.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2541,7 +2533,7 @@
 				"sound_hover" : "jungle.wav",
 				"effects" : {
 					"selected_sound" : "jungle.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -2559,7 +2551,7 @@
 				"sound_hover" : "helicopter.wav",
 				"effects" : {
 					"selected_sound" : "helicopter.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -2571,7 +2563,7 @@
 				"sound_hover" : "racing_car.wav",
 				"effects" : {
 					"selected_sound" : "racing_car.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2583,7 +2575,7 @@
 				"sound_hover" : "scooter.wav",
 				"effects" : {
 					"selected_sound" : "scooter.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2595,7 +2587,7 @@
 				"sound_hover" : "unicycle.wav",
 				"effects" : {
 					"selected_sound" : "unicycle.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2607,7 +2599,7 @@
 				"sound_hover" : "aeroplane.wav",
 				"effects" : {
 					"selected_sound" : "aeroplane.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2619,7 +2611,7 @@
 				"sound_hover" : "pirate_ship.wav",
 				"effects" : {
 					"selected_sound" : "pirate_ship.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2631,7 +2623,7 @@
 				"sound_hover" : "truck.wav",
 				"effects" : {
 					"selected_sound" : "truck.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2643,7 +2635,7 @@
 				"sound_hover" : "digger.wav",
 				"effects" : {
 					"selected_sound" : "digger.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2655,7 +2647,7 @@
 				"sound_hover" : "time_machine.wav",
 				"effects" : {
 					"selected_sound" : "time_machine.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2667,7 +2659,7 @@
 				"sound_hover" : "motor_bike.wav",
 				"effects" : {
 					"selected_sound" : "motor_bike.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -2685,7 +2677,7 @@
 				"sound_hover" : "toilet.wav",
 				"effects" : {
 					"selected_sound" : "toilet.wav",
-					"output" : ["rotors"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -2697,7 +2689,7 @@
 				"sound_hover" : "darkness.wav",
 				"effects" : {
 					"selected_sound" : "darkness.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2709,7 +2701,7 @@
 				"sound_hover" : "curtains.wav",
 				"effects" : {
 					"selected_sound" : "curtains.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2721,7 +2713,7 @@
 				"sound_hover" : "bushes.wav",
 				"effects" : {
 					"selected_sound" : "bushes.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2733,7 +2725,7 @@
 				"sound_hover" : "water.wav",
 				"effects" : {
 					"selected_sound" : "water.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2745,7 +2737,7 @@
 				"sound_hover" : "cave.wav",
 				"effects" : {
 					"selected_sound" : "cave.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2757,7 +2749,7 @@
 				"sound_hover" : "sand.wav",
 				"effects" : {
 					"selected_sound" : "sand.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2781,7 +2773,7 @@
 				"sound_hover" : "slime.wav",
 				"effects" : {
 					"selected_sound" : "slime.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2793,7 +2785,7 @@
 				"sound_hover" : "pit.wav",
 				"effects" : {
 					"selected_sound" : "pit.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -2811,7 +2803,7 @@
 				"sound_hover" : "hard.wav",
 				"effects" : {
 					"selected_sound" : "hard.wav",
-					"output" : ["vibe_mat"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -2823,7 +2815,7 @@
 				"sound_hover" : "heavy.wav",
 				"effects" : {
 					"selected_sound" : "heavy.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2835,7 +2827,7 @@
 				"sound_hover" : "sticky.wav",
 				"effects" : {
 					"selected_sound" : "sticky.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2847,7 +2839,7 @@
 				"sound_hover" : "hot.wav",
 				"effects" : {
 					"selected_sound" : "hot.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2859,7 +2851,7 @@
 				"sound_hover" : "lumpy.wav",
 				"effects" : {
 					"selected_sound" : "lumpy.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2871,7 +2863,7 @@
 				"sound_hover" : "rough.wav",
 				"effects" : {
 					"selected_sound" : "rough.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2895,7 +2887,7 @@
 				"sound_hover" : "quiet.wav",
 				"effects" : {
 					"selected_sound" : "quiet.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2907,7 +2899,7 @@
 				"sound_hover" : "dark.wav",
 				"effects" : {
 					"selected_sound" : "dark.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2919,7 +2911,7 @@
 				"sound_hover" : "freezing.wav",
 				"effects" : {
 					"selected_sound" : "freezing.wav",
-					"output" : ["fan","vibe_mat","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -2937,7 +2929,7 @@
 				"sound_hover" : "here.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -2949,7 +2941,7 @@
 				"sound_hover" : "there.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2961,7 +2953,7 @@
 				"sound_hover" : "under.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2973,7 +2965,7 @@
 				"sound_hover" : "over.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2985,7 +2977,7 @@
 				"sound_hover" : "up.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -2997,7 +2989,7 @@
 				"sound_hover" : "down.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3009,7 +3001,7 @@
 				"sound_hover" : "across.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3021,7 +3013,7 @@
 				"sound_hover" : "left.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3033,7 +3025,7 @@
 				"sound_hover" : "right.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3045,13 +3037,13 @@
 				"sound_hover" : "around.wav",
 				"effects" : {
 					"selected_sound" : "dir.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["fan"]
 				}
 			}
 		]	
 	},
 	{
-		"title" : "Then they go up, up, up...",
+		"title" : "Where will they start looking?",
 		"sound_narration" : "story2page10.wav",		
 		"buttons" : [
 			{
@@ -3063,7 +3055,7 @@
 				"sound_hover" : "ladder.wav",
 				"effects" : {
 					"selected_sound" : "ladder.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -3075,7 +3067,7 @@
 				"sound_hover" : "stairs.wav",
 				"effects" : {
 					"selected_sound" : "stairs.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3087,7 +3079,7 @@
 				"sound_hover" : "mountain.wav",
 				"effects" : {
 					"selected_sound" : "mountain.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3099,7 +3091,7 @@
 				"sound_hover" : "rope.wav",
 				"effects" : {
 					"selected_sound" : "rope.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3111,7 +3103,7 @@
 				"sound_hover" : "vine.wav",
 				"effects" : {
 					"selected_sound" : "vine.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3123,7 +3115,7 @@
 				"sound_hover" : "pole.wav",
 				"effects" : {
 					"selected_sound" : "pole.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3135,7 +3127,7 @@
 				"sound_hover" : "elevator.wav",
 				"effects" : {
 					"selected_sound" : "elevator.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3147,7 +3139,7 @@
 				"sound_hover" : "escalator.wav",
 				"effects" : {
 					"selected_sound" : "escalator.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3159,7 +3151,7 @@
 				"sound_hover" : "hoist.wav",
 				"effects" : {
 					"selected_sound" : "hoist.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3171,7 +3163,7 @@
 				"sound_hover" : "tree.wav",
 				"effects" : {
 					"selected_sound" : "tree.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -3201,7 +3193,7 @@
 				"sound_hover" : "cold.wav",
 				"effects" : {
 					"selected_sound" : "cold.wav",
-					"output" : ["fan","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3213,7 +3205,7 @@
 				"sound_hover" : "scary.wav",
 				"effects" : {
 					"selected_sound" : "scary.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3225,7 +3217,7 @@
 				"sound_hover" : "wet.wav",
 				"effects" : {
 					"selected_sound" : "wet.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3249,7 +3241,7 @@
 				"sound_hover" : "loud.wav",
 				"effects" : {
 					"selected_sound" : "loud.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3261,7 +3253,7 @@
 				"sound_hover" : "scratchy.wav",
 				"effects" : {
 					"selected_sound" : "scratchy.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3273,7 +3265,7 @@
 				"sound_hover" : "bumpy.wav",
 				"effects" : {
 					"selected_sound" : "bumpy.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3285,7 +3277,7 @@
 				"sound_hover" : "light.wav",
 				"effects" : {
 					"selected_sound" : "light.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3297,7 +3289,7 @@
 				"sound_hover" : "gross.wav",
 				"effects" : {
 					"selected_sound" : "gross.wav",
-					"output" : ["vibe_mat","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -3315,7 +3307,7 @@
 				"sound_hover" : "treasure.wav",
 				"effects" : {
 					"selected_sound" : "treasure.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -3327,7 +3319,7 @@
 				"sound_hover" : "podd_book.wav",
 				"effects" : {
 					"selected_sound" : "podd_book.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3339,7 +3331,7 @@
 				"sound_hover" : "tamborine.wav",
 				"effects" : {
 					"selected_sound" : "tamborine.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3351,7 +3343,7 @@
 				"sound_hover" : "spell_book.wav",
 				"effects" : {
 					"selected_sound" : "spell_book.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3363,7 +3355,7 @@
 				"sound_hover" : "crown.wav",
 				"effects" : {
 					"selected_sound" : "crown.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3375,7 +3367,7 @@
 				"sound_hover" : "brother.wav",
 				"effects" : {
 					"selected_sound" : "brother.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3387,7 +3379,7 @@
 				"sound_hover" : "letter.wav",
 				"effects" : {
 					"selected_sound" : "letter.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3399,7 +3391,7 @@
 				"sound_hover" : "secret.wav",
 				"effects" : {
 					"selected_sound" : "secret.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3411,7 +3403,7 @@
 				"sound_hover" : "queen.wav",
 				"effects" : {
 					"selected_sound" : "queen.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3423,7 +3415,7 @@
 				"sound_hover" : "nurse.wav",
 				"effects" : {
 					"selected_sound" : "nurse.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -3453,7 +3445,7 @@
 				"sound_hover" : "funny.wav",
 				"effects" : {
 					"selected_sound" : "funny.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3465,7 +3457,7 @@
 				"sound_hover" : "silly.wav",
 				"effects" : {
 					"selected_sound" : "silly.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3477,7 +3469,7 @@
 				"sound_hover" : "cool.wav",
 				"effects" : {
 					"selected_sound" : "cool.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3489,7 +3481,7 @@
 				"sound_hover" : "good.wav",
 				"effects" : {
 					"selected_sound" : "good.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3501,7 +3493,7 @@
 				"sound_hover" : "beautiful.wav",
 				"effects" : {
 					"selected_sound" : "beautiful.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3513,7 +3505,7 @@
 				"sound_hover" : "smart.wav",
 				"effects" : {
 					"selected_sound" : "smart.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3525,7 +3517,7 @@
 				"sound_hover" : "shiny.wav",
 				"effects" : {
 					"selected_sound" : "shiny.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3537,7 +3529,7 @@
 				"sound_hover" : "bad.wav",
 				"effects" : {
 					"selected_sound" : "bad.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3549,7 +3541,7 @@
 				"sound_hover" : "annoying.wav",
 				"effects" : {
 					"selected_sound" : "annoying.wav",
-					"output" : ["rotors"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -3567,7 +3559,7 @@
 				"sound_hover" : "5_hours.wav",
 				"effects" : {
 					"selected_sound" : "5_hours.wav",
-					"output" : ["rotors"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -3591,7 +3583,7 @@
 				"sound_hover" : "a_year.wav",
 				"effects" : {
 					"selected_sound" : "a_year.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3603,7 +3595,7 @@
 				"sound_hover" : "4_days.wav",
 				"effects" : {
 					"selected_sound" : "4_days.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3615,7 +3607,7 @@
 				"sound_hover" : "a_long_time.wav",
 				"effects" : {
 					"selected_sound" : "a_long_time.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3627,7 +3619,7 @@
 				"sound_hover" : "half_an_hour.wav",
 				"effects" : {
 					"selected_sound" : "half_an_hour.wav",
-					"output" : ["fan","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3639,7 +3631,7 @@
 				"sound_hover" : "10_seconds.wav",
 				"effects" : {
 					"selected_sound" : "10_seconds.wav",
-					"output" : ["fan"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3651,7 +3643,7 @@
 				"sound_hover" : "some_time.wav",
 				"effects" : {
 					"selected_sound" : "some_time.wav",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3663,7 +3655,7 @@
 				"sound_hover" : "a_week.wav",
 				"effects" : {
 					"selected_sound" : "a_week.wav",
-					"output" : ["rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3675,7 +3667,7 @@
 				"sound_hover" : "a_few_hours.wav",
 				"effects" : {
 					"selected_sound" : "a_few_hours.wav",
-					"output" : ["fan","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -3693,7 +3685,7 @@
 				"sound_hover" : "feel_proud.wav",
 				"effects" : {
 					"selected_sound" : "feel_proud.wav",
-					"output" : ["fan","vibe_mat","rotors"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -3705,7 +3697,7 @@
 				"sound_hover" : "have_a_sleep.wav",
 				"effects" : {
 					"selected_sound" : "have_a_sleep.wav",
-					"output" : ["vibe_mat","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3717,7 +3709,7 @@
 				"sound_hover" : "laugh.wav",
 				"effects" : {
 					"selected_sound" : "laugh.wav",
-					"output" : ["fan","vibe_mat","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3729,7 +3721,7 @@
 				"sound_hover" : "cheer.wav",
 				"effects" : {
 					"selected_sound" : "cheer.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3753,7 +3745,7 @@
 				"sound_hover" : "take_a_photo.wav",
 				"effects" : {
 					"selected_sound" : "take_a_photo.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3765,7 +3757,7 @@
 				"sound_hover" : "ring_a_friend.wav",
 				"effects" : {
 					"selected_sound" : "ring_a_friend.wav",
-					"output" : ["rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3777,7 +3769,7 @@
 				"sound_hover" : "shake_hands.wav",
 				"effects" : {
 					"selected_sound" : "shake_hands.wav",
-					"output" : ["fan","rotors"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3789,7 +3781,7 @@
 				"sound_hover" : "sing_a_song.wav",
 				"effects" : {
 					"selected_sound" : "sing_a_song.wav",
-					"output" : ["vibe_mat","rotors","custom"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3801,7 +3793,7 @@
 				"sound_hover" : "do_a_dance.wav",
 				"effects" : {
 					"selected_sound" : "do_a_dance.wav",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["fan"]
 				}
 			}
 		]	
@@ -3820,7 +3812,7 @@
 				"effects" : {
 					"selected_sound" : "smile.wav",
 					"not_random" : "Yes",
-					"output" : ["fan","vibe_mat","custom"]
+					"output" : ["rotors"]
 				}
 			},
 			{
@@ -3832,7 +3824,7 @@
 				"effects" : {
 					"selected_sound" : "scary.wav",
 					"not_random" : "Yes",
-					"output" : ["fan","vibe_mat"]
+					"output" : ["vibe_mat"]
 				}
 			},
 			{
@@ -3840,11 +3832,11 @@
 				"image" : "assets/img/buttons/fun2.png",
 				"location" : [1110, 620],
 				"text" : "Fun",
-				"sound_hover" : "fun2.wav",
+				"sound_hover" : "exciting.wav",
 				"effects" : {
 					"selected_sound" : "smile.wav",
 					"not_random" : "Yes",
-					"output" : ["fan","vibe_mat","rotors","custom"]
+					"output" : ["fan"]
 				}
 			},
 			{
@@ -3856,7 +3848,7 @@
 				"effects" : {
 					"selected_sound" : "tooth.wav",
 					"not_random" : "Yes",
-					"output" : ["rotors","custom"]
+					"output" : ["rotors"]
 				}
 			}
 		]	
@@ -3868,7 +3860,7 @@
 			{
 				"frames" : 4,
 				"image" : "assets/img/buttons/start.png",
-				"location" : [960, 620],
+				"location" : [960, 843],
 				"text" : "Restart",
 				"effects" : {
 					"not_random" : "Yes",

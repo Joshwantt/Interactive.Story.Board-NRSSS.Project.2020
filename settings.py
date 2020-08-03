@@ -18,6 +18,7 @@ FONT_SIZE = 100
 BACKGROUND_COLOUR = (0, 0, 0)
 FPS = 10
 LABEL_COLOUR = (255,255,0,100)
+SELECTED_COLOUR = (255, 0, 0, 100)
 DESIGN_WIDTH = 1920
 DESIGN_HEIGHT = 1080
 BUTTON_MIN_ZOOM = 200
@@ -36,9 +37,8 @@ SELECTED_SOUND = pygame.mixer.Sound("assets/selected.wav")
 # Pins
 ## Outputs
 FAN = 26
-VIBE_MAT = 13
-ROTORS = 19 
-CUSTOM = 6
+VIBE_MAT = 19
+ROTORS = 13
 
 ## Inputs
 BUTTON_ONE = 16
@@ -46,18 +46,15 @@ BUTTON_TWO = 20
 SHUTDOWN = 21
 
 # Durations for outputs
-FAN_PULSE_DURATION = 3
-FAN_PULSE_TOTAL = 2
-FAN_PULSE_INTERVAL = 1
-ROTORS_PULSE_DURATION = 0.5
-ROTORS_PULSE_TOTAL = 8
-ROTORS_PULSE_INTERVAL = .25
+FAN_PULSE_DURATION = 1
+FAN_PULSE_TOTAL = 3
+FAN_PULSE_INTERVAL = 2
+ROTORS_PULSE_DURATION = 1
+ROTORS_PULSE_TOTAL = 4
+ROTORS_PULSE_INTERVAL = .5
 VIBE_MAT_PULSE_DURATION = 1
 VIBE_MAT_PULSE_TOTAL = 3
-VIBE_MAT_PULSE_INTERVAL = 0.75
-CUSTOM_PULSE_DURATION = 3
-CUSTOM_PULSE_TOTAL = 2
-CUSTOM_PULSE_INTERVAL = 1
+VIBE_MAT_PULSE_INTERVAL = 1
 
 # This is the narrative structure for the menu.
 
@@ -81,7 +78,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/start.png",
                 "frames" : 4,
-                "location": [410, 620],
+                "location": [560, 720],
                 "text": "Start",
                 "effects": {
                     "not_random": "Yes",
@@ -91,7 +88,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/options.png",
                 "frames" : 4,
-                "location": [960, 620],
+                "location": [960, 720],
                 "text": "Options",
                 "effects": {
                     "not_random": "Yes",
@@ -101,7 +98,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/shutdown.png",
                 "frames" : 4,
-                "location": [1510, 620],
+                "location": [1360, 720],
                 "text": "Shutdown",
                 "effects": {
                     "not_random": "Yes",
@@ -120,7 +117,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
-                "location": [410, 620],
+                "location": [510, 720],
                 "text": "Easy",
                 "effects": {
                     "not_random": "Yes",
@@ -132,7 +129,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [960, 620],
+                "location": [960, 720],
                 "text": "Advanced",
                 "effects": {
                     "not_random": "Yes",
