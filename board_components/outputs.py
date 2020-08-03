@@ -61,6 +61,9 @@ class VibeMat(CommonOutput):
 class Rotors(CommonOutput):
     pass
 
+class Custom(CommonOutput):
+    pass
+
 if __name__ == "__main__":
     o = VibeMat(13, 5, 5, 5)
     o.pulse()

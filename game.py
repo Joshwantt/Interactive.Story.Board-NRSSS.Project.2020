@@ -11,7 +11,7 @@ from random import shuffle
 
 
 """
-This is the main game script by Vortech 2019.
+This is the main game script by Vortech 2019, Extended by the The Nights Watch 2020.
 
 It will read in the narrative.json file and operate the game logic based on that.
 
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     with open("narrative.json", "r") as f:
         narrative = json.loads(f.read())
 
-    screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+    screen = pygame.display.set_mode((0,0), pygame.RESIZABLE)
     design_canvas = pygame.Surface([settings.DESIGN_WIDTH, settings.DESIGN_HEIGHT])
 
     # Draw loading screen.
@@ -56,17 +56,19 @@ if __name__ == "__main__":
 
     def randomise_button_positions(buttons):
         positions = []
-        for button in buttons:
-            positions.append(button["location"])
+        ##for button in buttons:
+        ##    positions.append(button["location"])
 
-        shuffle(positions)
+        ##shuffle(positions)
 
-        for index, button in enumerate(buttons):
-            button["preload_button"].set_pos(positions[index])
-            button["location"] = positions[index]
+        ##for index, button in enumerate(buttons):
+        ##    button["preload_button"].set_pos(positions[index])
+        ##    button["location"] = positions[index]
             
-        buttons.sort(key=lambda x : x["location"][0])
+        ##buttons.sort(key=lambda x : x["location"][0])
 
+
+   
 
     # Pre-render buttons for performance.
     def preload_buttons(_dict, randomise_buttons=False):
@@ -74,7 +76,7 @@ if __name__ == "__main__":
             buttons = item.get("buttons")
             if buttons:
                 for button in buttons:
-                    button["preload_button"] = GUIButton(design_canvas, button["image"], button["location"], button["text"], button["frames"], button.get("sound_hover", None))
+                    button["preload_button"] = GUIButton(design_canvas, button["location"], button["text"], button.get("sound_hover", None))
                 if randomise_buttons:
                     randomise_button_positions(buttons)
                 
