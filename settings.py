@@ -13,7 +13,6 @@ SYSTEM = uname().system
 # If running on the pi it will be Linux.
 DEBUG = False if SYSTEM == "Linux" else True
 PRODUCTION = True
-
 FONT_SIZE = 100
 BACKGROUND_COLOUR = (0, 0, 0)
 FPS = 10
@@ -56,6 +55,9 @@ ROTORS_PULSE_INTERVAL = .5
 VIBE_MAT_PULSE_DURATION = 1
 VIBE_MAT_PULSE_TOTAL = 3
 VIBE_MAT_PULSE_INTERVAL = 1
+CUSTOM_PULSE_DURATION = 3
+CUSTOM_PULSE_TOTAL = 2
+CUSTOM_PULSE_INTERVAL = 1
 
 # This is the narrative structure for the menu.
 

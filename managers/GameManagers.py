@@ -261,7 +261,8 @@ class GameManager(Manager):
         self.outputs = {
             "fan" : Fan(settings.FAN, settings.FAN_PULSE_DURATION, settings.FAN_PULSE_INTERVAL, settings.FAN_PULSE_TOTAL),
             "rotors" : Rotors(settings.ROTORS, settings.ROTORS_PULSE_DURATION, settings.ROTORS_PULSE_INTERVAL, settings.ROTORS_PULSE_TOTAL),
-            "vibe_mat" : VibeMat(settings.VIBE_MAT, settings.VIBE_MAT_PULSE_DURATION, settings.VIBE_MAT_PULSE_INTERVAL, settings.VIBE_MAT_PULSE_TOTAL)
+            "vibe_mat" : VibeMat(settings.VIBE_MAT, settings.VIBE_MAT_PULSE_DURATION, settings.VIBE_MAT_PULSE_INTERVAL, settings.VIBE_MAT_PULSE_TOTAL),
+            "custom" : Custom(settings.CUSTOM, settings.CUSTOM_PULSE_DURATION, settings.CUSTOM_PULSE_INTERVAL, settings.CUSTOM_PULSE_TOTAL)
         }
        
 
