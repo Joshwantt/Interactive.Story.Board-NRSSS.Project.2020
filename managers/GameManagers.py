@@ -73,7 +73,7 @@ class Manager(object):
     # This function will render the text to the screen. It will also add a new line if the width of the screen is exceeded.
     def render_text(self):
         if "title" in self.narrative[self.scene_number]:
-            self.draw_text_lines(self.narrative[self.scene_number]["title"], self.screen.get_width()/2, self.screen.get_height()/3)
+            self.draw_text_lines(self.narrative[self.scene_number]["title"], self.screen.get_width()/2, self.screen.get_height()/5)
             
 
             
