@@ -67,9 +67,9 @@ CUSTOM_PULSE_INTERVAL = 1
 
 def shutdown():
     pygame.quit()
-    if SYSTEM == "Linux":
-        call("clear", shell=True)
-        call("sudo shutdown -h now", shell=True)
+    #if SYSTEM == "Linux":
+        #call("clear", shell=True)
+        #call("sudo shutdown -h now", shell=True)
 
 
 
