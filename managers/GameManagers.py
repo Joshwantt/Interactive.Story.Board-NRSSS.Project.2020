@@ -1,6 +1,6 @@
 import pygame
 from board_components.inputs import InputController
-from board_components.outputs import Fan, VibeMat, Rotors
+from board_components.outputs import Fan, VibeMat, Rotors, Custom
 from game_objects.gui_button import GUIButton
 import settings
 from threading import Timer
