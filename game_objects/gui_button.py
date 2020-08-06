@@ -35,13 +35,13 @@ class GUIButton(object):
         if self.selected == True:
             # If size of button is less than maximum allowed size, increase size
             # Only increase font if selected
-            if self.fontsize < settings.FONT_SIZE + 60:
-                self.fontsize = self.fontsize + 10
+            if self.fontsize < settings.FONT_SIZE + settings.BUTTON_MAX_ZOOM:
+                self.fontsize = self.fontsize + settings.BUTTON_ZOOM_RATE
         else:
             # If size of button is more than minimum allowed size, decrease size
             # Only decrease font if not selected
             if self.fontsize > settings.FONT_SIZE:
-                self.fontsize = self.fontsize - 12
+                self.fontsize = self.fontsize - int(settings.BUTTON_ZOOM_RATE + (settings.BUTTON_ZOOM_RATE/2))
 
         # Check if this is the first frame and if so, play the hover sound.
         if not self.previously_selected and self.selected:
