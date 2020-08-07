@@ -20,14 +20,14 @@ class Manager(object):
         self.font = pygame.font.Font(None, settings.FONT_SIZE)
         self.swap_manager = False
         self.mode = "easy"
-        self.button_cycle_timer = 2.0
+        self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
         self.active_button_cycle_timer = None
         self.active_scene_transition_timer = None
         self.message = ""
         self.scene_active = False
         self.narrative_played = False
         self.scene_wind_down = False
-        
+
         self.randomOptions = [[]]
         random.seed()
         for i in self.narrative:

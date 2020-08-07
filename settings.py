@@ -25,7 +25,7 @@ BUTTON_MAX_ZOOM = 60
 BUTTON_ZOOM_RATE = 10
 MESSAGE_LOCATION = (960, 960)
 MESSAGE_TIMER = 5.0
-CYCLE_BUTTON_TIMER = 2.0
+CYCLE_BUTTON_TIMER = 2.5
 # Set channels.
 pygame.mixer.set_num_channels(3)
 NARRATION = pygame.mixer.Channel(0)
