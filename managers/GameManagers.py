@@ -27,6 +27,9 @@ class Manager(object):
         self.scene_active = False
         self.narrative_played = False
         self.scene_wind_down = False
+        self.beginning = 1  ##default to all option 1 story
+        self.middle = 1     ##if option 2 is needed the variable 2
+        self.ending = 1
 
         self.randomOptions = [[]]
         random.seed()
@@ -48,6 +51,10 @@ class Manager(object):
         # Cleanup some things.
         for button in self.buttons:
             button.cleanup()
+
+        print("beg: "+ str(self.beginning))
+        print("mid: "+str(self.middle))
+        print("end: "+str(self.ending))
 
         # Clear any messages.
         self.message = ""
@@ -265,6 +272,30 @@ class Manager(object):
         else: #else change cycle speed
             self.button_cycle_timer += speed
 
+    def switch_beginning(self, option):
+        # Don't do anything if already in this mode
+        if option == self.beginning:
+            return
+
+        # Change it.
+        self.beginning = option
+
+    def switch_middle(self, option):
+        # Don't do anything if already in this mode
+        if option == self.middle:
+            return
+
+        # Change it.
+        self.middle = option
+
+    def switch_end(self, option):
+        # Don't do anything if already in this mode
+        if option == self.ending:
+            return
+
+        # Change it.
+        self.ending = option
+
 
 class GameManager(Manager):
 
@@ -378,6 +409,15 @@ class MenuManager(Manager):
             effects["plain_function"]()
         if "goto" in effects:
             self.set_scene_index(effects["goto"])
+        if "beginningOption" in effects:
+            self.switch_beginning(effects["beginningOption"])
+            self.beginning = effects["beginningOption"]
+        if "middleOption" in effects:
+            self.switch_middle(effects["middleOption"])
+            self.middle = effects["middleOption"]
+        if "endOption" in effects:
+            self.switch_end(effects["endOption"])
+            self.ending = effects["endOption"]
 
 
 class Managers(object):
@@ -416,9 +456,13 @@ class Managers(object):
                 self.menu_manager.destroy_cycle_timer()
                 self.game_manager.switch_mode(self.menu_manager.mode)
                 self.game_manager.switch_speed(self.menu_manager.button_cycle_timer)
+                self.game_manager.switch_beginning(self.menu_manager.beginning)
+                self.game_manager.switch_middle(self.menu_manager.middle)
+                self.game_manager.switch_end(self.menu_manager.ending)
             else:
                 for button in self.menu_manager.buttons:
                     button.cleanup()
                 self.menu_manager.buttons[0].selected = True
                 self.menu_manager.auto_button_cycle(start=True)
             self.in_menu = not self.in_menu
+            

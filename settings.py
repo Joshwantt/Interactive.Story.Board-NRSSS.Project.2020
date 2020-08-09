@@ -271,7 +271,7 @@ menu_narrative = [
                 "text": "Option 1",
                 "effects": {
                     "not_random": "Yes",
-                    ##do something
+                    "beginningOption": 1,
                     "goto": 0
 
                 }
@@ -283,7 +283,7 @@ menu_narrative = [
                 "text": "Option 2",
                 "effects": {
                     "not_random": "Yes",
-                    ##do something
+                    "beginningOption": 2,
                     "goto": 0
                 }
             }
@@ -301,7 +301,7 @@ menu_narrative = [
                 "text": "Option 1",
                 "effects": {
                     "not_random": "Yes",
-                    ##do something
+                    "middleOption": 1,
                     "goto": 0
 
                 }
@@ -313,7 +313,7 @@ menu_narrative = [
                 "text": "Option 2",
                 "effects": {
                     "not_random": "Yes",
-                    ##do something
+                    "middleOption": 2,
                     "goto": 0
                 }
             }
@@ -331,7 +331,7 @@ menu_narrative = [
                 "text": "Option 1",
                 "effects": {
                     "not_random": "Yes",
-                    ##do something
+                    "endOption": 1,
                     "goto": 0
 
                 }
@@ -343,7 +343,7 @@ menu_narrative = [
                 "text": "Option 2",
                 "effects": {
                     "not_random": "Yes",
-                    ##do something
+                    "endOption": 2,
                     "goto": 0
                 }
             }
