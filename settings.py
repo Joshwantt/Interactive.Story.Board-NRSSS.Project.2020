@@ -25,7 +25,8 @@ BUTTON_MAX_ZOOM = 60
 BUTTON_ZOOM_RATE = 10
 MESSAGE_LOCATION = (960, 960)
 MESSAGE_TIMER = 5.0
-CYCLE_BUTTON_TIMER = 2.5
+INITIAL_CYCLE_TIMER = 3
+CYCLE_BUTTON_TIMER = INITIAL_CYCLE_TIMER
 # Set channels.
 pygame.mixer.set_num_channels(3)
 NARRATION = pygame.mixer.Channel(0)
@@ -188,10 +189,10 @@ menu_narrative = [
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
                 "location": [510, 620],
-                "text": "Slow",
+                "text": "Slower(+1)",
                 "effects": {
                     "not_random": "Yes",
-                    "speed": 6,
+                    "speedChange": 0.5,
                     "goto": 0
 
                 }
@@ -200,10 +201,10 @@ menu_narrative = [
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
                 "location": [960, 620],
-                "text": "Default",
+                "text": "Reset("+str(INITIAL_CYCLE_TIMER)+")",
                 "effects": {
                     "not_random": "Yes",
-                    "speed": 3,
+                    "speedReset": INITIAL_CYCLE_TIMER,
                     "goto": 0
                 }
             },
@@ -211,10 +212,10 @@ menu_narrative = [
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
                 "location": [1510, 620],
-                "text": "Fast",
+                "text": "Faster(-0.5)",
                 "effects": {
                     "not_random": "Yes",
-                    "speed": 2,
+                    "speedChange": -0.25,
                     "goto": 0
                 }
             }
