@@ -18,6 +18,7 @@ class Manager(object):
         self.scene_number = 0
         # Create a font. At this stage, its nothing at 25 pt.
         self.font = pygame.font.Font(None, settings.FONT_SIZE)
+        self.fontMax = pygame.font.Font(None, (settings.FONT_SIZE+settings.BUTTON_MAX_ZOOM))
         self.swap_manager = False
         self.mode = "easy"
         self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
@@ -27,6 +28,10 @@ class Manager(object):
         self.scene_active = False
         self.narrative_played = False
         self.scene_wind_down = False
+        self.beginning = 1  ##default to all option 1 story
+        self.middle = 1     ##if option 2 is needed the variable is set to 2
+        self.ending = 1
+        self.fontSize = settings.FONT_SIZE
 
         self.randomOptions = [[]]
         random.seed()
@@ -252,6 +257,50 @@ class Manager(object):
 
         # Change it.
         self.mode = mode
+    
+    def switch_speed(self, speed):
+
+        # Don't do anything if already in this mode
+        if self.button_cycle_timer <= 1:
+            return
+
+        # Change it.
+        if speed == 3: #if speed is 3 it means that speed is trying to be reset
+            self.button_cycle_timer = speed
+        else: #else change cycle speed
+            self.button_cycle_timer += speed
+
+    def switch_beginning(self, option):
+        # Don't do anything if already in this mode
+        if option == self.beginning:
+            return
+
+        # Change it.
+        self.beginning = option
+
+    def switch_middle(self, option):
+        # Don't do anything if already in this mode
+        if option == self.middle:
+            return
+
+        # Change it.
+        self.middle = option
+
+    def switch_end(self, option):
+        # Don't do anything if already in this mode
+        if option == self.ending:
+            return
+
+        # Change it.
+        self.ending = option
+
+    def switch_font(self, size):
+        # Don't do anything if already in this mode
+        if size == self.fontSize:
+            return
+
+        # Change it.
+        self.fontSize = size
 
 
 class GameManager(Manager):
@@ -356,10 +405,31 @@ class MenuManager(Manager):
         if "mode" in effects:
             self.switch_mode(effects["mode"])
             self.mode = effects["mode"]
+        if "speedChange" in effects:
+            self.switch_speed(effects["speedChange"])
+            self.button_cycle_timer += effects["speedChange"]
+        if "speedReset" in effects:
+            self.switch_speed(effects["speedReset"])
+            self.button_cycle_timer = effects["speedReset"]
         if "plain_function" in effects:
             effects["plain_function"]()
         if "goto" in effects:
             self.set_scene_index(effects["goto"])
+        if "beginningOption" in effects:
+            self.switch_beginning(effects["beginningOption"])
+            self.beginning = effects["beginningOption"]
+        if "middleOption" in effects:
+            self.switch_middle(effects["middleOption"])
+            self.middle = effects["middleOption"]
+        if "endOption" in effects:
+            self.switch_end(effects["endOption"])
+            self.ending = effects["endOption"]
+        if "fontSize" in effects:
+            self.switch_font(effects["fontSize"])
+            self.fontSize = effects["fontSize"]
+            settings.FONT_SIZE = effects["fontSize"]
+            
+            
 
 
 class Managers(object):
@@ -397,9 +467,16 @@ class Managers(object):
             if self.in_menu:
                 self.menu_manager.destroy_cycle_timer()
                 self.game_manager.switch_mode(self.menu_manager.mode)
+                self.game_manager.switch_speed(self.menu_manager.button_cycle_timer)
+                self.game_manager.switch_beginning(self.menu_manager.beginning)
+                self.game_manager.switch_middle(self.menu_manager.middle)
+                self.game_manager.switch_end(self.menu_manager.ending)
+                self.game_manager.switch_font(self.menu_manager.font)
+
             else:
                 for button in self.menu_manager.buttons:
                     button.cleanup()
                 self.menu_manager.buttons[0].selected = True
                 self.menu_manager.auto_button_cycle(start=True)
             self.in_menu = not self.in_menu
+            
