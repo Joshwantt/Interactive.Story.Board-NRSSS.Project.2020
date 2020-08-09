@@ -28,7 +28,7 @@ class Manager(object):
         self.narrative_played = False
         self.scene_wind_down = False
         self.beginning = 1  ##default to all option 1 story
-        self.middle = 1     ##if option 2 is needed the variable 2
+        self.middle = 1     ##if option 2 is needed the variable is set to 2
         self.ending = 1
 
         self.randomOptions = [[]]
