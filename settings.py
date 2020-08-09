@@ -83,7 +83,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/start.png",
                 "frames" : 4,
-                "location": [450, 620],
+                "location": [450, 530],
                 "text": "Start",
                 "effects": {
                     "not_random": "Yes",
@@ -93,7 +93,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/options.png",
                 "frames" : 4,
-                "location": [960, 620],
+                "location": [960, 700],
                 "text": "Options",
                 "effects": {
                     "not_random": "Yes",
@@ -103,7 +103,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/shutdown.png",
                 "frames" : 4,
-                "location": [1470, 620],
+                "location": [1470, 530],
                 "text": "Shutdown",
                 "effects": {
                     "not_random": "Yes",
@@ -120,7 +120,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
-                "location": [510, 620],
+                "location": [300, 620],
                 "text": "Difficulty",
                 "effects": {
                     "not_random": "Yes",
@@ -131,7 +131,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [960, 620],
+                "location": [720, 620],
                 "text": "Speed",
                 "effects": {
                     "not_random": "Yes",
@@ -141,11 +141,21 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [1470, 620],
+                "location": [1120, 620],
                 "text": "Story",
                 "effects": {
                     "not_random": "Yes",
                     "goto": 4
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [1580, 620],
+                "text": "Text",
+                "effects": {
+                    "not_random": "Yes",
+                    "goto": 8
                 }
             }
         ]
@@ -344,6 +354,45 @@ menu_narrative = [
                 "effects": {
                     "not_random": "Yes",
                     "endOption": 2,
+                    "goto": 0
+                }
+            }
+        ]
+    },
+    { #8
+        "title": "Text Size",
+        "not_random": "Yes",
+        "buttons": [
+            {
+                "image": "assets/img/buttons/start.png",
+                "frames" : 4,
+                "location": [450, 620],
+                "text": "Default",
+                "effects": {
+                    "not_random": "Yes",
+                    "fontSize": FONT_SIZE,
+                    "goto": 0
+                }
+            },
+            {
+                "image": "assets/img/buttons/options.png",
+                "frames" : 4,
+                "location": [960, 620],
+                "text": "Bigger",
+                "effects": {
+                    "not_random": "Yes",
+                    "fontSize": FONT_SIZE+30,
+                    "goto": 0
+                }
+            },
+            {
+                "image": "assets/img/buttons/shutdown.png",
+                "frames" : 4,
+                "location": [1470, 620],
+                "text": "Biggest",
+                "effects": {
+                    "not_random": "Yes",
+                    "fontSize": FONT_SIZE+60,
                     "goto": 0
                 }
             }
