@@ -252,6 +252,15 @@ class Manager(object):
 
         # Change it.
         self.mode = mode
+    
+    def switch_speed(self, speed):
+
+        # Don't do anything if already in this mode
+        if speed == self.button_cycle_timer:
+            return
+
+        # Change it.
+        self.button_cycle_timer = speed
 
 
 class GameManager(Manager):
@@ -356,6 +365,9 @@ class MenuManager(Manager):
         if "mode" in effects:
             self.switch_mode(effects["mode"])
             self.mode = effects["mode"]
+        if "speed" in effects:
+            self.switch_speed(effects["speed"])
+            self.button_cycle_timer = effects["speed"]
         if "plain_function" in effects:
             effects["plain_function"]()
         if "goto" in effects:
@@ -397,6 +409,7 @@ class Managers(object):
             if self.in_menu:
                 self.menu_manager.destroy_cycle_timer()
                 self.game_manager.switch_mode(self.menu_manager.mode)
+                self.game_manager.switch_speed(self.menu_manager.button_cycle_timer)
             else:
                 for button in self.menu_manager.buttons:
                     button.cleanup()

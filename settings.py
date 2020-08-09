@@ -82,7 +82,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/start.png",
                 "frames" : 4,
-                "location": [560, 720],
+                "location": [450, 620],
                 "text": "Start",
                 "effects": {
                     "not_random": "Yes",
@@ -92,7 +92,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/options.png",
                 "frames" : 4,
-                "location": [960, 720],
+                "location": [960, 620],
                 "text": "Options",
                 "effects": {
                     "not_random": "Yes",
@@ -102,7 +102,7 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/shutdown.png",
                 "frames" : 4,
-                "location": [1360, 720],
+                "location": [1470, 620],
                 "text": "Shutdown",
                 "effects": {
                     "not_random": "Yes",
@@ -119,11 +119,10 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
-                "location": [510, 720],
+                "location": [510, 620],
                 "text": "Difficulty",
                 "effects": {
                     "not_random": "Yes",
-                    "mode": "easy",
                     "goto": 2
 
                 }
@@ -131,12 +130,21 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [960, 720],
+                "location": [960, 620],
                 "text": "Speed",
                 "effects": {
                     "not_random": "Yes",
-                    "mode": "adv",
                     "goto": 3
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [1470, 620],
+                "text": "Story",
+                "effects": {
+                    "not_random": "Yes",
+                    "goto": 4
                 }
             }
         ]
@@ -149,8 +157,8 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
-                "location": [660, 720],
-                "text": "Single Switch",
+                "location": [600, 620],
+                "text": "1 Switch",
                 "effects": {
                     "not_random": "Yes",
                     "mode": "easy",
@@ -161,8 +169,8 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [1160, 720],
-                "text": "Double Switch",
+                "location": [1220, 620],
+                "text": "2 Switch",
                 "effects": {
                     "not_random": "Yes",
                     "mode": "adv",
@@ -179,10 +187,11 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
-                "location": [510, 720],
+                "location": [510, 620],
                 "text": "Slow",
                 "effects": {
                     "not_random": "Yes",
+                    "speed": 6,
                     "goto": 0
 
                 }
@@ -190,23 +199,153 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [960, 720],
+                "location": [960, 620],
                 "text": "Default",
                 "effects": {
                     "not_random": "Yes",
+                    "speed": 3,
                     "goto": 0
                 }
             },
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [1510, 720],
+                "location": [1510, 620],
                 "text": "Fast",
                 "effects": {
                     "not_random": "Yes",
+                    "speed": 2,
                     "goto": 0
                 }
             }
         ]
     },
+    { #4
+        "title": "Story",
+        "not_random": "Yes",
+        "background_img": "assets/img/backgrounds/ocean_main.jpg",
+        "buttons": [
+            {
+                "image": "assets/img/buttons/onebutton.png",
+                "frames" : 4,
+                "location": [510, 620],
+                "text": "Beginning",
+                "effects": {
+                    "not_random": "Yes",
+                    "goto": 5
+
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [960, 620],
+                "text": "Middle",
+                "effects": {
+                    "not_random": "Yes",
+                    "goto": 6
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [1510, 620],
+                "text": "End",
+                "effects": {
+                    "not_random": "Yes",
+                    "goto": 7
+                }
+            }
+        ]
+    },
+    { #5
+        "title": "Beginning",
+        "not_random": "Yes",
+        "background_img": "assets/img/backgrounds/ocean_main.jpg",
+        "buttons": [
+            {
+                "image": "assets/img/buttons/onebutton.png",
+                "frames" : 4,
+                "location": [510, 620],
+                "text": "Option 1",
+                "effects": {
+                    "not_random": "Yes",
+                    ##do something
+                    "goto": 0
+
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [1410, 620],
+                "text": "Option 2",
+                "effects": {
+                    "not_random": "Yes",
+                    ##do something
+                    "goto": 0
+                }
+            }
+        ]
+    },
+    { #6
+        "title": "Middle",
+        "not_random": "Yes",
+        "background_img": "assets/img/backgrounds/ocean_main.jpg",
+        "buttons": [
+            {
+                "image": "assets/img/buttons/onebutton.png",
+                "frames" : 4,
+                "location": [510, 620],
+                "text": "Option 1",
+                "effects": {
+                    "not_random": "Yes",
+                    ##do something
+                    "goto": 0
+
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [1410, 620],
+                "text": "Option 2",
+                "effects": {
+                    "not_random": "Yes",
+                    ##do something
+                    "goto": 0
+                }
+            }
+        ]
+    },
+    { #7
+        "title": "End",
+        "not_random": "Yes",
+        "background_img": "assets/img/backgrounds/ocean_main.jpg",
+        "buttons": [
+            {
+                "image": "assets/img/buttons/onebutton.png",
+                "frames" : 4,
+                "location": [510, 620],
+                "text": "Option 1",
+                "effects": {
+                    "not_random": "Yes",
+                    ##do something
+                    "goto": 0
+
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [1410, 620],
+                "text": "Option 2",
+                "effects": {
+                    "not_random": "Yes",
+                    ##do something
+                    "goto": 0
+                }
+            }
+        ]
+    }
 ]
