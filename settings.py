@@ -75,7 +75,7 @@ def shutdown():
 
 menu_narrative = [
 
-    {
+    { #0
         "title": "Welcome to the adventure!",
         "not_random": "Yes",
         "buttons": [
@@ -109,12 +109,10 @@ menu_narrative = [
                     "plain_function": shutdown
                 }
             }
-
-
         ]
     },
-    {
-        "title": "Difficulty",
+    { #1
+        "title": "Options",
         "not_random": "Yes",
         "background_img": "assets/img/backgrounds/ocean_main.jpg",
         "buttons": [
@@ -122,7 +120,37 @@ menu_narrative = [
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
                 "location": [510, 720],
-                "text": "Easy",
+                "text": "Difficulty",
+                "effects": {
+                    "not_random": "Yes",
+                    "mode": "easy",
+                    "goto": 2
+
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [960, 720],
+                "text": "Speed",
+                "effects": {
+                    "not_random": "Yes",
+                    "mode": "adv",
+                    "goto": 3
+                }
+            }
+        ]
+    },
+    { #2
+        "title": "Difficulty",
+        "not_random": "Yes",
+        "background_img": "assets/img/backgrounds/ocean_main.jpg",
+        "buttons": [
+            {
+                "image": "assets/img/buttons/onebutton.png",
+                "frames" : 4,
+                "location": [660, 720],
+                "text": "Single Switch",
                 "effects": {
                     "not_random": "Yes",
                     "mode": "easy",
@@ -133,16 +161,52 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [960, 720],
-                "text": "Advanced",
+                "location": [1160, 720],
+                "text": "Double Switch",
                 "effects": {
                     "not_random": "Yes",
                     "mode": "adv",
                     "goto": 0
                 }
             }
-
-
         ]
-    }
+    },
+    { #3
+        "title": "Speed",
+        "not_random": "Yes",
+        "background_img": "assets/img/backgrounds/ocean_main.jpg",
+        "buttons": [
+            {
+                "image": "assets/img/buttons/onebutton.png",
+                "frames" : 4,
+                "location": [510, 720],
+                "text": "Slow",
+                "effects": {
+                    "not_random": "Yes",
+                    "goto": 0
+
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [960, 720],
+                "text": "Default",
+                "effects": {
+                    "not_random": "Yes",
+                    "goto": 0
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [1510, 720],
+                "text": "Fast",
+                "effects": {
+                    "not_random": "Yes",
+                    "goto": 0
+                }
+            }
+        ]
+    },
 ]
