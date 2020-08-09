@@ -20,21 +20,21 @@ class Manager(object):
         self.font = pygame.font.Font(None, settings.FONT_SIZE)
         self.swap_manager = False
         self.mode = "easy"
-        self.button_cycle_timer = 2.0
+        self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
         self.active_button_cycle_timer = None
         self.active_scene_transition_timer = None
         self.message = ""
         self.scene_active = False
         self.narrative_played = False
         self.scene_wind_down = False
-        
-        self.randomOptions = [[10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10], [10, 10, 10]]
-        
+
+        self.randomOptions = [[]]
         random.seed()
-        for i in self.randomOptions:
-            i[0] = random.randint(0, 3)
-            i[1] = random.randint(4, 6)
-            i[2] = random.randint(7, 9)
+        for i in self.narrative:
+            a = random.randint(0, 3)
+            b = random.randint(4, 6)
+            c = random.randint(7, 9)
+            self.randomOptions.append([a,b,c])
 
         # Because the timer thread goes off and does its thing before the game starts, a start bool will be used to set it in update rather than here.
         self.start = True
@@ -73,7 +73,8 @@ class Manager(object):
     # This function will render the text to the screen. It will also add a new line if the width of the screen is exceeded.
     def render_text(self):
         if "title" in self.narrative[self.scene_number]:
-            self.draw_text_lines(self.narrative[self.scene_number]["title"], self.screen.get_width()/2, self.screen.get_height()/3)
+            self.draw_text_lines(self.narrative[self.scene_number]["title"], self.screen.get_width()/2, self.screen.get_height()/5)
+            
 
             
     def draw_text_lines(self, text, x, y):
@@ -108,6 +109,7 @@ class Manager(object):
 
             for i, button in enumerateButtons:
                 if "not_random" in self.narrative[self.scene_number]:
+                    ###button["preload_button"] = GUIButton(pygame.Surface([settings.DESIGN_WIDTH, settings.DESIGN_HEIGHT]), button["location"], "bla bla bla", button.get("sound_hover", None))
                     self.buttons.append(button["preload_button"])
                 else:
                     if (self.randomOptions[self.scene_number][0] == i):
@@ -281,7 +283,8 @@ class GameManager(Manager):
             effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
         else:
             effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
-            effectsRandom = self.narrative[self.scene_number]["buttons"][self.randomOptions[self.scene_number - 0][self.selected_button]].get("effects")
+            effectsRandom = self.narrative[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]].get("effects")
+            ###self.chosenAnswers[self.scene_number] = self.randomOptions[self.scene_number][self.selected_button]
 
         # If there is no effects key, just go to the next scene. 
         if effects:
@@ -310,7 +313,7 @@ class GameManager(Manager):
                 if "selected_sound" in effects:
                     # Play a default sound if nothing in the field.
                     to_play = effectsRandom["selected_sound"] if effectsRandom["selected_sound"] else settings.SELECTED_SOUND
-                    settings.SOUND_EFFECTS.play(to_play)
+                    settings.SOUND_EFFECTS.play(to_play, 1)
 
                 if "sound_narration" in effectsRandom:
                     settings.NARRATION.play(effectsRandom["sound_narration"])
