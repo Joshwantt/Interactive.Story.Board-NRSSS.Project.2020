@@ -52,10 +52,6 @@ class Manager(object):
         for button in self.buttons:
             button.cleanup()
 
-        print("beg: "+ str(self.beginning))
-        print("mid: "+str(self.middle))
-        print("end: "+str(self.ending))
-
         # Clear any messages.
         self.message = ""
 
