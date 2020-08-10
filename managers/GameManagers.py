@@ -1,3 +1,4 @@
+import json
 import pygame
 from board_components.inputs import InputController
 from board_components.outputs import Fan, VibeMat, Rotors, Custom
@@ -32,7 +33,7 @@ class Manager(object):
         self.middle = 1     ##if option 2 is needed the variable is set to 2
         self.ending = 1
         self.fontSize = settings.FONT_SIZE
-
+        self.readback = []
         self.randomOptions = [[]]
         random.seed()
         for i in self.narrative:
@@ -110,21 +111,32 @@ class Manager(object):
         if "buttons" in self.narrative[self.scene_number]:
             self.buttons.clear()
 
-            enumerateButtons = enumerate(self.narrative[self.scene_number]["buttons"])
-
-            for i, button in enumerateButtons:
-                if "not_random" in self.narrative[self.scene_number]:
-                    ###button["preload_button"] = GUIButton(pygame.Surface([settings.DESIGN_WIDTH, settings.DESIGN_HEIGHT]), button["location"], "bla bla bla", button.get("sound_hover", None))
+            if "beginning_playback" in self.narrative[self.scene_number]:
+                for button in self.narrative[self.scene_number]["buttons"]:
                     self.buttons.append(button["preload_button"])
-                else:
-                    if (self.randomOptions[self.scene_number][0] == i):
+                for i, button in enumerate(self.buttons):
+                    a = i // 2
+                    if i % 2 == 0:
+                        button.set_text(self.readback[a][0])
+                        button.set_sound_narration(self.readback[a][2])
+                    if i % 2 == 1:
+                        button.set_text(self.readback[a][1])
+                        button.set_hover_sound(self.readback[a][3])
+                        button.set_sound_selected(self.readback[a][4])
+            else:
+                enumerateButtons = enumerate(self.narrative[self.scene_number]["buttons"])
+                for i, button in enumerateButtons:
+                    if "not_random" in self.narrative[self.scene_number]:
                         self.buttons.append(button["preload_button"])
-                        
-                    if (self.randomOptions[self.scene_number][1] == i):
-                        self.buttons.append(button["preload_button"])
-                        
-                    if (self.randomOptions[self.scene_number][2] == i):
-                        self.buttons.append(button["preload_button"])
+                    else:
+                        if (self.randomOptions[self.scene_number][0] == i):
+                            self.buttons.append(button["preload_button"])
+                            
+                        if (self.randomOptions[self.scene_number][1] == i):
+                            self.buttons.append(button["preload_button"])
+                            
+                        if (self.randomOptions[self.scene_number][2] == i):
+                            self.buttons.append(button["preload_button"])
 
             
             # Set button one to selected.if
@@ -191,6 +203,10 @@ class Manager(object):
             self.active_button_cycle_timer.cancel()
 
         if self.mode == "easy":
+            if self.scene_number == 11:
+                self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER + 1
+            else:
+                self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
             self.active_button_cycle_timer = Timer(self.button_cycle_timer, self.auto_button_cycle)
             self.active_button_cycle_timer.start()
 
@@ -209,6 +225,26 @@ class Manager(object):
         self.input_controller.kill_all()
 
     def next_scene(self):
+
+        ## Scene numbers may need to change if scenes are added for playback feature
+        if self.scene_number == 0 and self.beginning == 2:
+            self.scene_number = 31
+            
+        if self.scene_number == 11 and self.middle == 2:
+            self.scene_number = 41
+            
+        if self.scene_number == 21 and self.end == 2:
+            self.scene_number = 51
+            
+        if self.scene_number == 31:
+            self.scene_number = 61
+            
+        if self.scene_number == 41 and self.middle == 1:
+            self.scene_number = 11
+            
+        if self.scene_number == 51 and self.end == 1:
+            self.scene_number = 21
+            
         self.scene_number += 1
         if not self.scene_number >= len(self.narrative):
             self.scene_transisition()
@@ -333,7 +369,14 @@ class GameManager(Manager):
         else:
             effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
             effectsRandom = self.narrative[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]].get("effects")
-            ###self.chosenAnswers[self.scene_number] = self.randomOptions[self.scene_number][self.selected_button]
+            with open("narrative.json", "r") as f:
+                js = json.loads(f.read())
+            selectedSound = js[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]].get("effects")
+            optionText = js[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]]["text"]
+
+            self.readback.append([self.narrative[self.scene_number]["title"], " " + optionText, js[self.scene_number]["sound_narration"],
+                                         js[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]]["sound_hover"],
+                                         selectedSound["selected_sound"]])
 
         # If there is no effects key, just go to the next scene. 
         if effects:
@@ -363,6 +406,7 @@ class GameManager(Manager):
                     # Play a default sound if nothing in the field.
                     to_play = effectsRandom["selected_sound"] if effectsRandom["selected_sound"] else settings.SELECTED_SOUND
                     settings.SOUND_EFFECTS.play(to_play, 1)
+                    
 
                 if "sound_narration" in effectsRandom:
                     settings.NARRATION.play(effectsRandom["sound_narration"])
@@ -479,4 +523,3 @@ class Managers(object):
                 self.menu_manager.buttons[0].selected = True
                 self.menu_manager.auto_button_cycle(start=True)
             self.in_menu = not self.in_menu
-            
