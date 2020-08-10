@@ -4,7 +4,7 @@ from os.path import join
 
 
 class GUIButton(object):
-    def __init__(self, screen, pos, text, sound_hover=None):
+    def __init__(self, screen, pos, text, sound_narration=None, sound_hover=None, sound_selected=None):
         self.selected = False
         self.screen = screen
         self.fontsize = settings.FONT_SIZE
@@ -16,6 +16,16 @@ class GUIButton(object):
         else:
             self.hover_sound = None
 
+        if sound_narration:
+            self.sound_narration = pygame.mixer.Sound(join("assets", "SoundNarration", sound_narration))
+        else:
+            self.sound_narration = None
+
+        if sound_selected:
+            self.sound_selected = pygame.mixer.Sound(join("assets", "SoundSelected", sound_selected))
+        else:
+            self.sound_selected = None
+
         # Variable for the first frame of being selected.
         self.previously_selected = False
 
@@ -26,6 +36,18 @@ class GUIButton(object):
         self.font = pygame.font.Font(None, settings.FONT_SIZE)
         self.fontMax = pygame.font.Font(None, settings.FONT_SIZE+settings.BUTTON_MAX_ZOOM)
 
+    def set_sound_narration(self, new_sound_narration):
+        self.sound_narration = pygame.mixer.Sound(join("assets", "SoundNarration", new_sound_narration))
+
+    def set_hover_sound(self, new_hover_sound):
+        self.hover_sound = pygame.mixer.Sound(join("assets", "SoundHover", new_hover_sound))
+
+    def set_sound_selected(self, new_sound_selected):
+        self.sound_selected = pygame.mixer.Sound(join("assets", "SoundSelected", new_sound_selected))
+            
+    def set_text(self, new_text):
+        self.text = new_text
+
     def set_pos(self, position):
         self.pos = position
 
@@ -33,6 +55,9 @@ class GUIButton(object):
         self.draw()
         self.font = pygame.font.Font(None, self.fontsize)
 
+        if self.fontsize < settings.FONT_SIZE:
+            self.fontsize = settings.FONT_SIZE
+                
         if self.selected == True:
             # If size of button is less than maximum allowed size, increase size
             # Only increase font if selected
@@ -41,9 +66,11 @@ class GUIButton(object):
         else:
             # If size of button is more than minimum allowed size, decrease size
             # Only decrease font if not selected
-            if self.fontsize >= settings.FONT_SIZE:
+            if self.fontsize > settings.FONT_SIZE + settings.BUTTON_MAX_ZOOM:
+                self.fontsize = settings.FONT_SIZE
+            if self.fontsize > settings.FONT_SIZE:
                 self.fontsize = self.fontsize - int(settings.BUTTON_ZOOM_RATE + (settings.BUTTON_ZOOM_RATE/2))
-        
+
         # Check if this is the first frame and if so, play the hover sound.
         if not self.previously_selected and self.selected:
             self.play_hover_sound()
@@ -85,9 +112,14 @@ class GUIButton(object):
 
     def updateFont(self, size):
         self.fontsize = size
-    
+
     def play_hover_sound(self):
+        if self.sound_narration:
+            settings.NARRATION.play(self.sound_narration)
         if self.hover_sound:
             settings.SELECTED_EFFECTS.play(self.hover_sound)
+        if self.sound_selected:
+            settings.SOUND_EFFECTS.play(self.sound_selected)
+
 
 
