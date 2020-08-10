@@ -740,6 +740,73 @@
 		]		
 	},
 	{
+		"title" : "The story so far...",
+		"not_random" : "Yes",
+		"beginning_playback" : "Yes",
+		"buttons" : [
+			{
+				
+				"frames" : 4,
+				"image" : "assets/img/buttons/start.png",
+				"location" : [960, 340],
+				"text" : "",
+				"sound_hover" : "",
+				"effects": {
+					"selected_sound" : "",
+					"not_random" : "Yes"
+				}
+			},
+			{
+				
+				"frames" : 4,
+				"image" : "assets/img/buttons/start.png",
+				"location" : [960, 440],
+				"text" : "",
+				"sound_hover" : "",
+				"effects": {
+					"selected_sound" : "",
+					"not_random" : "Yes"
+				}
+			},
+			{
+				
+				"frames" : 4,
+				"image" : "assets/img/buttons/start.png",
+				"location" : [960, 540],
+				"text" : "",
+				"sound_hover" : "",
+				"effects": {
+					"selected_sound" : "",
+					"not_random" : "Yes"
+				}
+			},
+			{
+				
+				"frames" : 4,
+				"image" : "assets/img/buttons/start.png",
+				"location" : [960, 740],
+				"text" : "",
+				"sound_hover" : "",
+				"effects": {
+					"selected_sound" : "",
+					"not_random" : "Yes"
+				}
+			},
+			{
+				
+				"frames" : 4,
+				"image" : "assets/img/buttons/start.png",
+				"location" : [960, 840],
+				"text" : "",
+				"sound_hover" : "",
+				"effects": {
+					"selected_sound" : "",
+					"not_random" : "Yes"
+				}
+			}			
+		]		
+	},
+	{
 		"title" : "They are ready to travel in their...",
 		"sound_narration" : "story1page6.wav",
 		"buttons" : [
