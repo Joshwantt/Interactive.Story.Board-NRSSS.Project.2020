@@ -35,6 +35,7 @@ SOUND_EFFECTS = pygame.mixer.Channel(2)
 TRANSITION_SOUND = pygame.mixer.Sound("assets/bell.wav")
 SELECTED_SOUND = pygame.mixer.Sound("assets/selected.wav")
 READBACK_TRANSISION = False
+REABBACK_BUTTON_FREEZE = False
 
 # Pins
 ## Outputs

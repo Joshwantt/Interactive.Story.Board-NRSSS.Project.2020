@@ -112,8 +112,8 @@ class Manager(object):
     def setup_buttons(self):
         if "buttons" in self.narrative[self.scene_number]:
             self.buttons.clear()
-
             if "beginning_playback" in self.narrative[self.scene_number] or "middle_playback" in self.narrative[self.scene_number] or "end_playback" in self.narrative[self.scene_number]:
+                settings.REABBACK_BUTTON_FREEZE = True
                 for button in self.narrative[self.scene_number]["buttons"]:
                     self.buttons.append(button["preload_button"])
                 for i, button in enumerate(self.buttons):
@@ -130,6 +130,7 @@ class Manager(object):
                         button.set_text(self.readback[a][1])
                         button.set_sound_selected(self.readback[a][4])
             else:
+                settings.REABBACK_BUTTON_FREEZE = False
                 enumerateButtons = enumerate(self.narrative[self.scene_number]["buttons"])
                 for i, button in enumerateButtons:
                     if "not_random" in self.narrative[self.scene_number]:
@@ -363,12 +364,12 @@ class GameManager(Manager):
        
 
     def check_pressed(self):
-        if self.input_controller.button_one_pressed:
+        if self.input_controller.button_one_pressed and not settings.REABBACK_BUTTON_FREEZE:
             self.destroy_cycle_timer()
             self.buttons[self.selected_button].selected = True
             self.process_button_effects()
 
-        if self.input_controller.button_two_pressed:
+        if self.input_controller.button_two_pressed and not settings.REABBACK_BUTTON_FREEZE:
             self.cycle_button()
 
 
