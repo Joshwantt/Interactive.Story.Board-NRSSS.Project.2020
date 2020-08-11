@@ -202,7 +202,7 @@ menu_narrative = [
                 "text": "Slower(+1)",
                 "effects": {
                     "not_random": "Yes",
-                    "speedChange": 0.5,
+                    "speedChange": 1,
                     "goto": 0
 
                 }
@@ -225,7 +225,7 @@ menu_narrative = [
                 "text": "Faster(-0.5)",
                 "effects": {
                     "not_random": "Yes",
-                    "speedChange": -0.25,
+                    "speedChange": -0.5,
                     "goto": 0
                 }
             }

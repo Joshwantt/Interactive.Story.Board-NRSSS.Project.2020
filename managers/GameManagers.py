@@ -457,9 +457,11 @@ class MenuManager(Manager):
         if "speedChange" in effects:
             self.switch_speed(effects["speedChange"])
             self.button_cycle_timer += effects["speedChange"]
+            settings.CYCLE_BUTTON_TIMER += effects["speedChange"]
         if "speedReset" in effects:
             self.switch_speed(effects["speedReset"])
             self.button_cycle_timer = effects["speedReset"]
+            settings.CYCLE_BUTTON_TIMER = effects["speedChange"]
         if "plain_function" in effects:
             effects["plain_function"]()
         if "goto" in effects:
