@@ -111,17 +111,21 @@ class Manager(object):
         if "buttons" in self.narrative[self.scene_number]:
             self.buttons.clear()
 
-            if "beginning_playback" in self.narrative[self.scene_number]:
+            if "beginning_playback" in self.narrative[self.scene_number] or "middle_playback" in self.narrative[self.scene_number] or "end_playback" in self.narrative[self.scene_number]:
                 for button in self.narrative[self.scene_number]["buttons"]:
                     self.buttons.append(button["preload_button"])
                 for i, button in enumerate(self.buttons):
                     a = i // 2
+                    if "middle_playback" in self.narrative[self.scene_number]:
+                        a = a+5
+                    if "end_playback" in self.narrative[self.scene_number]:
+                        a = a+10
                     if i % 2 == 0:
                         button.set_text(self.readback[a][0])
                         button.set_sound_narration(self.readback[a][2])
+                        button.set_hover_sound(self.readback[a][3])
                     if i % 2 == 1:
                         button.set_text(self.readback[a][1])
-                        button.set_hover_sound(self.readback[a][3])
                         button.set_sound_selected(self.readback[a][4])
             else:
                 enumerateButtons = enumerate(self.narrative[self.scene_number]["buttons"])
@@ -233,7 +237,7 @@ class Manager(object):
         if self.scene_number == 11 and self.middle == 2:
             self.scene_number = 41
             
-        if self.scene_number == 21 and self.end == 2:
+        if self.scene_number == 21 and self.ending == 2:
             self.scene_number = 51
             
         if self.scene_number == 31:
@@ -242,7 +246,7 @@ class Manager(object):
         if self.scene_number == 41 and self.middle == 1:
             self.scene_number = 11
             
-        if self.scene_number == 51 and self.end == 1:
+        if self.scene_number == 51 and self.ending == 1:
             self.scene_number = 21
             
         self.scene_number += 1
@@ -400,6 +404,7 @@ class GameManager(Manager):
 
                 if "restart" in effects:
                     self.scene_number = -1
+                    self.readback = []
                     self.swap_manager = True
             else:
                 if "selected_sound" in effects:
