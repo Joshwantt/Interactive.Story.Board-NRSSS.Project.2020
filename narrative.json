@@ -740,133 +740,6 @@
 		]		
 	},
 	{
-		"title" : "",
-		"not_random" : "Yes",
-		"beginning_playback" : "Yes",
-		"buttons" : [
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 50],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 50],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 240],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 240],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 440],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},	
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 440],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 640],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 640],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 840],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 840],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			}		
-		]		
-	},
-	{
 		"title" : "They are ready to travel in their...",
 		"sound_narration" : "story1page6.wav",
 		"buttons" : [
@@ -4467,61 +4340,6 @@
 		]		
 	},
 	{
-		"title" : "The sun is going down and it's time to go home. This adventure has been",
-		"sound_narration" : "ending.wav",
-		"not_random" : "Yes",
-		"buttons" : [
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/exciting.png",
-				"location" : [450, 530],
-				"text" : "Exciting",
-				"sound_hover" : "exciting.wav",
-				"effects" : {
-					"selected_sound" : "smile.wav",
-					"not_random" : "Yes",
-					"output" : ["fan","vibe_mat","custom"]
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/scary.png",
-				"location" : [810, 620],
-				"text" : "Scary",
-				"sound_hover" : "scary.wav",
-				"effects" : {
-					"selected_sound" : "scary.wav",
-					"not_random" : "Yes",
-					"output" : ["fan","vibe_mat"]
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/fun2.png",
-				"location" : [1110, 620],
-				"text" : "Fun",
-				"sound_hover" : "fun2.wav",
-				"effects" : {
-					"selected_sound" : "smile.wav",
-					"not_random" : "Yes",
-					"output" : ["fan","vibe_mat","rotors","custom"]
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/boring.png",
-				"location" : [1470, 530],
-				"text" : "Boring",
-				"sound_hover" : "boring.wav",
-				"effects" : {
-					"selected_sound" : "tooth.wav",
-					"not_random" : "Yes",
-					"output" : ["rotors","custom"]
-				}
-			}
-		]	
-	},
-	{
 		"title" : "",
 		"not_random" : "Yes",
 		"beginning_playback" : "Yes",
@@ -4901,6 +4719,61 @@
 				}
 			}		
 		]		
+	},
+	{
+		"title" : "The sun is going down and it's time to go home. This adventure has been",
+		"sound_narration" : "ending.wav",
+		"not_random" : "Yes",
+		"buttons" : [
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/exciting.png",
+				"location" : [450, 530],
+				"text" : "Exciting",
+				"sound_hover" : "exciting.wav",
+				"effects" : {
+					"selected_sound" : "smile.wav",
+					"not_random" : "Yes",
+					"output" : ["fan","vibe_mat","custom"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/scary.png",
+				"location" : [810, 620],
+				"text" : "Scary",
+				"sound_hover" : "scary.wav",
+				"effects" : {
+					"selected_sound" : "scary.wav",
+					"not_random" : "Yes",
+					"output" : ["fan","vibe_mat"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/fun2.png",
+				"location" : [1110, 620],
+				"text" : "Fun",
+				"sound_hover" : "fun2.wav",
+				"effects" : {
+					"selected_sound" : "smile.wav",
+					"not_random" : "Yes",
+					"output" : ["fan","vibe_mat","rotors","custom"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/boring.png",
+				"location" : [1470, 530],
+				"text" : "Boring",
+				"sound_hover" : "boring.wav",
+				"effects" : {
+					"selected_sound" : "tooth.wav",
+					"not_random" : "Yes",
+					"output" : ["rotors","custom"]
+				}
+			}
+		]	
 	},
 	{
 		"title" : "Thanks for playing!",

@@ -76,7 +76,7 @@ if __name__ == "__main__":
             buttons = item.get("buttons")
             if buttons:
                 for button in buttons:
-                    button["preload_button"] = GUIButton(design_canvas, button["location"], button["text"], None, button.get("sound_hover", None), None)
+                    button["preload_button"] = GUIButton(design_canvas, button["location"], button["text"], button["effects"], None, button.get("sound_hover", None), None)
                 if randomise_buttons:
                     randomise_button_positions(buttons)
                 

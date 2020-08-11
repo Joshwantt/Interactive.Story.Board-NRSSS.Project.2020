@@ -4,13 +4,13 @@ from os.path import join
 
 
 class GUIButton(object):
-    def __init__(self, screen, pos, text, sound_narration=None, sound_hover=None, sound_selected=None):
+    def __init__(self, screen, pos, text, effects, sound_narration=None, sound_hover=None, sound_selected=None):
         self.selected = False
         self.screen = screen
         self.fontsize = settings.FONT_SIZE
         self.visible = True
         self.not_played = True
-        
+        self.effects = effects
         
         # Only get this sound if it has a sound passed in.
         if sound_hover:
