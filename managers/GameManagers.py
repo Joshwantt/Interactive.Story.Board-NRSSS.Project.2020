@@ -36,8 +36,9 @@ class Manager(object):
         self.readback = []
         self.randomOptions = [[]]
         self.beginningSkip = False
-        random.seed()
+
         for i in self.narrative:
+            random.seed()
             a = random.randint(0, 3)
             b = random.randint(4, 6)
             c = random.randint(7, 9)
@@ -161,6 +162,10 @@ class Manager(object):
         self.render_buttons()
         self.render_text()
         self.render_message()
+
+        if settings.READBACK_TRANSISION:
+            settings.READBACK_TRANSISION = False
+            self.scene_wind_down = True
 
         if self.scene_wind_down:
             # Here is where we handle when to transition scenes.    ####################################################

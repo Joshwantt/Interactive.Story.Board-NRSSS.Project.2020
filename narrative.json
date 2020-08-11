@@ -4461,7 +4461,8 @@
 				"sound_hover" : "",
 				"effects": {
 					"selected_sound" : "",
-					"not_random" : "Yes"
+					"not_random" : "Yes",
+					"nextPage" : "Yes"
 				}
 			}		
 		]		
@@ -4588,7 +4589,8 @@
 				"sound_hover" : "",
 				"effects": {
 					"selected_sound" : "",
-					"not_random" : "Yes"
+					"not_random" : "Yes",
+					"nextPage" : "Yes"
 				}
 			}		
 		]		
@@ -4715,7 +4717,8 @@
 				"sound_hover" : "",
 				"effects": {
 					"selected_sound" : "",
-					"not_random" : "Yes"
+					"not_random" : "Yes",
+					"nextPage" : "Yes"
 				}
 			}		
 		]		

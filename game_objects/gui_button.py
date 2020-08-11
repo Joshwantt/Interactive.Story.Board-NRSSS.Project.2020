@@ -80,6 +80,9 @@ class GUIButton(object):
             if self.fontsize > settings.FONT_SIZE:
                 self.fontsize = self.fontsize - int(settings.BUTTON_ZOOM_RATE + (settings.BUTTON_ZOOM_RATE/2))
 
+        if "nextPage" in self.effects and self.selected:
+            settings.READBACK_TRANSISION = True
+
         # Check if this is the first frame and if so, play the hover sound.
         if not self.previously_selected and self.selected:
             self.not_played = True
