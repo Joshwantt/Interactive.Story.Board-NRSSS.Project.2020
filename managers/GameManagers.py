@@ -238,25 +238,25 @@ class Manager(object):
     def next_scene(self):
 
         ## Scene numbers may need to change if scenes are added for playback feature
+        if self.scene_number == 30 and not self.beginningSkip:
+            self.scene_number = 60
+
         if self.scene_number == 0 and self.beginning == 2:
             self.scene_number = 30
             self.beginningSkip = True
-            
+
         if self.scene_number == 11 and self.middle == 2:
             self.scene_number = 41
-            
+
         if self.scene_number == 21 and self.ending == 2:
             self.scene_number = 50
-            
-        if self.scene_number == 30 and not self.beginningSkip:
-            self.scene_number = 60
-            
+
         if self.scene_number == 40 and self.middle == 1:
             self.scene_number = 12
-            
+
         if self.scene_number == 50 and self.ending == 1:
             self.scene_number = 20
-            
+
         self.scene_number += 1
         if not self.scene_number >= len(self.narrative):
             self.scene_transisition()
