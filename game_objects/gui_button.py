@@ -49,7 +49,7 @@ class GUIButton(object):
 
     def set_sound_selected(self, new_sound_selected):
         self.sound_selected = pygame.mixer.Sound(join("assets", "SoundSelected", new_sound_selected))
-            
+
     def set_text(self, new_text):
         self.text = new_text
 
@@ -59,8 +59,6 @@ class GUIButton(object):
     
     
     def update(self):
-        
-        
         self.draw()
         self.font = pygame.font.Font(None, self.fontsize)
 
@@ -131,11 +129,11 @@ class GUIButton(object):
     def play_hover_sound(self):
         if self.hover_sound:
             settings.SELECTED_EFFECTS.play(self.hover_sound)
-        if self.sound_narration and self.hover_sound:
+        if self.sound_narration:
             settings.SELECTED_EFFECTS.play(self.sound_narration)
-            settings.SELECTED_EFFECTS.queue(self.hover_sound)
-        if self.sound_selected:
-            settings.SOUND_EFFECTS.play(self.sound_selected)
+        if self.hover_sound and self.sound_selected:
+            settings.SOUND_EFFECTS.play(self.hover_sound)
+            settings.SOUND_EFFECTS.queue(self.sound_selected)
 
             
 
