@@ -4,13 +4,12 @@ from os.path import join
 
 
 class GUIButton(object):
-    def __init__(self, screen, pos, text, effects, sound_narration=None, sound_hover=None, sound_selected=None):
+    def __init__(self, screen, pos, text, sound_narration=None, sound_hover=None, sound_selected=None):
         self.selected = False
         self.screen = screen
         self.fontsize = settings.FONT_SIZE
         self.visible = True
         self.not_played = True
-        self.effects = effects
         
         # Only get this sound if it has a sound passed in.
         if sound_hover:
@@ -78,8 +77,6 @@ class GUIButton(object):
             if self.fontsize > settings.FONT_SIZE:
                 self.fontsize = self.fontsize - int(settings.BUTTON_ZOOM_RATE + (settings.BUTTON_ZOOM_RATE/2))
 
-        if "nextPage" in self.effects and self.selected:
-            settings.READBACK_TRANSISION = True
 
         # Check if this is the first frame and if so, play the hover sound.
         if not self.previously_selected and self.selected:
