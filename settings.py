@@ -34,6 +34,8 @@ SELECTED_EFFECTS = pygame.mixer.Channel(1)
 SOUND_EFFECTS = pygame.mixer.Channel(2)
 TRANSITION_SOUND = pygame.mixer.Sound("assets/bell.wav")
 SELECTED_SOUND = pygame.mixer.Sound("assets/selected.wav")
+READBACK_TRANSISION = False
+REABBACK_BUTTON_FREEZE = False
 
 # Pins
 ## Outputs
@@ -202,7 +204,7 @@ menu_narrative = [
                 "text": "Slower(+1)",
                 "effects": {
                     "not_random": "Yes",
-                    "speedChange": 0.5,
+                    "speedChange": 1,
                     "goto": 0
 
                 }
@@ -225,7 +227,7 @@ menu_narrative = [
                 "text": "Faster(-0.5)",
                 "effects": {
                     "not_random": "Yes",
-                    "speedChange": -0.25,
+                    "speedChange": -0.5,
                     "goto": 0
                 }
             }

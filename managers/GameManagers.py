@@ -35,8 +35,10 @@ class Manager(object):
         self.fontSize = settings.FONT_SIZE
         self.readback = []
         self.randomOptions = [[]]
-        random.seed()
+        self.beginningSkip = False
+
         for i in self.narrative:
+            random.seed()
             a = random.randint(0, 3)
             b = random.randint(4, 6)
             c = random.randint(7, 9)
@@ -62,7 +64,7 @@ class Manager(object):
         self.setup_buttons()
 
         # If we are in easy mode, need to flag the timers to start in update.
-        if self.mode == "easy":
+        if self.mode == "easy" or "playback" in self.narrative[self.scene_number]:
             self.start = True
 
         # Reset narrative
@@ -110,19 +112,22 @@ class Manager(object):
     def setup_buttons(self):
         if "buttons" in self.narrative[self.scene_number]:
             self.buttons.clear()
-
-            if "beginning_playback" in self.narrative[self.scene_number]:
+            if "playback" in self.narrative[self.scene_number]:
                 for button in self.narrative[self.scene_number]["buttons"]:
                     self.buttons.append(button["preload_button"])
                 for i, button in enumerate(self.buttons):
-                    a = i // 2
-                    if i % 2 == 0:
+                    a = self.narrative[self.scene_number]["playback"]
+                    if i == 0:
                         button.set_text(self.readback[a][0])
                         button.set_sound_narration(self.readback[a][2])
-                    if i % 2 == 1:
+                    if i == 1:
                         button.set_text(self.readback[a][1])
                         button.set_hover_sound(self.readback[a][3])
                         button.set_sound_selected(self.readback[a][4])
+
+                        #Setting physical feedback
+                        effects = self.narrative[self.scene_number]["buttons"][i].get("effects")
+                        effects["output"] = self.readback[a][5]
             else:
                 enumerateButtons = enumerate(self.narrative[self.scene_number]["buttons"])
                 for i, button in enumerateButtons:
@@ -202,11 +207,8 @@ class Manager(object):
         if self.active_button_cycle_timer:
             self.active_button_cycle_timer.cancel()
 
-        if self.mode == "easy":
-            if self.scene_number == 11:
-                self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER + 1
-            else:
-                self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
+        if (self.mode == "easy") or ("playback" in self.narrative[self.scene_number]):
+            self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
             self.active_button_cycle_timer = Timer(self.button_cycle_timer, self.auto_button_cycle)
             self.active_button_cycle_timer.start()
 
@@ -227,24 +229,24 @@ class Manager(object):
     def next_scene(self):
 
         ## Scene numbers may need to change if scenes are added for playback feature
+        if self.scene_number == 30:
+            self.scene_number = 60
+
         if self.scene_number == 0 and self.beginning == 2:
-            self.scene_number = 31
-            
-        if self.scene_number == 11 and self.middle == 2:
-            self.scene_number = 41
-            
-        if self.scene_number == 21 and self.end == 2:
-            self.scene_number = 51
-            
-        if self.scene_number == 31:
-            self.scene_number = 61
-            
-        if self.scene_number == 41 and self.middle == 1:
-            self.scene_number = 11
-            
-        if self.scene_number == 51 and self.end == 1:
-            self.scene_number = 21
-            
+            self.scene_number = 30
+
+        if self.scene_number == 10 and self.middle == 2:
+            self.scene_number = 40
+
+        if self.scene_number == 20 and self.ending == 2:
+            self.scene_number = 50
+
+        if self.scene_number == 40 and self.middle == 1:
+            self.scene_number = 10
+
+        if self.scene_number == 50 and self.ending == 1:
+            self.scene_number = 20
+
         self.scene_number += 1
         if not self.scene_number >= len(self.narrative):
             self.scene_transisition()
@@ -278,6 +280,9 @@ class Manager(object):
             self.selected_button += 1
 
         self.buttons[self.selected_button].selected = True
+
+        if "playback" in self.narrative[self.scene_number] and self.selected_button == 2:
+            self.scene_wind_down = True
 
     def check_swap_manager(self):
         if self.swap_manager:
@@ -352,12 +357,12 @@ class GameManager(Manager):
        
 
     def check_pressed(self):
-        if self.input_controller.button_one_pressed:
+        if self.input_controller.button_one_pressed and not settings.REABBACK_BUTTON_FREEZE:
             self.destroy_cycle_timer()
             self.buttons[self.selected_button].selected = True
             self.process_button_effects()
 
-        if self.input_controller.button_two_pressed:
+        if self.input_controller.button_two_pressed and not settings.REABBACK_BUTTON_FREEZE:
             self.cycle_button()
 
 
@@ -374,9 +379,13 @@ class GameManager(Manager):
             selectedSound = js[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]].get("effects")
             optionText = js[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]]["text"]
 
-            self.readback.append([self.narrative[self.scene_number]["title"], " " + optionText, js[self.scene_number]["sound_narration"],
-                                         js[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]]["sound_hover"],
-                                         selectedSound["selected_sound"]])
+            self.readback.append([self.narrative[self.scene_number]["title"],
+                                  " " + optionText,
+                                  js[self.scene_number]["sound_narration"],
+                                  js[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]]["sound_hover"],
+                                  selectedSound["selected_sound"],
+                                  selectedSound["output"]])
+
 
         # If there is no effects key, just go to the next scene. 
         if effects:
@@ -400,6 +409,7 @@ class GameManager(Manager):
 
                 if "restart" in effects:
                     self.scene_number = -1
+                    self.readback = []
                     self.swap_manager = True
             else:
                 if "selected_sound" in effects:
@@ -423,6 +433,7 @@ class GameManager(Manager):
                 if "restart" in effectsRandom:
                     self.scene_number = -1
                     self.swap_manager = True
+
 
 
         # After everything is processed, enter scene wind-down mode.
@@ -452,9 +463,11 @@ class MenuManager(Manager):
         if "speedChange" in effects:
             self.switch_speed(effects["speedChange"])
             self.button_cycle_timer += effects["speedChange"]
+            settings.CYCLE_BUTTON_TIMER += effects["speedChange"]
         if "speedReset" in effects:
             self.switch_speed(effects["speedReset"])
             self.button_cycle_timer = effects["speedReset"]
+            settings.CYCLE_BUTTON_TIMER = effects["speedChange"]
         if "plain_function" in effects:
             effects["plain_function"]()
         if "goto" in effects:

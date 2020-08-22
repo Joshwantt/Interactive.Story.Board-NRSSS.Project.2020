@@ -740,133 +740,6 @@
 		]		
 	},
 	{
-		"title" : "",
-		"not_random" : "Yes",
-		"beginning_playback" : "Yes",
-		"buttons" : [
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 50],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 50],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 240],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 240],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 440],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},	
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 440],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 640],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 640],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [660, 840],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			},
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [1410, 840],
-				"text" : "",
-				"sound_hover" : "",
-				"effects": {
-					"selected_sound" : "",
-					"not_random" : "Yes"
-				}
-			}		
-		]		
-	},
-	{
 		"title" : "They are ready to travel in their...",
 		"sound_narration" : "story1page6.wav",
 		"buttons" : [
@@ -4449,24 +4322,6 @@
 		]	
 	},
 	{
-		"title" : "Press button to move to next page",
-		"not_random" : "Yes",
-		"buttons" : [
-			{
-				
-				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [960, 540],
-				"text" : "Next page",
-				"sound_hover" : "next_page.wav",
-				"effects": {
-					"selected_sound" : "page_turn.wav",
-					"not_random" : "Yes"
-				}
-			}
-		]		
-	},
-	{
 		"title" : "The sun is going down and it's time to go home. This adventure has been",
 		"sound_narration" : "ending.wav",
 		"not_random" : "Yes",
@@ -4520,6 +4375,654 @@
 				}
 			}
 		]	
+	},
+	{
+		"title" : "",
+		"playback" : 0,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 1,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 2,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 3,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 4,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 5,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 6,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 7,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 8,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 9,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 10,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 11,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 12,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 13,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "",
+		"playback" : 14,	
+		"buttons" : [
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 400],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 600],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			},
+			{
+				"index": 2,
+				"frames" : 4,
+				"image" : "",
+				"location" : [960, 530],
+				"text" : "",
+				"sound_hover" : "",
+				"effects" : {
+					"selected_sound" : "",
+					"output" : ""
+				}
+			}
+		]
+	},
+	{
+		"title" : "Press button to move to next page",
+		"not_random" : "Yes",
+		"buttons" : [
+			{
+				
+				"frames" : 4,
+				"image" : "assets/img/buttons/start.png",
+				"location" : [960, 540],
+				"text" : "Next page",
+				"sound_hover" : "next_page.wav",
+				"effects": {
+					"selected_sound" : "page_turn.wav",
+					"not_random" : "Yes"
+				}
+			}
+		]		
 	},
 	{
 		"title" : "Thanks for playing!",
