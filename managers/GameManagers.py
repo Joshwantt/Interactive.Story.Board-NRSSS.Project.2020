@@ -386,6 +386,7 @@ class GameManager(Manager):
                                   selectedSound["selected_sound"],
                                   selectedSound["output"]])
 
+
         # If there is no effects key, just go to the next scene. 
         if effects:
             if "not_random" in effects:

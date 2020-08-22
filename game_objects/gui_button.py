@@ -37,9 +37,10 @@ class GUIButton(object):
         self.font = pygame.font.Font(None, settings.FONT_SIZE)
         self.fontMax = pygame.font.Font(None, settings.FONT_SIZE+settings.BUTTON_MAX_ZOOM)
 
+
     def set_invisible(self):
         self.visible = False
-        
+
     def set_sound_narration(self, new_sound_narration):
         self.sound_narration = pygame.mixer.Sound(join("assets", "SoundNarration", new_sound_narration))
 
@@ -77,8 +78,6 @@ class GUIButton(object):
             if self.fontsize > settings.FONT_SIZE:
                 self.fontsize = self.fontsize - int(settings.BUTTON_ZOOM_RATE + (settings.BUTTON_ZOOM_RATE/2))
 
-
-        # Check if this is the first frame and if so, play the hover sound.
         if not self.previously_selected and self.selected:
             self.not_played = True
             self.play_hover_sound()
@@ -124,6 +123,8 @@ class GUIButton(object):
         self.fontsize = size
 
     def play_hover_sound(self):
+        if self.sound_narration:
+            settings.NARRATION.play(self.sound_narration)
         if self.hover_sound:
             settings.SELECTED_EFFECTS.play(self.hover_sound)
         if self.sound_narration:
@@ -133,6 +134,7 @@ class GUIButton(object):
             settings.SOUND_EFFECTS.queue(self.sound_selected)
 
             
+
 
 
 
