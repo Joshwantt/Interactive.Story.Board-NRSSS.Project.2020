@@ -208,7 +208,11 @@ class Manager(object):
             self.active_button_cycle_timer.cancel()
 
         if (self.mode == "easy") or ("playback" in self.narrative[self.scene_number]):
-            self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
+            if ("playback" in self.narrative[self.scene_number]):
+                self.button_cycle_timer = 3
+            else:
+                self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
+
             self.active_button_cycle_timer = Timer(self.button_cycle_timer, self.auto_button_cycle)
             self.active_button_cycle_timer.start()
 
@@ -460,14 +464,15 @@ class MenuManager(Manager):
         if "mode" in effects:
             self.switch_mode(effects["mode"])
             self.mode = effects["mode"]
-        if "speedChange" in effects:
-            self.switch_speed(effects["speedChange"])
-            self.button_cycle_timer += effects["speedChange"]
-            settings.CYCLE_BUTTON_TIMER += effects["speedChange"]
-        if "speedReset" in effects:
-            self.switch_speed(effects["speedReset"])
-            self.button_cycle_timer = effects["speedReset"]
-            settings.CYCLE_BUTTON_TIMER = effects["speedChange"]
+        if self.mode == "easy":
+            if "speedChange" in effects:
+                self.switch_speed(effects["speedChange"])
+                self.button_cycle_timer += effects["speedChange"]
+                settings.CYCLE_BUTTON_TIMER += effects["speedChange"]
+            if "speedReset" in effects:
+                self.switch_speed(effects["speedReset"])
+                self.button_cycle_timer = effects["speedReset"]
+                settings.CYCLE_BUTTON_TIMER = effects["speedChange"]
         if "plain_function" in effects:
             effects["plain_function"]()
         if "goto" in effects:
