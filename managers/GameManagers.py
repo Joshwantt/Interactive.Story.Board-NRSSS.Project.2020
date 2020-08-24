@@ -113,6 +113,7 @@ class Manager(object):
         if "buttons" in self.narrative[self.scene_number]:
             self.buttons.clear()
             if "playback" in self.narrative[self.scene_number]:
+                settings.REABBACK_BUTTON_FREEZE = True
                 for button in self.narrative[self.scene_number]["buttons"]:
                     self.buttons.append(button["preload_button"])
                 for i, button in enumerate(self.buttons):
@@ -129,6 +130,7 @@ class Manager(object):
                         effects = self.narrative[self.scene_number]["buttons"][i].get("effects")
                         effects["output"] = self.readback[a][5]
             else:
+                settings.REABBACK_BUTTON_FREEZE = False
                 enumerateButtons = enumerate(self.narrative[self.scene_number]["buttons"])
                 for i, button in enumerateButtons:
                     if "not_random" in self.narrative[self.scene_number]:
