@@ -37,12 +37,61 @@ class Manager(object):
         self.randomOptions = [[]]
         self.beginningSkip = False
 
+        self.BegOne = []
+        self.BegTwo = []
+        self.MidOne = []
+        self.MidTwo = []
+        self.EndOne = []
+        self.EndTwo = []
+
+
+
         for i in self.narrative:
             random.seed()
             a = random.randint(0, 3)
             b = random.randint(4, 6)
             c = random.randint(7, 9)
             self.randomOptions.append([a,b,c])
+
+        for page in range(0, len(self.narrative)):
+            if "BeginningOpt1Beg" in self.narrative[page]:
+                self.BegOne.append(page-1)
+                print(page-1)
+            if "BeginningOpt1End" in self.narrative[page]:
+                self.BegOne.append(page+1)
+                print(page+1)
+            if "MiddleOpt1Beg" in self.narrative[page]:
+                self.MidOne.append(page-1)
+                print(page-1)
+            if "MiddleOpt1End" in self.narrative[page]:
+                self.MidOne.append(page+1)
+                print(page+1)
+            if "EndOpt1Beg" in self.narrative[page]:
+                self.EndOne.append(page-1)
+                print(page-1)
+            if "EndOpt1End" in self.narrative[page]:
+                self.EndOne.append(page+1)
+                print(page+1)
+            if "BeginningOpt2Beg" in self.narrative[page]:
+                self.BegTwo.append(page-1)
+                print(page-1)
+            if "BeginningOpt2End" in self.narrative[page]:
+                self.BegTwo.append(page+1)
+                print(page+1)
+            if "MiddleOpt2Beg" in self.narrative[page]:
+                self.MidTwo.append(page-1)
+                print(page-1)
+            if "MiddleOpt2End" in self.narrative[page]:
+                self.MidTwo.append(page+1)
+                print(page+1)
+            if "EndOpt2Beg" in self.narrative[page]:
+                self.EndTwo.append(page-1)
+                print(page-1)
+            if "EndOpt2End" in self.narrative[page]:
+                self.EndTwo.append(page+1)
+                print(page+1)
+            
+
 
         # Because the timer thread goes off and does its thing before the game starts, a start bool will be used to set it in update rather than here.
         self.start = True
@@ -235,23 +284,23 @@ class Manager(object):
     def next_scene(self):
 
         ## Scene numbers may need to change if scenes are added for playback feature
-        if self.scene_number == 30:
-            self.scene_number = 60
+        if self.scene_number == self.EndOne[1]:
+            self.scene_number = self.EndTwo[1]
 
-        if self.scene_number == 0 and self.beginning == 2:
-            self.scene_number = 30
+        if self.scene_number == self.BegOne[0] and self.beginning == 2:
+            self.scene_number = self.EndOne[1]
 
-        if self.scene_number == 10 and self.middle == 2:
-            self.scene_number = 40
+        if self.scene_number == self.BegOne[1] and self.middle == 2:
+            self.scene_number = self.BegTwo[1]
 
-        if self.scene_number == 20 and self.ending == 2:
-            self.scene_number = 50
+        if self.scene_number == self.MidOne[1] and self.ending == 2:
+            self.scene_number = self.MidTwo[1]
 
-        if self.scene_number == 40 and self.middle == 1:
-            self.scene_number = 10
+        if self.scene_number == self.BegTwo[1] and self.middle == 1:
+            self.scene_number = self.MidOne[0]
 
-        if self.scene_number == 50 and self.ending == 1:
-            self.scene_number = 20
+        if self.scene_number == self.MidTwo[1] and self.ending == 1:
+            self.scene_number = self.MidOne[1]
 
         self.scene_number += 1
         if not self.scene_number >= len(self.narrative):

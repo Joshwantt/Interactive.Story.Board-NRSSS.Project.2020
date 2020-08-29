@@ -22,6 +22,7 @@
 	{
 		"title" : "My Story is about a",
 		"sound_narration" : "story1page1.wav",
+		"BeginningOpt1Beg" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -598,6 +599,7 @@
 	{
 		"title" : "So they put on their",
 		"sound_narration" : "story1page5.wav",
+		"BeginningOpt1End" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -742,6 +744,7 @@
 	{
 		"title" : "They are ready to travel in their...",
 		"sound_narration" : "story1page6.wav",
+		"MiddleOpt1Beg" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -1318,6 +1321,7 @@
 	{
 		"title" : "They then go over a",
 		"sound_narration" : "story1page10.wav",
+		"MiddleOpt1End" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -1462,6 +1466,7 @@
 	{
 		"title" : "It is...",
 		"sound_narration" : "story1page11.wav",
+		"EndOpt1Beg" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -2037,7 +2042,8 @@
 	},
 	{
 		"title" : "When we get to our final destination, we...",
-		"sound_narration" : "story1page15.wav",		
+		"sound_narration" : "story1page15.wav",
+		"EndOpt1End" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -2181,7 +2187,8 @@
 	},
 	{
 		"title" : "My Story is about detective..",
-		"sound_narration" : "story2page1.wav",		
+		"sound_narration" : "story2page1.wav",
+		"BeginningOpt2Beg" : "Yes",	
 		"buttons" : [
 			{
 				"index": 0,
@@ -2757,7 +2764,8 @@
 	},
 	{
 		"title" : "Where will they start looking?",
-		"sound_narration" : "story2page5.wav",		
+		"sound_narration" : "story2page5.wav",
+		"BeginningOpt2End" : "Yes",		
 		"buttons" : [
 			{
 				"index": 0,
@@ -2901,7 +2909,8 @@
 	},
 	{
 		"title" : "They're ready to travel in their",
-		"sound_narration" : "story2page6.wav",		
+		"sound_narration" : "story2page6.wav",
+		"MiddleOpt2Beg" : "Yes",	
 		"buttons" : [
 			{
 				"index": 0,
@@ -3477,7 +3486,8 @@
 	},
 	{
 		"title" : "Then they go up, up, up...",
-		"sound_narration" : "story2page10.wav",		
+		"sound_narration" : "story2page10.wav",
+		"MiddleOpt2End" : "Yes",	
 		"buttons" : [
 			{
 				"index": 0,
@@ -3621,7 +3631,8 @@
 	},
 	{
 		"title" : "It is...",
-		"sound_narration" : "story2page11.wav",		
+		"sound_narration" : "story2page11.wav",
+		"EndOpt2Beg" : "Yes",	
 		"buttons" : [
 			{
 				"index": 0,
@@ -4197,7 +4208,8 @@
 	},
 	{
 		"title" : "When the job was done, we...",
-		"sound_narration" : "story2page15.wav",		
+		"sound_narration" : "story2page15.wav",
+		"EndOpt2End" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
