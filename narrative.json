@@ -148,6 +148,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -292,6 +293,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -436,6 +438,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -580,6 +583,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -725,6 +729,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -870,6 +875,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1014,6 +1020,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1158,6 +1165,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1302,6 +1310,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1447,6 +1456,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1592,6 +1602,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1736,6 +1747,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1880,6 +1892,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2024,6 +2037,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2169,6 +2183,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2314,6 +2329,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2458,6 +2474,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2602,6 +2619,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2746,6 +2764,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2891,6 +2910,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3036,6 +3056,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3180,6 +3201,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3324,6 +3346,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3468,6 +3491,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3613,6 +3637,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3758,6 +3783,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3902,6 +3928,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -4046,6 +4073,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -4190,6 +4218,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{

@@ -36,6 +36,7 @@ TRANSITION_SOUND = pygame.mixer.Sound("assets/bell.wav")
 SELECTED_SOUND = pygame.mixer.Sound("assets/selected.wav")
 READBACK_TRANSISION = False
 REABBACK_BUTTON_FREEZE = False
+PAGE_TURN = "default"
 
 # Pins
 ## Outputs
@@ -85,31 +86,23 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/start.png",
                 "frames" : 4,
-                "location": [450, 530],
+                "location": [650, 530],
                 "text": "Start",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "manager": "having this key will swap the manager. This value doesnt matter."
                 }
             },
             {
                 "image": "assets/img/buttons/options.png",
                 "frames" : 4,
-                "location": [960, 700],
+                "location": [1270, 530],
                 "text": "Options",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "goto": 1
-                }
-            },
-            {
-                "image": "assets/img/buttons/shutdown.png",
-                "frames" : 4,
-                "location": [1470, 530],
-                "text": "Shutdown",
-                "effects": {
-                    "not_random": "Yes",
-                    "plain_function": shutdown
                 }
             }
         ]
@@ -122,10 +115,11 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
-                "location": [300, 620],
-                "text": "Difficulty",
+                "location": [450, 530],
+                "text": "Switches",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "goto": 2
 
                 }
@@ -133,31 +127,56 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [720, 620],
+                "location": [960, 530],
                 "text": "Speed",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "goto": 3
                 }
             },
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [1120, 620],
+                "location": [1470, 530],
                 "text": "Story",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "goto": 4
                 }
             },
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [1580, 620],
+                "location": [450, 700],
                 "text": "Text",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "goto": 8
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [960, 700],
+                "text": "Turn Page",
+                "effects": {
+                    "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
+                    "goto": 9
+                }
+            },
+            {
+                "image": "assets/img/buttons/shutdown.png",
+                "frames" : 4,
+                "location": [1470, 700],
+                "text": "Shutdown",
+                "effects": {
+                    "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
+                    "plain_function": shutdown
                 }
             }
         ]
@@ -174,6 +193,7 @@ menu_narrative = [
                 "text": "1 Switch",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "mode": "easy",
                     "goto": 0
 
@@ -186,6 +206,7 @@ menu_narrative = [
                 "text": "2 Switch",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "mode": "adv",
                     "goto": 0
                 }
@@ -204,6 +225,7 @@ menu_narrative = [
                 "text": "Slower(+1)",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "speedChange": 1,
                     "goto": 0
 
@@ -216,6 +238,7 @@ menu_narrative = [
                 "text": "Reset("+str(INITIAL_CYCLE_TIMER)+")",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "speedReset": INITIAL_CYCLE_TIMER,
                     "goto": 0
                 }
@@ -227,6 +250,7 @@ menu_narrative = [
                 "text": "Faster(-0.5)",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "speedChange": -0.5,
                     "goto": 0
                 }
@@ -245,6 +269,7 @@ menu_narrative = [
                 "text": "Beginning",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "goto": 5
 
                 }
@@ -256,6 +281,7 @@ menu_narrative = [
                 "text": "Middle",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "goto": 6
                 }
             },
@@ -266,6 +292,7 @@ menu_narrative = [
                 "text": "End",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "goto": 7
                 }
             }
@@ -283,6 +310,7 @@ menu_narrative = [
                 "text": "Option 1",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "beginningOption": 1,
                     "goto": 0
 
@@ -295,6 +323,7 @@ menu_narrative = [
                 "text": "Option 2",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "beginningOption": 2,
                     "goto": 0
                 }
@@ -313,6 +342,7 @@ menu_narrative = [
                 "text": "Option 1",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "middleOption": 1,
                     "goto": 0
 
@@ -325,6 +355,7 @@ menu_narrative = [
                 "text": "Option 2",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "middleOption": 2,
                     "goto": 0
                 }
@@ -343,6 +374,7 @@ menu_narrative = [
                 "text": "Option 1",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "endOption": 1,
                     "goto": 0
 
@@ -355,6 +387,7 @@ menu_narrative = [
                 "text": "Option 2",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "endOption": 2,
                     "goto": 0
                 }
@@ -372,6 +405,7 @@ menu_narrative = [
                 "text": "Default",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "fontSize": FONT_SIZE,
                     "goto": 0
                 }
@@ -383,6 +417,7 @@ menu_narrative = [
                 "text": "Bigger",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "fontSize": FONT_SIZE+30,
                     "goto": 0
                 }
@@ -394,7 +429,62 @@ menu_narrative = [
                 "text": "Biggest",
                 "effects": {
                     "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
                     "fontSize": FONT_SIZE+60,
+                    "goto": 0
+                }
+            }
+        ]
+    },
+    { #8
+        "title": "Page Turn",
+        "not_random": "Yes",
+        "buttons": [
+            {
+                "image": "assets/img/buttons/start.png",
+                "frames" : 4,
+                "location": [300, 620],
+                "text": "Default",
+                "effects": {
+                    "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
+                    "pageTurn": "default",
+                    "goto": 0
+                }
+            },
+            {
+                "image": "assets/img/buttons/options.png",
+                "frames" : 4,
+                "location": [760, 620],
+                "text": "Both Switches",
+                "effects": {
+                    "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
+                    "pageTurn": "both",
+                    "goto": 0
+                }
+            },
+            {
+                "image": "assets/img/buttons/shutdown.png",
+                "frames" : 4,
+                "location": [1200, 620],
+                "text": "Auto 10s",
+                "effects": {
+                    "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
+                    "pageTurn": "auto",
+                    "goto": 0
+                }
+            },
+            {
+                "image": "assets/img/buttons/shutdown.png",
+                "frames" : 4,
+                "location": [1620, 620],
+                "text": "No Page",
+                "effects": {
+                    "not_random": "Yes",
+                    "selected_sound" : "page_turn.wav",
+                    "pageTurn": "off",
                     "goto": 0
                 }
             }

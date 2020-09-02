@@ -302,7 +302,11 @@ class Manager(object):
         if self.scene_number == self.MidTwo[1] and self.ending == 1:
             self.scene_number = self.MidOne[1]
 
-        self.scene_number += 1
+        if settings.PAGE_TURN == "off" and "turn_page" in self.narrative[self.scene_number+1]:
+            self.scene_number += 2
+        else:
+            self.scene_number += 1
+
         if not self.scene_number >= len(self.narrative):
             self.scene_transisition()
 
@@ -413,6 +417,11 @@ class GameManager(Manager):
 
     def check_pressed(self):
         if self.input_controller.button_one_pressed and not settings.REABBACK_BUTTON_FREEZE:
+            self.destroy_cycle_timer()
+            self.buttons[self.selected_button].selected = True
+            self.process_button_effects()
+
+        if self.input_controller.button_two_pressed and "turn_page" in self.narrative[self.scene_number] and settings.PAGE_TURN == "both":
             self.destroy_cycle_timer()
             self.buttons[self.selected_button].selected = True
             self.process_button_effects()
@@ -541,6 +550,9 @@ class MenuManager(Manager):
             self.switch_font(effects["fontSize"])
             self.fontSize = effects["fontSize"]
             settings.FONT_SIZE = effects["fontSize"]
+        if "pageTurn" in effects:
+            settings.PAGE_TURN = effects["pageTurn"]
+
             
             
 
