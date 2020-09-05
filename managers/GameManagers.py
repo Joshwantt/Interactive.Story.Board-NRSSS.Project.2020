@@ -29,13 +29,17 @@ class Manager(object):
         self.scene_active = False
         self.narrative_played = False
         self.scene_wind_down = False
-        self.beginning = 1  ##default to all option 1 story
-        self.middle = 1     ##if option 2 is needed the variable is set to 2
-        self.ending = 1
         self.fontSize = settings.FONT_SIZE
         self.readback = []
         self.randomOptions = [[]]
         self.beginningSkip = False
+
+        random.seed
+        self.beginning = random.randint(1, 2)
+        random.seed
+        self.middle = random.randint(1, 2)
+        random.seed
+        self.ending = random.randint(1, 2)
 
         for i in self.narrative:
             random.seed()
