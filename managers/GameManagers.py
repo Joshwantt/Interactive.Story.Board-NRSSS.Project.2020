@@ -30,13 +30,17 @@ class Manager(object):
         self.scene_active = False
         self.narrative_played = False
         self.scene_wind_down = False
-        self.beginning = 1  ##default to all option 1 story
-        self.middle = 1     ##if option 2 is needed the variable is set to 2
-        self.ending = 1
         self.fontSize = settings.FONT_SIZE
         self.readback = []
         self.randomOptions = [[]]
         self.beginningSkip = False
+
+        random.seed()
+        self.beginning = random.randint(1, 2)
+        random.seed()
+        self.middle= random.randint(1, 2)
+        random.seed()
+        self.ending = random.randint(1, 2)
 
         self.BegOne = []
         self.BegTwo = []
@@ -44,7 +48,6 @@ class Manager(object):
         self.MidTwo = []
         self.EndOne = []
         self.EndTwo = []
-
 
 
         for i in self.narrative:
@@ -251,7 +254,7 @@ class Manager(object):
             self.input_controller.update(events)
 
             # If we are using in easy mode, we need to ignore the state of the second button.
-            if self.mode == "easy":
+            if self.mode == "easy" and not "turn_page" in self.narrative[self.scene_number]:
                 self.input_controller.button_two_pressed = False
 
             # Check for button presses.

@@ -1,6 +1,7 @@
 [
 	{
 		"title" : "When the bell plays, press your switch to turn the page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"sound_narration" : "turn_page.wav",
 				
