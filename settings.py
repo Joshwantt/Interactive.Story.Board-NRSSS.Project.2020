@@ -88,6 +88,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [650, 530],
                 "text": "Start",
+                "sound_hover" : "start.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -99,6 +100,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1270, 530],
                 "text": "Options",
+                "sound_hover" : "options.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -117,6 +119,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [450, 530],
                 "text": "Switches",
+                "sound_hover" : "switches.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -129,6 +132,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [960, 530],
                 "text": "Speed",
+                "sound_hover" : "speed.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -140,6 +144,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1470, 530],
                 "text": "Story",
+                "sound_hover" : "story.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -151,6 +156,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [450, 700],
                 "text": "Text",
+                "sound_hover" : "text.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -162,6 +168,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [960, 700],
                 "text": "Turn Page",
+                "sound_hover" : "turnpage.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -173,6 +180,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1470, 700],
                 "text": "Shutdown",
+                "sound_hover" : "shutdown.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -191,6 +199,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [600, 620],
                 "text": "1 Switch",
+                "sound_hover" : "oneswitch.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -204,6 +213,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1220, 620],
                 "text": "2 Switch",
+                "sound_hover" : "twoswitch.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -223,6 +233,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Slower(+1)",
+                "sound_hover" : "slower.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -236,6 +247,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [960, 620],
                 "text": "Reset("+str(INITIAL_CYCLE_TIMER)+")",
+                "sound_hover" : "reset.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -248,6 +260,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1510, 620],
                 "text": "Faster(-0.5)",
+                "sound_hover" : "faster.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -267,6 +280,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Beginning",
+                "sound_hover" : "beginning.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -279,6 +293,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [960, 620],
                 "text": "Middle",
+                "sound_hover" : "middle.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -290,6 +305,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1510, 620],
                 "text": "End",
+                "sound_hover" : "end.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -308,6 +324,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Option 1",
+                "sound_hover" : "optionone.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -321,6 +338,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1410, 620],
                 "text": "Option 2",
+                "sound_hover" : "optiontwo.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -340,6 +358,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Option 1",
+                "sound_hover" : "optionone.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -353,6 +372,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1410, 620],
                 "text": "Option 2",
+                "sound_hover" : "optiontwo.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -372,6 +392,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Option 1",
+                "sound_hover" : "optionone.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -385,6 +406,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1410, 620],
                 "text": "Option 2",
+                "sound_hover" : "optiontwo.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -403,6 +425,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [450, 620],
                 "text": "Default",
+                "sound_hover" : "default.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -415,6 +438,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [960, 620],
                 "text": "Bigger",
+                "sound_hover" : "bigger.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -427,6 +451,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1470, 620],
                 "text": "Biggest",
+                "sound_hover" : "biggest.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -445,6 +470,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [300, 620],
                 "text": "Default",
+                "sound_hover" : "default.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -457,6 +483,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [760, 620],
                 "text": "Both Switches",
+                "sound_hover" : "bothswitches.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -469,6 +496,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1200, 620],
                 "text": "Auto 10s",
+                "sound_hover" : "auto.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",
@@ -481,6 +509,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1620, 620],
                 "text": "No Page",
+                "sound_hover" : "nopage.wav",
                 "effects": {
                     "not_random": "Yes",
                     "selected_sound" : "page_turn.wav",

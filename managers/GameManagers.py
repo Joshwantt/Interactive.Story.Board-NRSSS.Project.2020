@@ -42,6 +42,10 @@ class Manager(object):
         random.seed()
         self.ending = random.randint(1, 2)
 
+        print(self.beginning)
+        print(self.middle)
+        print(self.ending)
+
         self.BegOne = []
         self.BegTwo = []
         self.MidOne = []
