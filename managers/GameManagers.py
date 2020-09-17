@@ -3,6 +3,7 @@ import pygame
 from board_components.inputs import InputController
 from board_components.outputs import Fan, VibeMat, Rotors, Custom
 from game_objects.gui_button import GUIButton
+from subprocess import call
 import settings
 from threading import Timer
 from time import sleep
@@ -493,9 +494,11 @@ class GameManager(Manager):
                         self.outputs[op].pulse()
 
                 if "restart" in effects:
-                    self.scene_number = -1
-                    self.readback = []
-                    self.swap_manager = True
+                    if SYSTEM == "Linux":
+                        call("clear", shell=True)
+                        call("sudo shutdown -r now", shell=True)
+                    else:
+                        pygame.quit()
             else:
                 if "selected_sound" in effects:
                     # Play a default sound if nothing in the field.
@@ -516,8 +519,11 @@ class GameManager(Manager):
                         self.outputs[op].pulse()
 
                 if "restart" in effectsRandom:
-                    self.scene_number = -1
-                    self.swap_manager = True
+                    if settings.SYSTEM == "Linux":
+                        call("clear", shell=True)
+                        call("sudo shutdown -r now", shell=True)
+                    else:
+                        pygame.quit()
 
 
 
