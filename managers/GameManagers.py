@@ -141,10 +141,11 @@ class Manager(object):
             self.draw_text_lines(self.narrative[self.scene_number]["title"], self.screen.get_width()/2, self.screen.get_height()/5)
 
     def auto_turn(self):
-        self.scene_wind_down = True
-        self.auto_page_turn_timer.cancel()
-        self.selected_button = 0
-        self.process_button_effects()
+        if "turn_page" in self.narrative[self.scene_number]:
+            self.scene_wind_down = True
+            self.auto_page_turn_timer.cancel()
+            self.selected_button = 0
+            self.process_button_effects()
 
             
     def draw_text_lines(self, text, x, y):
