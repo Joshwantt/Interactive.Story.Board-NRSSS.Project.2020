@@ -36,7 +36,8 @@ TRANSITION_SOUND = pygame.mixer.Sound("assets/bell.wav")
 SELECTED_SOUND = pygame.mixer.Sound("assets/selected.wav")
 READBACK_TRANSISION = False
 REABBACK_BUTTON_FREEZE = False
-PAGE_TURN = "default"
+PAGE_TURN = "auto"
+IN_GAME = False
 
 # Pins
 ## Outputs
@@ -70,10 +71,14 @@ CUSTOM_PULSE_INTERVAL = 1
 
 
 def shutdown():
-    pygame.quit()
-    #if SYSTEM == "Linux":
+    if SYSTEM == "Linux":
+        print("linux")
         #call("clear", shell=True)
         #call("sudo shutdown -h now", shell=True)
+        #this code is commented for dev reasons.
+    else:
+        print("not linux")
+        pygame.quit()
 
 
 
@@ -91,7 +96,6 @@ menu_narrative = [
                 "sound_hover" : "start.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "manager": "having this key will swap the manager. This value doesnt matter."
                 }
             },
@@ -103,7 +107,6 @@ menu_narrative = [
                 "sound_hover" : "options.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "goto": 1
                 }
             }
@@ -122,7 +125,6 @@ menu_narrative = [
                 "sound_hover" : "switches.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "goto": 2
 
                 }
@@ -135,7 +137,6 @@ menu_narrative = [
                 "sound_hover" : "speed.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "goto": 3
                 }
             },
@@ -147,7 +148,6 @@ menu_narrative = [
                 "sound_hover" : "story.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "goto": 4
                 }
             },
@@ -159,7 +159,6 @@ menu_narrative = [
                 "sound_hover" : "text.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "goto": 8
                 }
             },
@@ -171,7 +170,6 @@ menu_narrative = [
                 "sound_hover" : "turnpage.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "goto": 9
                 }
             },
@@ -183,7 +181,6 @@ menu_narrative = [
                 "sound_hover" : "shutdown.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "plain_function": shutdown
                 }
             }
@@ -202,7 +199,6 @@ menu_narrative = [
                 "sound_hover" : "oneswitch.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "mode": "easy",
                     "goto": 0
 
@@ -216,7 +212,6 @@ menu_narrative = [
                 "sound_hover" : "twoswitch.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "mode": "adv",
                     "goto": 0
                 }
@@ -236,7 +231,6 @@ menu_narrative = [
                 "sound_hover" : "slower.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "speedChange": 1,
                     "goto": 0
 
@@ -250,7 +244,6 @@ menu_narrative = [
                 "sound_hover" : "reset.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "speedReset": INITIAL_CYCLE_TIMER,
                     "goto": 0
                 }
@@ -263,7 +256,6 @@ menu_narrative = [
                 "sound_hover" : "faster.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "speedChange": -0.5,
                     "goto": 0
                 }
@@ -283,7 +275,6 @@ menu_narrative = [
                 "sound_hover" : "beginning.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "goto": 5
 
                 }
@@ -296,7 +287,6 @@ menu_narrative = [
                 "sound_hover" : "middle.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "goto": 6
                 }
             },
@@ -308,7 +298,6 @@ menu_narrative = [
                 "sound_hover" : "end.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "goto": 7
                 }
             }
@@ -327,7 +316,6 @@ menu_narrative = [
                 "sound_hover" : "optionone.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "beginningOption": 1,
                     "goto": 0
 
@@ -341,7 +329,6 @@ menu_narrative = [
                 "sound_hover" : "optiontwo.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "beginningOption": 2,
                     "goto": 0
                 }
@@ -361,7 +348,6 @@ menu_narrative = [
                 "sound_hover" : "optionone.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "middleOption": 1,
                     "goto": 0
 
@@ -375,7 +361,6 @@ menu_narrative = [
                 "sound_hover" : "optiontwo.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "middleOption": 2,
                     "goto": 0
                 }
@@ -395,7 +380,6 @@ menu_narrative = [
                 "sound_hover" : "optionone.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "endOption": 1,
                     "goto": 0
 
@@ -409,7 +393,6 @@ menu_narrative = [
                 "sound_hover" : "optiontwo.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "endOption": 2,
                     "goto": 0
                 }
@@ -428,7 +411,6 @@ menu_narrative = [
                 "sound_hover" : "default.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "fontSize": FONT_SIZE,
                     "goto": 0
                 }
@@ -441,7 +423,6 @@ menu_narrative = [
                 "sound_hover" : "bigger.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "fontSize": FONT_SIZE+30,
                     "goto": 0
                 }
@@ -454,7 +435,6 @@ menu_narrative = [
                 "sound_hover" : "biggest.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "fontSize": FONT_SIZE+60,
                     "goto": 0
                 }
@@ -469,11 +449,10 @@ menu_narrative = [
                 "image": "assets/img/buttons/start.png",
                 "frames" : 4,
                 "location": [300, 620],
-                "text": "Default",
-                "sound_hover" : "default.wav",
+                "text": "1-Switch",
+                "sound_hover" : "oneswitch.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "pageTurn": "default",
                     "goto": 0
                 }
@@ -482,11 +461,10 @@ menu_narrative = [
                 "image": "assets/img/buttons/options.png",
                 "frames" : 4,
                 "location": [760, 620],
-                "text": "Both Switches",
-                "sound_hover" : "bothswitches.wav",
+                "text": "2-Switch",
+                "sound_hover" : "twoswitch.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "pageTurn": "both",
                     "goto": 0
                 }
@@ -499,7 +477,6 @@ menu_narrative = [
                 "sound_hover" : "auto.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "pageTurn": "auto",
                     "goto": 0
                 }
@@ -512,7 +489,6 @@ menu_narrative = [
                 "sound_hover" : "nopage.wav",
                 "effects": {
                     "not_random": "Yes",
-                    "selected_sound" : "page_turn.wav",
                     "pageTurn": "off",
                     "goto": 0
                 }

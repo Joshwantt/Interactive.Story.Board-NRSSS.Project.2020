@@ -143,6 +143,7 @@ class Manager(object):
 
     def auto_turn(self):
         if "turn_page" in self.narrative[self.scene_number]:
+            print("auto now")
             self.scene_wind_down = True
             self.auto_page_turn_timer.cancel()
             self.selected_button = 0
@@ -213,7 +214,8 @@ class Manager(object):
             # Set button one to selected.if
             self.selected_button = 0
             
-            if settings.PAGE_TURN == "auto" and ("turn_page" in self.narrative[self.scene_number]):
+            if settings.PAGE_TURN == "auto" and ("turn_page" in self.narrative[self.scene_number]) and settings.IN_GAME:
+                print("auto countdown started")
                 self.auto_page_turn_timer = Timer(10.0, self.auto_turn)
                 self.auto_page_turn_timer.start()
 
@@ -494,7 +496,7 @@ class GameManager(Manager):
                         self.outputs[op].pulse()
 
                 if "restart" in effects:
-                    if SYSTEM == "Linux":
+                    if settings.SYSTEM == "Linux":
                         call("clear", shell=True)
                         call("sudo shutdown -r now", shell=True)
                     else:
@@ -547,6 +549,7 @@ class MenuManager(Manager):
         effects = self.narrative[self.scene_number]["buttons"][self.selected_button]["effects"]
 
         if "manager" in effects:
+            settings.IN_GAME = True
             self.swap_manager = True
         if "mode" in effects:
             self.switch_mode(effects["mode"])
@@ -559,7 +562,7 @@ class MenuManager(Manager):
             if "speedReset" in effects:
                 self.switch_speed(effects["speedReset"])
                 self.button_cycle_timer = effects["speedReset"]
-                settings.CYCLE_BUTTON_TIMER = effects["speedChange"]
+                settings.CYCLE_BUTTON_TIMER = effects["speedReset"]
         if "plain_function" in effects:
             effects["plain_function"]()
         if "goto" in effects:

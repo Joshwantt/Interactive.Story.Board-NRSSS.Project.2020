@@ -4,7 +4,6 @@
 		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"sound_narration" : "turn_page.wav",
-				
 		"buttons" : [
 			{
 				"name" : "start",
@@ -2742,7 +2741,7 @@
 				"frames" : 4,
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [1470, 530],
-				"text" : "pen",
+				"text" : "Pen",
 				"sound_hover" : "pen.wav",
 				"effects" : {
 					"selected_sound" : "pen.wav",
