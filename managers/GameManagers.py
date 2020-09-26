@@ -3,6 +3,7 @@ import pygame
 from board_components.inputs import InputController
 from board_components.outputs import Fan, VibeMat, Rotors, Custom
 from game_objects.gui_button import GUIButton
+from subprocess import call
 import settings
 from threading import Timer
 from time import sleep
@@ -25,24 +26,83 @@ class Manager(object):
         self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
         self.active_button_cycle_timer = None
         self.active_scene_transition_timer = None
+        self.auto_page_turn_timer = None
         self.message = ""
         self.scene_active = False
         self.narrative_played = False
         self.scene_wind_down = False
-        self.beginning = 1  ##default to all option 1 story
-        self.middle = 1     ##if option 2 is needed the variable is set to 2
-        self.ending = 1
         self.fontSize = settings.FONT_SIZE
         self.readback = []
         self.randomOptions = [[]]
         self.beginningSkip = False
 
+        #For each section in the story, randomly select Option A or Option B
+        random.seed()
+        self.beginning = random.randint(1, 2)
+        random.seed()
+        self.middle= random.randint(1, 2)
+        random.seed()
+        self.ending = random.randint(1, 2)
+
+        print(self.beginning)
+        print(self.middle)
+        print(self.ending)
+        
+        self.BegOne = []
+        self.BegTwo = []
+        self.MidOne = []
+        self.MidTwo = []
+        self.EndOne = []
+        self.EndTwo = []
+
+        #For each prompt in the narrative, choose 3 random options out of the 10 buttons
         for i in self.narrative:
             random.seed()
             a = random.randint(0, 3)
             b = random.randint(4, 6)
             c = random.randint(7, 9)
             self.randomOptions.append([a,b,c])
+        
+        #Store the locations of the start and end of each section of the story
+        for page in range(0, len(self.narrative)):
+            if "BeginningOpt1Beg" in self.narrative[page]:
+                self.BegOne.append(page-1)
+                print(page-1)
+            if "BeginningOpt1End" in self.narrative[page]:
+                self.BegOne.append(page+1)
+                print(page+1)
+            if "MiddleOpt1Beg" in self.narrative[page]:
+                self.MidOne.append(page-1)
+                print(page-1)
+            if "MiddleOpt1End" in self.narrative[page]:
+                self.MidOne.append(page+1)
+                print(page+1)
+            if "EndOpt1Beg" in self.narrative[page]:
+                self.EndOne.append(page-1)
+                print(page-1)
+            if "EndOpt1End" in self.narrative[page]:
+                self.EndOne.append(page+1)
+                print(page+1)
+            if "BeginningOpt2Beg" in self.narrative[page]:
+                self.BegTwo.append(page-1)
+                print(page-1)
+            if "BeginningOpt2End" in self.narrative[page]:
+                self.BegTwo.append(page+1)
+                print(page+1)
+            if "MiddleOpt2Beg" in self.narrative[page]:
+                self.MidTwo.append(page-1)
+                print(page-1)
+            if "MiddleOpt2End" in self.narrative[page]:
+                self.MidTwo.append(page+1)
+                print(page+1)
+            if "EndOpt2Beg" in self.narrative[page]:
+                self.EndTwo.append(page-1)
+                print(page-1)
+            if "EndOpt2End" in self.narrative[page]:
+                self.EndTwo.append(page+1)
+                print(page+1)
+            
+
 
         # Because the timer thread goes off and does its thing before the game starts, a start bool will be used to set it in update rather than here.
         self.start = True
@@ -82,7 +142,14 @@ class Manager(object):
     def render_text(self):
         if "title" in self.narrative[self.scene_number]:
             self.draw_text_lines(self.narrative[self.scene_number]["title"], self.screen.get_width()/2, self.screen.get_height()/5)
-            
+
+    def auto_turn(self):
+        if "turn_page" in self.narrative[self.scene_number]:
+            print("auto now")
+            self.scene_wind_down = True
+            self.auto_page_turn_timer.cancel()
+            self.selected_button = 0
+            self.process_button_effects()
 
             
     def draw_text_lines(self, text, x, y):
@@ -112,7 +179,10 @@ class Manager(object):
     def setup_buttons(self):
         if "buttons" in self.narrative[self.scene_number]:
             self.buttons.clear()
+            #For playback screens, retrieve the saved button selections and set the buttons
+            #in the playback screen to them
             if "playback" in self.narrative[self.scene_number]:
+                settings.REABBACK_BUTTON_FREEZE = True
                 for button in self.narrative[self.scene_number]["buttons"]:
                     self.buttons.append(button["preload_button"])
                 for i, button in enumerate(self.buttons):
@@ -129,11 +199,14 @@ class Manager(object):
                         effects = self.narrative[self.scene_number]["buttons"][i].get("effects")
                         effects["output"] = self.readback[a][5]
             else:
+                settings.REABBACK_BUTTON_FREEZE = False
                 enumerateButtons = enumerate(self.narrative[self.scene_number]["buttons"])
                 for i, button in enumerateButtons:
+                    #For screens that aren't story or playback, just append the buttons
                     if "not_random" in self.narrative[self.scene_number]:
                         self.buttons.append(button["preload_button"])
                     else:
+                        #For screens that are in the story, append the 3 random buttons
                         if (self.randomOptions[self.scene_number][0] == i):
                             self.buttons.append(button["preload_button"])
                             
@@ -146,6 +219,11 @@ class Manager(object):
             
             # Set button one to selected.if
             self.selected_button = 0
+            
+            if settings.PAGE_TURN == "auto" and ("turn_page" in self.narrative[self.scene_number]) and settings.IN_GAME:
+                print("auto countdown started")
+                self.auto_page_turn_timer = Timer(10.0, self.auto_turn)
+                self.auto_page_turn_timer.start()
 
     def render_buttons(self, active=True):
         for button in self.buttons:
@@ -162,7 +240,10 @@ class Manager(object):
         self.render_text()
         self.render_message()
 
+        
+        
         if self.scene_wind_down:
+            self.auto_page_turn_timer = None
             # Here is where we handle when to transition scenes.    ####################################################
             self.destroy_cycle_timer()
             if not pygame.mixer.get_busy() and (not self.active_scene_transition_timer or not self.active_scene_transition_timer.is_alive()):
@@ -187,7 +268,7 @@ class Manager(object):
             self.input_controller.update(events)
 
             # If we are using in easy mode, we need to ignore the state of the second button.
-            if self.mode == "easy":
+            if self.mode == "easy" and not "turn_page" in self.narrative[self.scene_number]:
                 self.input_controller.button_two_pressed = False
 
             # Check for button presses.
@@ -208,7 +289,11 @@ class Manager(object):
             self.active_button_cycle_timer.cancel()
 
         if (self.mode == "easy") or ("playback" in self.narrative[self.scene_number]):
-            self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
+            if ("playback" in self.narrative[self.scene_number]):
+                self.button_cycle_timer = 3
+            else:
+                self.button_cycle_timer = settings.CYCLE_BUTTON_TIMER
+
             self.active_button_cycle_timer = Timer(self.button_cycle_timer, self.auto_button_cycle)
             self.active_button_cycle_timer.start()
 
@@ -227,27 +312,43 @@ class Manager(object):
         self.input_controller.kill_all()
 
     def next_scene(self):
+        offset = 0
+        if settings.PAGE_TURN == "off":
+            offset=1
+        else:
+            offset=0
+        ## Depending on which combinations of story options are selected, skip forwards
+        # or backwards in the narrative as needed.
+        # NOTE: At present, the game is split into 3 sections, each having 2 option
+        # Beginning- Option A, Option B; Middle- Option A and B; End- Option A and B
+        # All 6 of the possible sections are already loaded- this merely changes which
+        #part of the narrative is being displayed
+        # Example: If the story options are Beginning A, Middle B, End A- the narrative
+        #goes through Beginning A, and then skips to the start of Middle B, goes through
+        #Middle B, and then skips to the location of End A in the narrative
+        if self.scene_number == self.EndOne[1]:
+            self.scene_number = self.EndTwo[1]
 
-        ## Scene numbers may need to change if scenes are added for playback feature
-        if self.scene_number == 30:
-            self.scene_number = 60
+        if self.scene_number == self.BegOne[0] and self.beginning == 2:
+            self.scene_number = self.EndOne[1]
 
-        if self.scene_number == 0 and self.beginning == 2:
-            self.scene_number = 30
+        if self.scene_number == self.BegOne[1]-offset and self.middle == 2:
+            self.scene_number = self.BegTwo[1]
 
-        if self.scene_number == 10 and self.middle == 2:
-            self.scene_number = 40
+        if self.scene_number == self.MidOne[1]-offset and self.ending == 2:
+            self.scene_number = self.MidTwo[1]
 
-        if self.scene_number == 20 and self.ending == 2:
-            self.scene_number = 50
+        if self.scene_number == self.BegTwo[1]-offset and self.middle == 1:
+            self.scene_number = self.MidOne[0]
 
-        if self.scene_number == 40 and self.middle == 1:
-            self.scene_number = 10
+        if self.scene_number == self.MidTwo[1]-offset and self.ending == 1:
+            self.scene_number = self.MidOne[1]
 
-        if self.scene_number == 50 and self.ending == 1:
-            self.scene_number = 20
+        if settings.PAGE_TURN == "off" and "turn_page" in self.narrative[self.scene_number+1]:
+            self.scene_number += 2
+        else:
+            self.scene_number += 1
 
-        self.scene_number += 1
         if not self.scene_number >= len(self.narrative):
             self.scene_transisition()
 
@@ -280,7 +381,8 @@ class Manager(object):
             self.selected_button += 1
 
         self.buttons[self.selected_button].selected = True
-
+        
+        #Automatically go the next screen if the playback sounds have played through
         if "playback" in self.narrative[self.scene_number] and self.selected_button == 2:
             self.scene_wind_down = True
 
@@ -362,6 +464,11 @@ class GameManager(Manager):
             self.buttons[self.selected_button].selected = True
             self.process_button_effects()
 
+        if self.input_controller.button_two_pressed and "turn_page" in self.narrative[self.scene_number] and settings.PAGE_TURN == "both":
+            self.destroy_cycle_timer()
+            self.buttons[self.selected_button].selected = True
+            self.process_button_effects()
+
         if self.input_controller.button_two_pressed and not settings.REABBACK_BUTTON_FREEZE:
             self.cycle_button()
 
@@ -372,6 +479,7 @@ class GameManager(Manager):
         if "not_random" in self.narrative[self.scene_number]:
             effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
         else:
+            #Save the options that are selected to self.readback. To do this, the corresponding parts of the narrative are retrieved
             effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
             effectsRandom = self.narrative[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]].get("effects")
             with open("narrative.json", "r") as f:
@@ -408,9 +516,11 @@ class GameManager(Manager):
                         self.outputs[op].pulse()
 
                 if "restart" in effects:
-                    self.scene_number = -1
-                    self.readback = []
-                    self.swap_manager = True
+                    if settings.SYSTEM == "Linux":
+                        call("clear", shell=True)
+                        call("sudo shutdown -r now", shell=True)
+                    else:
+                        pygame.quit()
             else:
                 if "selected_sound" in effects:
                     # Play a default sound if nothing in the field.
@@ -431,8 +541,11 @@ class GameManager(Manager):
                         self.outputs[op].pulse()
 
                 if "restart" in effectsRandom:
-                    self.scene_number = -1
-                    self.swap_manager = True
+                    if settings.SYSTEM == "Linux":
+                        call("clear", shell=True)
+                        call("sudo shutdown -r now", shell=True)
+                    else:
+                        pygame.quit()
 
 
 
@@ -456,18 +569,20 @@ class MenuManager(Manager):
         effects = self.narrative[self.scene_number]["buttons"][self.selected_button]["effects"]
 
         if "manager" in effects:
+            settings.IN_GAME = True
             self.swap_manager = True
         if "mode" in effects:
             self.switch_mode(effects["mode"])
             self.mode = effects["mode"]
-        if "speedChange" in effects:
-            self.switch_speed(effects["speedChange"])
-            self.button_cycle_timer += effects["speedChange"]
-            settings.CYCLE_BUTTON_TIMER += effects["speedChange"]
-        if "speedReset" in effects:
-            self.switch_speed(effects["speedReset"])
-            self.button_cycle_timer = effects["speedReset"]
-            settings.CYCLE_BUTTON_TIMER = effects["speedChange"]
+        if self.mode == "easy":
+            if "speedChange" in effects:
+                self.switch_speed(effects["speedChange"])
+                self.button_cycle_timer += effects["speedChange"]
+                settings.CYCLE_BUTTON_TIMER += effects["speedChange"]
+            if "speedReset" in effects:
+                self.switch_speed(effects["speedReset"])
+                self.button_cycle_timer = effects["speedReset"]
+                settings.CYCLE_BUTTON_TIMER = effects["speedReset"]
         if "plain_function" in effects:
             effects["plain_function"]()
         if "goto" in effects:
@@ -485,6 +600,9 @@ class MenuManager(Manager):
             self.switch_font(effects["fontSize"])
             self.fontSize = effects["fontSize"]
             settings.FONT_SIZE = effects["fontSize"]
+        if "pageTurn" in effects:
+            settings.PAGE_TURN = effects["pageTurn"]
+
             
             
 

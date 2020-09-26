@@ -1,9 +1,9 @@
 [
 	{
 		"title" : "When the bell plays, press your switch to turn the page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"sound_narration" : "turn_page.wav",
-				
 		"buttons" : [
 			{
 				"name" : "start",
@@ -22,6 +22,7 @@
 	{
 		"title" : "My Story is about a",
 		"sound_narration" : "story1page1.wav",
+		"BeginningOpt1Beg" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -147,6 +148,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -291,6 +293,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -435,6 +438,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -579,6 +583,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -598,6 +603,7 @@
 	{
 		"title" : "So they put on their",
 		"sound_narration" : "story1page5.wav",
+		"BeginningOpt1End" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -723,6 +729,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -742,6 +749,7 @@
 	{
 		"title" : "They are ready to travel in their...",
 		"sound_narration" : "story1page6.wav",
+		"MiddleOpt1Beg" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -867,6 +875,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1011,6 +1020,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1155,6 +1165,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1299,6 +1310,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1318,6 +1330,7 @@
 	{
 		"title" : "They then go over a",
 		"sound_narration" : "story1page10.wav",
+		"MiddleOpt1End" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -1443,6 +1456,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1462,6 +1476,7 @@
 	{
 		"title" : "It is...",
 		"sound_narration" : "story1page11.wav",
+		"EndOpt1Beg" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -1587,6 +1602,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1731,6 +1747,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -1875,6 +1892,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2019,6 +2037,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2037,7 +2056,8 @@
 	},
 	{
 		"title" : "When we get to our final destination, we...",
-		"sound_narration" : "story1page15.wav",		
+		"sound_narration" : "story1page15.wav",
+		"EndOpt1End" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -2162,7 +2182,8 @@
 		]	
 	},
 	{
-		"title" : "Press button to move to next page",
+		"title" : "This is my story",
+		"sound_narration" : "mystory.wav",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2181,7 +2202,8 @@
 	},
 	{
 		"title" : "My Story is about detective..",
-		"sound_narration" : "story2page1.wav",		
+		"sound_narration" : "story2page1.wav",
+		"BeginningOpt2Beg" : "Yes",	
 		"buttons" : [
 			{
 				"index": 0,
@@ -2307,6 +2329,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2451,6 +2474,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2595,6 +2619,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2716,7 +2741,7 @@
 				"frames" : 4,
 				"image" : "assets/img/buttons/jetski.png",
 				"location" : [1470, 530],
-				"text" : "pen",
+				"text" : "Pen",
 				"sound_hover" : "pen.wav",
 				"effects" : {
 					"selected_sound" : "pen.wav",
@@ -2739,6 +2764,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2757,7 +2783,8 @@
 	},
 	{
 		"title" : "Where will they start looking?",
-		"sound_narration" : "story2page5.wav",		
+		"sound_narration" : "story2page5.wav",
+		"BeginningOpt2End" : "Yes",		
 		"buttons" : [
 			{
 				"index": 0,
@@ -2883,6 +2910,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -2901,7 +2929,8 @@
 	},
 	{
 		"title" : "They're ready to travel in their",
-		"sound_narration" : "story2page6.wav",		
+		"sound_narration" : "story2page6.wav",
+		"MiddleOpt2Beg" : "Yes",	
 		"buttons" : [
 			{
 				"index": 0,
@@ -3027,6 +3056,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3171,6 +3201,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3315,6 +3346,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3459,6 +3491,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3477,7 +3510,8 @@
 	},
 	{
 		"title" : "Then they go up, up, up...",
-		"sound_narration" : "story2page10.wav",		
+		"sound_narration" : "story2page10.wav",
+		"MiddleOpt2End" : "Yes",	
 		"buttons" : [
 			{
 				"index": 0,
@@ -3603,6 +3637,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3621,7 +3656,8 @@
 	},
 	{
 		"title" : "It is...",
-		"sound_narration" : "story2page11.wav",		
+		"sound_narration" : "story2page11.wav",
+		"EndOpt2Beg" : "Yes",	
 		"buttons" : [
 			{
 				"index": 0,
@@ -3747,6 +3783,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -3891,6 +3928,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -4035,6 +4073,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -4179,6 +4218,7 @@
 	},
 	{
 		"title" : "Press button to move to next page",
+		"turn_page" : "yes",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
@@ -4197,7 +4237,8 @@
 	},
 	{
 		"title" : "When the job was done, we...",
-		"sound_narration" : "story2page15.wav",		
+		"sound_narration" : "story2page15.wav",
+		"EndOpt2End" : "Yes",
 		"buttons" : [
 			{
 				"index": 0,
@@ -4322,59 +4363,23 @@
 		]	
 	},
 	{
-		"title" : "The sun is going down and it's time to go home. This adventure has been",
-		"sound_narration" : "ending.wav",
+		"title" : "This is my story",
+		"sound_narration" : "mystory.wav",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
+				
 				"frames" : 4,
-				"image" : "assets/img/buttons/exciting.png",
-				"location" : [450, 530],
-				"text" : "Exciting",
-				"sound_hover" : "exciting.wav",
-				"effects" : {
-					"selected_sound" : "smile.wav",
-					"not_random" : "Yes",
-					"output" : ["fan","vibe_mat","custom"]
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/scary.png",
-				"location" : [810, 620],
-				"text" : "Scary",
-				"sound_hover" : "scary.wav",
-				"effects" : {
-					"selected_sound" : "scary.wav",
-					"not_random" : "Yes",
-					"output" : ["fan","vibe_mat"]
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/fun2.png",
-				"location" : [1110, 620],
-				"text" : "Fun",
-				"sound_hover" : "fun2.wav",
-				"effects" : {
-					"selected_sound" : "smile.wav",
-					"not_random" : "Yes",
-					"output" : ["fan","vibe_mat","rotors","custom"]
-				}
-			},
-			{
-				"frames" : 4,
-				"image" : "assets/img/buttons/boring.png",
-				"location" : [1470, 530],
-				"text" : "Boring",
-				"sound_hover" : "boring.wav",
-				"effects" : {
-					"selected_sound" : "tooth.wav",
-					"not_random" : "Yes",
-					"output" : ["rotors","custom"]
+				"image" : "assets/img/buttons/start.png",
+				"location" : [960, 540],
+				"text" : "Next page",
+				"sound_hover" : "next_page.wav",
+				"effects": {
+					"selected_sound" : "page_turn.wav",
+					"not_random" : "Yes"
 				}
 			}
-		]	
+		]		
 	},
 	{
 		"title" : "",
@@ -5007,26 +5012,64 @@
 		]
 	},
 	{
-		"title" : "Press button to move to next page",
+		"title" : "The sun is going down and it's time to go home. This adventure has been",
+		"sound_narration" : "ending.wav",
 		"not_random" : "Yes",
 		"buttons" : [
 			{
-				
 				"frames" : 4,
-				"image" : "assets/img/buttons/start.png",
-				"location" : [960, 540],
-				"text" : "Next page",
-				"sound_hover" : "next_page.wav",
-				"effects": {
-					"selected_sound" : "page_turn.wav",
-					"not_random" : "Yes"
+				"image" : "assets/img/buttons/exciting.png",
+				"location" : [450, 530],
+				"text" : "Exciting",
+				"sound_hover" : "exciting.wav",
+				"effects" : {
+					"selected_sound" : "smile.wav",
+					"not_random" : "Yes",
+					"output" : ["fan","vibe_mat","rotors","custom"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/scary.png",
+				"location" : [810, 620],
+				"text" : "Scary",
+				"sound_hover" : "scary.wav",
+				"effects" : {
+					"selected_sound" : "scary.wav",
+					"not_random" : "Yes",
+					"output" : ["fan","vibe_mat","rotors","custom"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/fun2.png",
+				"location" : [1110, 620],
+				"text" : "Fun",
+				"sound_hover" : "fun2.wav",
+				"effects" : {
+					"selected_sound" : "smile.wav",
+					"not_random" : "Yes",
+					"output" : ["fan","vibe_mat","rotors","custom"]
+				}
+			},
+			{
+				"frames" : 4,
+				"image" : "assets/img/buttons/boring.png",
+				"location" : [1470, 530],
+				"text" : "Boring",
+				"sound_hover" : "boring.wav",
+				"effects" : {
+					"selected_sound" : "tooth.wav",
+					"not_random" : "Yes",
+					"output" : ["fan","vibe_mat","rotors","custom"]
 				}
 			}
-		]		
+		]	
 	},
 	{
-		"title" : "Thanks for playing!",
+		"title" : "The End",
 		"not_random" : "Yes",
+		"sound_narration" : "theend.wav",
 		"buttons" : [
 			{
 				"frames" : 4,

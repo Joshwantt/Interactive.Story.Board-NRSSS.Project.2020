@@ -15,7 +15,7 @@ DEBUG = False if SYSTEM == "Linux" else True
 PRODUCTION = True
 FONT_SIZE = 100
 BACKGROUND_COLOUR = (0, 0, 0)
-FPS = 12
+FPS = 10
 LABEL_COLOUR = (255,255,0,100)
 SELECTED_COLOUR = (255, 0, 0, 100)
 DESIGN_WIDTH = 1920
@@ -25,7 +25,7 @@ BUTTON_MAX_ZOOM = 60
 BUTTON_ZOOM_RATE = 10
 MESSAGE_LOCATION = (960, 960)
 MESSAGE_TIMER = 5.0
-INITIAL_CYCLE_TIMER = 3
+INITIAL_CYCLE_TIMER = 4
 CYCLE_BUTTON_TIMER = INITIAL_CYCLE_TIMER
 # Set channels.
 pygame.mixer.set_num_channels(3)
@@ -36,6 +36,8 @@ TRANSITION_SOUND = pygame.mixer.Sound("assets/bell.wav")
 SELECTED_SOUND = pygame.mixer.Sound("assets/selected.wav")
 READBACK_TRANSISION = False
 REABBACK_BUTTON_FREEZE = False
+PAGE_TURN = "auto"
+IN_GAME = False
 
 # Pins
 ## Outputs
@@ -69,10 +71,14 @@ CUSTOM_PULSE_INTERVAL = 1
 
 
 def shutdown():
-    pygame.quit()
-    #if SYSTEM == "Linux":
+    print(SYSTEM)
+    if SYSTEM == "Linux":
         #call("clear", shell=True)
         #call("sudo shutdown -h now", shell=True)
+        #this code is commented for dev reasons. Comment this code to gain access back into the device.
+        pygame.quit()
+    else:
+        pygame.quit()
 
 
 
@@ -85,8 +91,9 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/start.png",
                 "frames" : 4,
-                "location": [450, 530],
+                "location": [650, 530],
                 "text": "Start",
+                "sound_hover" : "start.wav",
                 "effects": {
                     "not_random": "Yes",
                     "manager": "having this key will swap the manager. This value doesnt matter."
@@ -95,21 +102,12 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/options.png",
                 "frames" : 4,
-                "location": [960, 700],
+                "location": [1270, 530],
                 "text": "Options",
+                "sound_hover" : "options.wav",
                 "effects": {
                     "not_random": "Yes",
                     "goto": 1
-                }
-            },
-            {
-                "image": "assets/img/buttons/shutdown.png",
-                "frames" : 4,
-                "location": [1470, 530],
-                "text": "Shutdown",
-                "effects": {
-                    "not_random": "Yes",
-                    "plain_function": shutdown
                 }
             }
         ]
@@ -122,8 +120,9 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/onebutton.png",
                 "frames" : 4,
-                "location": [300, 620],
-                "text": "Difficulty",
+                "location": [450, 530],
+                "text": "Switches",
+                "sound_hover" : "switches.wav",
                 "effects": {
                     "not_random": "Yes",
                     "goto": 2
@@ -133,8 +132,9 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [720, 620],
+                "location": [960, 530],
                 "text": "Speed",
+                "sound_hover" : "speed.wav",
                 "effects": {
                     "not_random": "Yes",
                     "goto": 3
@@ -143,8 +143,9 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [1120, 620],
+                "location": [1470, 530],
                 "text": "Story",
+                "sound_hover" : "story.wav",
                 "effects": {
                     "not_random": "Yes",
                     "goto": 4
@@ -153,11 +154,34 @@ menu_narrative = [
             {
                 "image": "assets/img/buttons/twobuttons.png",
                 "frames" : 4,
-                "location": [1580, 620],
+                "location": [450, 700],
                 "text": "Text",
+                "sound_hover" : "text.wav",
                 "effects": {
                     "not_random": "Yes",
                     "goto": 8
+                }
+            },
+            {
+                "image": "assets/img/buttons/twobuttons.png",
+                "frames" : 4,
+                "location": [960, 700],
+                "text": "Turn Page",
+                "sound_hover" : "turnpage.wav",
+                "effects": {
+                    "not_random": "Yes",
+                    "goto": 9
+                }
+            },
+            {
+                "image": "assets/img/buttons/shutdown.png",
+                "frames" : 4,
+                "location": [1470, 700],
+                "text": "Shutdown",
+                "sound_hover" : "shutdown.wav",
+                "effects": {
+                    "not_random": "Yes",
+                    "plain_function": shutdown
                 }
             }
         ]
@@ -172,6 +196,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [600, 620],
                 "text": "1 Switch",
+                "sound_hover" : "oneswitch.wav",
                 "effects": {
                     "not_random": "Yes",
                     "mode": "easy",
@@ -184,6 +209,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1220, 620],
                 "text": "2 Switch",
+                "sound_hover" : "twoswitch.wav",
                 "effects": {
                     "not_random": "Yes",
                     "mode": "adv",
@@ -202,6 +228,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Slower(+1)",
+                "sound_hover" : "slower.wav",
                 "effects": {
                     "not_random": "Yes",
                     "speedChange": 1,
@@ -214,6 +241,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [960, 620],
                 "text": "Reset("+str(INITIAL_CYCLE_TIMER)+")",
+                "sound_hover" : "reset.wav",
                 "effects": {
                     "not_random": "Yes",
                     "speedReset": INITIAL_CYCLE_TIMER,
@@ -225,6 +253,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1510, 620],
                 "text": "Faster(-0.5)",
+                "sound_hover" : "faster.wav",
                 "effects": {
                     "not_random": "Yes",
                     "speedChange": -0.5,
@@ -243,6 +272,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Beginning",
+                "sound_hover" : "beginning.wav",
                 "effects": {
                     "not_random": "Yes",
                     "goto": 5
@@ -254,6 +284,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [960, 620],
                 "text": "Middle",
+                "sound_hover" : "middle.wav",
                 "effects": {
                     "not_random": "Yes",
                     "goto": 6
@@ -264,6 +295,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1510, 620],
                 "text": "End",
+                "sound_hover" : "end.wav",
                 "effects": {
                     "not_random": "Yes",
                     "goto": 7
@@ -281,6 +313,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Option 1",
+                "sound_hover" : "optionone.wav",
                 "effects": {
                     "not_random": "Yes",
                     "beginningOption": 1,
@@ -293,6 +326,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1410, 620],
                 "text": "Option 2",
+                "sound_hover" : "optiontwo.wav",
                 "effects": {
                     "not_random": "Yes",
                     "beginningOption": 2,
@@ -311,6 +345,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Option 1",
+                "sound_hover" : "optionone.wav",
                 "effects": {
                     "not_random": "Yes",
                     "middleOption": 1,
@@ -323,6 +358,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1410, 620],
                 "text": "Option 2",
+                "sound_hover" : "optiontwo.wav",
                 "effects": {
                     "not_random": "Yes",
                     "middleOption": 2,
@@ -341,6 +377,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [510, 620],
                 "text": "Option 1",
+                "sound_hover" : "optionone.wav",
                 "effects": {
                     "not_random": "Yes",
                     "endOption": 1,
@@ -353,6 +390,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1410, 620],
                 "text": "Option 2",
+                "sound_hover" : "optiontwo.wav",
                 "effects": {
                     "not_random": "Yes",
                     "endOption": 2,
@@ -370,6 +408,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [450, 620],
                 "text": "Default",
+                "sound_hover" : "default.wav",
                 "effects": {
                     "not_random": "Yes",
                     "fontSize": FONT_SIZE,
@@ -381,6 +420,7 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [960, 620],
                 "text": "Bigger",
+                "sound_hover" : "bigger.wav",
                 "effects": {
                     "not_random": "Yes",
                     "fontSize": FONT_SIZE+30,
@@ -392,9 +432,64 @@ menu_narrative = [
                 "frames" : 4,
                 "location": [1470, 620],
                 "text": "Biggest",
+                "sound_hover" : "biggest.wav",
                 "effects": {
                     "not_random": "Yes",
                     "fontSize": FONT_SIZE+60,
+                    "goto": 0
+                }
+            }
+        ]
+    },
+    { #8
+        "title": "Page Turn",
+        "not_random": "Yes",
+        "buttons": [
+            {
+                "image": "assets/img/buttons/start.png",
+                "frames" : 4,
+                "location": [300, 620],
+                "text": "1-Switch",
+                "sound_hover" : "oneswitch.wav",
+                "effects": {
+                    "not_random": "Yes",
+                    "pageTurn": "default",
+                    "goto": 0
+                }
+            },
+            {
+                "image": "assets/img/buttons/options.png",
+                "frames" : 4,
+                "location": [760, 620],
+                "text": "2-Switch",
+                "sound_hover" : "twoswitch.wav",
+                "effects": {
+                    "not_random": "Yes",
+                    "pageTurn": "both",
+                    "goto": 0
+                }
+            },
+            {
+                "image": "assets/img/buttons/shutdown.png",
+                "frames" : 4,
+                "location": [1200, 620],
+                "text": "Auto 10s",
+                "sound_hover" : "auto.wav",
+                "effects": {
+                    "not_random": "Yes",
+                    "pageTurn": "auto",
+                    "goto": 0
+                }
+            },
+            {
+                "image": "assets/img/buttons/shutdown.png",
+                "frames" : 4,
+                "location": [1620, 620],
+                "text": "No Page",
+                "sound_hover" : "nopage.wav",
+                "effects": {
+                    "not_random": "Yes",
+                    "pageTurn": "off",
                     "goto": 0
                 }
             }
