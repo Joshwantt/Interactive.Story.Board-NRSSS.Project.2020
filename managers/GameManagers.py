@@ -36,6 +36,7 @@ class Manager(object):
         self.randomOptions = [[]]
         self.beginningSkip = False
 
+        #For each section in the story, randomly select Option A or Option B
         random.seed()
         self.beginning = random.randint(1, 2)
         random.seed()
@@ -46,7 +47,7 @@ class Manager(object):
         print(self.beginning)
         print(self.middle)
         print(self.ending)
-
+        
         self.BegOne = []
         self.BegTwo = []
         self.MidOne = []
@@ -54,14 +55,15 @@ class Manager(object):
         self.EndOne = []
         self.EndTwo = []
 
-
+        #For each prompt in the narrative, choose 3 random options out of the 10 buttons
         for i in self.narrative:
             random.seed()
             a = random.randint(0, 3)
             b = random.randint(4, 6)
             c = random.randint(7, 9)
             self.randomOptions.append([a,b,c])
-
+        
+        #Store the locations of the start and end of each section of the story
         for page in range(0, len(self.narrative)):
             if "BeginningOpt1Beg" in self.narrative[page]:
                 self.BegOne.append(page-1)
@@ -177,6 +179,8 @@ class Manager(object):
     def setup_buttons(self):
         if "buttons" in self.narrative[self.scene_number]:
             self.buttons.clear()
+            #For playback screens, retrieve the saved button selections and set the buttons
+            #in the playback screen to them
             if "playback" in self.narrative[self.scene_number]:
                 settings.REABBACK_BUTTON_FREEZE = True
                 for button in self.narrative[self.scene_number]["buttons"]:
@@ -198,9 +202,11 @@ class Manager(object):
                 settings.REABBACK_BUTTON_FREEZE = False
                 enumerateButtons = enumerate(self.narrative[self.scene_number]["buttons"])
                 for i, button in enumerateButtons:
+                    #For screens that aren't story or playback, just append the buttons
                     if "not_random" in self.narrative[self.scene_number]:
                         self.buttons.append(button["preload_button"])
                     else:
+                        #For screens that are in the story, append the 3 random buttons
                         if (self.randomOptions[self.scene_number][0] == i):
                             self.buttons.append(button["preload_button"])
                             
@@ -311,7 +317,15 @@ class Manager(object):
             offset=1
         else:
             offset=0
-        ## Scene numbers may need to change if scenes are added for playback feature
+        ## Depending on which combinations of story options are selected, skip forwards
+        # or backwards in the narrative as needed.
+        # NOTE: At present, the game is split into 3 sections, each having 2 option
+        # Beginning- Option A, Option B; Middle- Option A and B; End- Option A and B
+        # All 6 of the possible sections are already loaded- this merely changes which
+        #part of the narrative is being displayed
+        # Example: If the story options are Beginning A, Middle B, End A- the narrative
+        #goes through Beginning A, and then skips to the start of Middle B, goes through
+        #Middle B, and then skips to the location of End A in the narrative
         if self.scene_number == self.EndOne[1]:
             self.scene_number = self.EndTwo[1]
 
@@ -367,7 +381,8 @@ class Manager(object):
             self.selected_button += 1
 
         self.buttons[self.selected_button].selected = True
-
+        
+        #Automatically go the next screen if the playback sounds have played through
         if "playback" in self.narrative[self.scene_number] and self.selected_button == 2:
             self.scene_wind_down = True
 
@@ -464,6 +479,7 @@ class GameManager(Manager):
         if "not_random" in self.narrative[self.scene_number]:
             effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
         else:
+            #Save the options that are selected to self.readback. To do this, the corresponding parts of the narrative are retrieved
             effects = self.narrative[self.scene_number]["buttons"][self.selected_button].get("effects")
             effectsRandom = self.narrative[self.scene_number]["buttons"][self.randomOptions[self.scene_number][self.selected_button]].get("effects")
             with open("narrative.json", "r") as f:
