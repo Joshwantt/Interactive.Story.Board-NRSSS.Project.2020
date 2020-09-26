@@ -306,7 +306,11 @@ class Manager(object):
         self.input_controller.kill_all()
 
     def next_scene(self):
-
+        offset = 0
+        if settings.PAGE_TURN == "off":
+            offset=1
+        else:
+            offset=0
         ## Scene numbers may need to change if scenes are added for playback feature
         if self.scene_number == self.EndOne[1]:
             self.scene_number = self.EndTwo[1]
@@ -314,16 +318,16 @@ class Manager(object):
         if self.scene_number == self.BegOne[0] and self.beginning == 2:
             self.scene_number = self.EndOne[1]
 
-        if self.scene_number == self.BegOne[1] and self.middle == 2:
+        if self.scene_number == self.BegOne[1]-offset and self.middle == 2:
             self.scene_number = self.BegTwo[1]
 
-        if self.scene_number == self.MidOne[1] and self.ending == 2:
+        if self.scene_number == self.MidOne[1]-offset and self.ending == 2:
             self.scene_number = self.MidTwo[1]
 
-        if self.scene_number == self.BegTwo[1] and self.middle == 1:
+        if self.scene_number == self.BegTwo[1]-offset and self.middle == 1:
             self.scene_number = self.MidOne[0]
 
-        if self.scene_number == self.MidTwo[1] and self.ending == 1:
+        if self.scene_number == self.MidTwo[1]-offset and self.ending == 1:
             self.scene_number = self.MidOne[1]
 
         if settings.PAGE_TURN == "off" and "turn_page" in self.narrative[self.scene_number+1]:
