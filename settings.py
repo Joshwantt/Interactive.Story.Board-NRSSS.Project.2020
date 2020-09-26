@@ -71,13 +71,13 @@ CUSTOM_PULSE_INTERVAL = 1
 
 
 def shutdown():
+    print(SYSTEM)
     if SYSTEM == "Linux":
-        print("linux")
         #call("clear", shell=True)
         #call("sudo shutdown -h now", shell=True)
-        #this code is commented for dev reasons.
+        #this code is commented for dev reasons. Comment this code to gain access back into the device.
+        pygame.quit()
     else:
-        print("not linux")
         pygame.quit()
 
 
